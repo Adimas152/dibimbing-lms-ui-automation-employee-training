@@ -1875,3 +1875,286 @@ Session ID: bb2233870c41be3c19eb6477db4e95b0
 2026-01-17 08:59:12.194 [TestNG-test-RegressionTests-3] INFO  dibimbing.pages.employee.AddEmployeeModal - Input NIK: 1234567890123456
 2026-01-17 08:59:12.329 [TestNG-test-RegressionTests-3] INFO  dibimbing.pages.employee.AddEmployeeModal - Input NPWP: 123456789012345
 2026-01-17 08:59:12.459 [TestNG-test-RegressionTests-3] INFO  dibimbing.pages.employee.AddEmployeeModal - Click submit Add Employee
+2026-01-17 10:04:22.986 [Test worker] INFO  dibimbing.core.ConfigReader - Loading properties from: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 10:04:22.988 [Test worker] INFO  dibimbing.core.ConfigReader - Loaded properties: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 10:04:22.988 [Test worker] INFO  dibimbing.tests.base.BaseTest - Loaded config env: staging
+2026-01-17 10:04:55.441 [Test worker] INFO  dibimbing.core.ConfigReader - Loading properties from: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 10:04:55.442 [Test worker] INFO  dibimbing.core.ConfigReader - Loaded properties: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 10:04:55.443 [Test worker] INFO  dibimbing.tests.base.BaseTest - Loaded config env: staging
+2026-01-17 10:05:35.287 [Test worker] INFO  dibimbing.core.ConfigReader - Loading properties from: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 10:05:35.289 [Test worker] INFO  dibimbing.core.ConfigReader - Loaded properties: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 10:05:35.289 [Test worker] INFO  dibimbing.tests.base.BaseTest - Loaded config env: staging
+2026-01-17 10:05:39.763 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.LoginPage - Logging in with email: arwendymelyn@dibimbing.id
+2026-01-17 10:05:40.082 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Verify Employee & Training menu visible
+2026-01-17 10:05:40.750 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Clik employee menu
+2026-01-17 10:05:40.804 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.EmployeeListPage - Verify Employee List Page loaded
+2026-01-17 10:05:41.369 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.EmployeeListPage - Click Add Employee button
+2026-01-17 10:05:41.465 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input employee name: DEL_SEED_310425654619125
+2026-01-17 10:05:41.714 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input employee ID: EMP-DEL-310425654619125
+2026-01-17 10:05:41.903 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input employee email: seed.del+310425654619125@example.com
+2026-01-17 10:05:42.191 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input employee phone number: 623104256546
+2026-01-17 10:05:42.339 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Select division: Quality Assurance Data Test Division
+2026-01-17 10:05:42.621 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input role: Member
+2026-01-17 10:05:42.763 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Select angkatan: 2024 Ganjil
+2026-01-17 10:05:42.920 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Select gender: Male
+2026-01-17 10:05:42.994 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input birth date: 01/01/2000
+2026-01-17 10:05:43.084 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input address
+2026-01-17 10:05:43.251 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input NIK: 1234567890123456
+2026-01-17 10:05:43.388 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input NPWP: 123456789012345
+2026-01-17 10:05:43.536 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Click submit Add Employee
+2026-01-17 10:05:43.617 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.components.ToastComponent - Verify toast visible: Success create employee
+2026-01-17 10:05:44.149 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.EmployeeListPage - Open employee detail by name: DEL_SEED_310425654619125
+2026-01-17 10:05:44.149 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.EmployeeListPage - Search employee by name: DEL_SEED_310425654619125
+2026-01-17 10:05:45.992 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.DetailEmployeePage - Verify Detail Employee Page loaded
+2026-01-17 10:05:47.045 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.DetailEmployeePage - Click Delete Employee button
+2026-01-17 10:05:47.111 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.DetailEmployeePage - Verify delete modal visible
+2026-01-17 10:05:47.153 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.DetailEmployeePage - Confirm delete employee
+2026-01-17 10:05:47.203 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.components.ToastComponent - Verify toast visible: Success update employee
+2026-01-17 10:05:47.733 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.components.ToastComponent - Get toast text: Success delete employee
+2026-01-17 10:07:53.382 [Test worker] INFO  dibimbing.core.ConfigReader - Loading properties from: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 10:07:53.384 [Test worker] INFO  dibimbing.core.ConfigReader - Loaded properties: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 10:07:53.384 [Test worker] INFO  dibimbing.tests.base.BaseTest - Loaded config env: staging
+2026-01-17 10:07:55.971 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.LoginPage - Logging in with email: arwendymelyn@dibimbing.id
+2026-01-17 10:07:58.124 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Verify Employee & Training menu visible
+2026-01-17 10:07:59.195 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Clik employee menu
+2026-01-17 10:07:59.247 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.EmployeeListPage - Verify Employee List Page loaded
+2026-01-17 10:08:00.325 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.EmployeeListPage - Click Add Employee button
+2026-01-17 10:08:00.440 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input employee name: DEL_SEED_310564610478041
+2026-01-17 10:08:00.689 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input employee ID: EMP-DEL-310564610478041
+2026-01-17 10:08:00.899 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input employee email: seed.del+310564610478041@example.com
+2026-01-17 10:08:01.185 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input employee phone number: 623105646104
+2026-01-17 10:08:01.316 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Select division: Quality Assurance Data Test Division
+2026-01-17 10:08:01.482 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input role: Member
+2026-01-17 10:08:01.653 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Select angkatan: 2024 Ganjil
+2026-01-17 10:08:01.794 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Select gender: Male
+2026-01-17 10:08:01.860 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input birth date: 01/01/2000
+2026-01-17 10:08:01.945 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input address
+2026-01-17 10:08:02.100 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input NIK: 1234567890123456
+2026-01-17 10:08:02.239 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input NPWP: 123456789012345
+2026-01-17 10:08:02.377 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Click submit Add Employee
+2026-01-17 10:08:02.467 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.components.ToastComponent - Verify toast visible: Success create employee
+2026-01-17 10:08:02.997 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.EmployeeListPage - Open employee detail by name: DEL_SEED_310564610478041
+2026-01-17 10:08:02.998 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.EmployeeListPage - Search employee by name: DEL_SEED_310564610478041
+2026-01-17 10:08:04.851 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.DetailEmployeePage - Verify Detail Employee Page loaded
+2026-01-17 10:08:05.385 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.DetailEmployeePage - Click Delete Employee button
+2026-01-17 10:08:05.443 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.DetailEmployeePage - Verify delete modal visible
+2026-01-17 10:08:05.995 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.DetailEmployeePage - Confirm delete employee
+2026-01-17 10:08:06.046 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.components.ToastComponent - Verify toast visible: Success update employee
+2026-01-17 10:08:06.579 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.components.ToastComponent - Get toast text: Success delete employee
+2026-01-17 10:08:47.033 [Test worker] INFO  dibimbing.core.ConfigReader - Loading properties from: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 10:08:47.034 [Test worker] INFO  dibimbing.core.ConfigReader - Loaded properties: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 10:08:47.034 [Test worker] INFO  dibimbing.tests.base.BaseTest - Loaded config env: staging
+2026-01-17 10:08:49.697 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.LoginPage - Logging in with email: arwendymelyn@dibimbing.id
+2026-01-17 10:08:50.904 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Verify Employee & Training menu visible
+2026-01-17 10:08:51.530 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Clik employee menu
+2026-01-17 10:08:51.573 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.EmployeeListPage - Verify Employee List Page loaded
+2026-01-17 10:08:52.653 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.EmployeeListPage - Click Add Employee button
+2026-01-17 10:08:52.764 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input employee name: DEL_SEED_310616938160750
+2026-01-17 10:08:53.027 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input employee ID: EMP-DEL-310616938160750
+2026-01-17 10:08:53.261 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input employee email: seed.del+310616938160750@example.com
+2026-01-17 10:08:53.518 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input employee phone number: 623106169381
+2026-01-17 10:08:53.655 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Select division: Quality Assurance Data Test Division
+2026-01-17 10:08:53.847 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input role: Member
+2026-01-17 10:08:54.013 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Select angkatan: 2024 Ganjil
+2026-01-17 10:08:54.157 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Select gender: Male
+2026-01-17 10:08:54.222 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input birth date: 01/01/2000
+2026-01-17 10:08:54.304 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input address
+2026-01-17 10:08:54.566 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input NIK: 1234567890123456
+2026-01-17 10:08:54.712 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input NPWP: 123456789012345
+2026-01-17 10:08:54.856 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Click submit Add Employee
+2026-01-17 10:08:54.941 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.components.ToastComponent - Verify toast visible: Success create employee
+2026-01-17 10:08:55.466 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.EmployeeListPage - Open employee detail by name: DEL_SEED_310616938160750
+2026-01-17 10:08:55.467 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.EmployeeListPage - Search employee by name: DEL_SEED_310616938160750
+2026-01-17 10:08:57.326 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.DetailEmployeePage - Verify Detail Employee Page loaded
+2026-01-17 10:08:58.373 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.DetailEmployeePage - Click Delete Employee button
+2026-01-17 10:08:58.424 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.DetailEmployeePage - Verify delete modal visible
+2026-01-17 10:08:58.470 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.DetailEmployeePage - Confirm delete employee
+2026-01-17 10:08:58.528 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.components.ToastComponent - Verify toast visible: Success update employee
+2026-01-17 10:08:59.061 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.components.ToastComponent - Get toast text: Success delete employee
+2026-01-17 10:11:39.105 [Test worker] INFO  dibimbing.core.ConfigReader - Loading properties from: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 10:11:39.107 [Test worker] INFO  dibimbing.core.ConfigReader - Loaded properties: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 10:11:39.107 [Test worker] INFO  dibimbing.tests.base.BaseTest - Loaded config env: staging
+2026-01-17 10:11:41.735 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.LoginPage - Logging in with email: arwendymelyn@dibimbing.id
+2026-01-17 10:11:42.563 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Verify Employee & Training menu visible
+2026-01-17 10:11:43.637 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Clik employee menu
+2026-01-17 10:11:43.716 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.EmployeeListPage - Verify Employee List Page loaded
+2026-01-17 10:11:44.275 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.EmployeeListPage - Click Add Employee button
+2026-01-17 10:11:44.373 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input employee name: DEL_SEED_310788559787291
+2026-01-17 10:11:44.642 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input employee ID: EMP-DEL-310788559787291
+2026-01-17 10:11:44.844 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input employee email: seed.del+310788559787291@example.com
+2026-01-17 10:11:45.094 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input employee phone number: 623107885597
+2026-01-17 10:11:45.223 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Select division: Quality Assurance Data Test Division
+2026-01-17 10:11:45.522 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input role: Member
+2026-01-17 10:11:45.657 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Select angkatan: 2024 Ganjil
+2026-01-17 10:11:45.804 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Select gender: Male
+2026-01-17 10:11:45.868 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input birth date: 01/01/2000
+2026-01-17 10:11:45.949 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input address
+2026-01-17 10:11:46.114 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input NIK: 1234567890123456
+2026-01-17 10:11:46.260 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input NPWP: 123456789012345
+2026-01-17 10:11:46.399 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Click submit Add Employee
+2026-01-17 10:11:46.472 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.components.ToastComponent - Verify toast visible: Success create employee
+2026-01-17 10:11:47.001 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.EmployeeListPage - Open employee detail by name: DEL_SEED_310788559787291
+2026-01-17 10:11:47.001 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.EmployeeListPage - Search employee by name: DEL_SEED_310788559787291
+2026-01-17 10:11:48.843 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.DetailEmployeePage - Verify Detail Employee Page loaded
+2026-01-17 10:11:49.376 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.DetailEmployeePage - Click Delete Employee button
+2026-01-17 10:11:49.431 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.DetailEmployeePage - Verify delete modal visible
+2026-01-17 10:11:49.987 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.DetailEmployeePage - Confirm delete employee
+2026-01-17 10:11:50.034 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.components.ToastComponent - Verify toast visible: Success update employee
+2026-01-17 10:11:50.577 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.components.ToastComponent - Get toast text: Success delete employee
+2026-01-17 10:16:09.080 [Test worker] INFO  dibimbing.core.ConfigReader - Loading properties from: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 10:16:09.082 [Test worker] INFO  dibimbing.core.ConfigReader - Loaded properties: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 10:16:09.082 [Test worker] INFO  dibimbing.tests.base.BaseTest - Loaded config env: staging
+2026-01-17 10:16:12.241 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.LoginPage - Logging in with email: arwendymelyn@dibimbing.id
+2026-01-17 10:16:13.060 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Verify Employee & Training menu visible
+2026-01-17 10:16:14.146 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Clik employee menu
+2026-01-17 10:16:14.189 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.EmployeeListPage - Verify Employee List Page loaded
+2026-01-17 10:16:14.753 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.EmployeeListPage - Click Add Employee button
+2026-01-17 10:16:14.843 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input employee name: DEL_SEED_311059036539166
+2026-01-17 10:16:15.080 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input employee ID: EMP-DEL-311059036539166
+2026-01-17 10:16:15.285 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input employee email: seed.del+311059036539166@example.com
+2026-01-17 10:16:15.526 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input employee phone number: 623110590365
+2026-01-17 10:16:15.672 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Select division: Quality Assurance Data Test Division
+2026-01-17 10:16:15.961 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input role: Member
+2026-01-17 10:16:16.136 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Select angkatan: 2024 Ganjil
+2026-01-17 10:16:16.287 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Select gender: Male
+2026-01-17 10:16:16.356 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input birth date: 01/01/2000
+2026-01-17 10:16:16.443 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input address
+2026-01-17 10:16:16.611 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input NIK: 1234567890123456
+2026-01-17 10:16:16.752 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input NPWP: 123456789012345
+2026-01-17 10:16:16.883 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Click submit Add Employee
+2026-01-17 10:16:16.961 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.components.ToastComponent - Verify toast visible: Success create employee
+2026-01-17 10:16:17.496 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.EmployeeListPage - Open employee detail by name: DEL_SEED_311059036539166
+2026-01-17 10:16:17.496 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.EmployeeListPage - Search employee by name: DEL_SEED_311059036539166
+2026-01-17 10:16:19.351 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.DetailEmployeePage - Verify Detail Employee Page loaded
+2026-01-17 10:16:20.406 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.DetailEmployeePage - Click Delete Employee button
+2026-01-17 10:16:20.465 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.DetailEmployeePage - Verify delete modal visible
+2026-01-17 10:16:21.018 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.DetailEmployeePage - Confirm delete employee
+2026-01-17 10:16:21.062 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.components.ToastComponent - Verify toast visible: Success update employee
+2026-01-17 10:17:54.479 [Test worker] INFO  dibimbing.core.ConfigReader - Loading properties from: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 10:17:54.481 [Test worker] INFO  dibimbing.core.ConfigReader - Loaded properties: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 10:17:54.481 [Test worker] INFO  dibimbing.tests.base.BaseTest - Loaded config env: staging
+2026-01-17 10:17:57.628 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.LoginPage - Logging in with email: arwendymelyn@dibimbing.id
+2026-01-17 10:17:58.461 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Verify Employee & Training menu visible
+2026-01-17 10:17:59.553 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Clik employee menu
+2026-01-17 10:17:59.608 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.EmployeeListPage - Verify Employee List Page loaded
+2026-01-17 10:18:00.173 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.EmployeeListPage - Click Add Employee button
+2026-01-17 10:18:00.269 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input employee name: DEL_SEED_311164453011083
+2026-01-17 10:18:00.520 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input employee ID: EMP-DEL-311164453011083
+2026-01-17 10:18:00.730 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input employee email: seed.del+311164453011083@example.com
+2026-01-17 10:18:00.988 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input employee phone number: 623111644530
+2026-01-17 10:18:01.165 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Select division: Quality Assurance Data Test Division
+2026-01-17 10:18:01.432 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input role: Member
+2026-01-17 10:18:01.568 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Select angkatan: 2024 Ganjil
+2026-01-17 10:18:01.727 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Select gender: Male
+2026-01-17 10:18:01.802 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input birth date: 01/01/2000
+2026-01-17 10:18:01.898 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input address
+2026-01-17 10:18:02.064 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input NIK: 1234567890123456
+2026-01-17 10:18:02.196 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input NPWP: 123456789012345
+2026-01-17 10:18:02.326 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Click submit Add Employee
+2026-01-17 10:18:02.403 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.components.ToastComponent - Verify toast visible: Success create employee
+2026-01-17 10:18:02.933 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.EmployeeListPage - Open employee detail by name: DEL_SEED_311164453011083
+2026-01-17 10:18:02.934 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.EmployeeListPage - Search employee by name: DEL_SEED_311164453011083
+2026-01-17 10:18:05.299 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.DetailEmployeePage - Verify Detail Employee Page loaded
+2026-01-17 10:18:06.340 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.DetailEmployeePage - Click Delete Employee button
+2026-01-17 10:18:06.392 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.DetailEmployeePage - Verify delete modal visible
+2026-01-17 10:18:06.433 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.DetailEmployeePage - Confirm delete employee
+2026-01-17 10:18:06.482 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.components.ToastComponent - Verify toast visible: Success update employee
+2026-01-17 10:18:07.014 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.components.ToastComponent - Get toast text: Success delete employee
+2026-01-17 10:18:40.882 [Test worker] INFO  dibimbing.core.ConfigReader - Loading properties from: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 10:18:40.883 [Test worker] INFO  dibimbing.core.ConfigReader - Loaded properties: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 10:18:40.884 [Test worker] INFO  dibimbing.tests.base.BaseTest - Loaded config env: staging
+2026-01-17 10:18:42.930 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.LoginPage - Logging in with email: arwendymelyn@dibimbing.id
+2026-01-17 10:18:44.298 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Verify Employee & Training menu visible
+2026-01-17 10:18:45.369 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Clik employee menu
+2026-01-17 10:18:45.427 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.EmployeeListPage - Verify Employee List Page loaded
+2026-01-17 10:18:45.992 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.EmployeeListPage - Click Add Employee button
+2026-01-17 10:18:46.098 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input employee name: DEL_SEED_311210271413875
+2026-01-17 10:18:46.356 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input employee ID: EMP-DEL-311210271413875
+2026-01-17 10:18:46.585 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input employee email: seed.del+311210271413875@example.com
+2026-01-17 10:18:46.836 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input employee phone number: 623112102714
+2026-01-17 10:18:46.963 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Select division: Quality Assurance Data Test Division
+2026-01-17 10:18:47.226 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input role: Member
+2026-01-17 10:18:47.395 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Select angkatan: 2024 Ganjil
+2026-01-17 10:18:47.558 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Select gender: Male
+2026-01-17 10:18:47.628 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input birth date: 01/01/2000
+2026-01-17 10:18:47.716 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input address
+2026-01-17 10:18:47.882 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input NIK: 1234567890123456
+2026-01-17 10:18:48.028 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input NPWP: 123456789012345
+2026-01-17 10:18:48.171 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Click submit Add Employee
+2026-01-17 10:18:48.246 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.components.ToastComponent - Verify toast visible: Success create employee
+2026-01-17 10:18:48.794 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.EmployeeListPage - Open employee detail by name: DEL_SEED_311210271413875
+2026-01-17 10:18:48.795 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.EmployeeListPage - Search employee by name: DEL_SEED_311210271413875
+2026-01-17 10:18:50.638 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.DetailEmployeePage - Verify Detail Employee Page loaded
+2026-01-17 10:18:51.174 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.DetailEmployeePage - Click Delete Employee button
+2026-01-17 10:18:51.237 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.DetailEmployeePage - Verify delete modal visible
+2026-01-17 10:18:51.809 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.DetailEmployeePage - Confirm delete employee
+2026-01-17 10:18:51.857 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.components.ToastComponent - Verify toast visible: Success update employee
+2026-01-17 10:18:52.386 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.components.ToastComponent - Get toast text: Success delete employee
+2026-01-17 10:25:58.182 [Test worker] INFO  dibimbing.core.ConfigReader - Loading properties from: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 10:25:58.183 [Test worker] INFO  dibimbing.core.ConfigReader - Loaded properties: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 10:25:58.183 [Test worker] INFO  dibimbing.tests.base.BaseTest - Loaded config env: staging
+2026-01-17 10:26:01.142 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.LoginPage - Logging in with email: arwendymelyn@dibimbing.id
+2026-01-17 10:26:01.980 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Verify Employee & Training menu visible
+2026-01-17 10:26:02.615 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Clik employee menu
+2026-01-17 10:26:02.663 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.EmployeeListPage - Verify Employee List Page loaded
+2026-01-17 10:26:03.251 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.EmployeeListPage - Click Add Employee button
+2026-01-17 10:26:03.352 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input employee name: SRC_SEED_311647529399333
+2026-01-17 10:26:03.609 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input employee ID: EMP-SRC-311647529399333
+2026-01-17 10:26:03.802 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input employee email: seed.src+311647529399333@example.com
+2026-01-17 10:26:04.046 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input employee phone number: 623116475293
+2026-01-17 10:26:04.217 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Select division: Quality Assurance Data Test Division
+2026-01-17 10:26:04.418 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input role: Member
+2026-01-17 10:26:04.594 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Select angkatan: 2024 Ganjil
+2026-01-17 10:26:04.758 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Select gender: Male
+2026-01-17 10:26:04.862 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input birth date: 01/01/2000
+2026-01-17 10:26:04.958 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input address
+2026-01-17 10:26:05.146 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input NIK: 1234567890123456
+2026-01-17 10:26:05.289 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input NPWP: 123456789012345
+2026-01-17 10:26:05.436 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Click submit Add Employee
+2026-01-17 10:26:05.532 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.EmployeeListPage - Search employee by name: SRC_SEED_
+2026-01-17 10:35:49.020 [Test worker] INFO  dibimbing.core.ConfigReader - Loading properties from: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 10:35:49.021 [Test worker] INFO  dibimbing.core.ConfigReader - Loaded properties: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 10:35:49.021 [Test worker] INFO  dibimbing.tests.base.BaseTest - Loaded config env: staging
+2026-01-17 10:35:52.236 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.LoginPage - Logging in with email: arwendymelyn@dibimbing.id
+2026-01-17 10:35:53.058 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Verify Employee & Training menu visible
+2026-01-17 10:35:54.143 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Clik employee menu
+2026-01-17 10:35:54.188 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.EmployeeListPage - Verify Employee List Page loaded
+2026-01-17 10:35:54.753 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.EmployeeListPage - Click Add Employee button
+2026-01-17 10:35:54.842 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input employee name: SRC_SEED_312239027101750
+2026-01-17 10:35:55.071 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input employee ID: EMP-SRC-312239027101750
+2026-01-17 10:35:55.251 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input employee email: seed.src+312239027101750@example.com
+2026-01-17 10:35:55.486 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input employee phone number: 623122390271
+2026-01-17 10:35:55.787 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Select division: Quality Assurance Data Test Division
+2026-01-17 10:35:55.983 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input role: Member
+2026-01-17 10:35:56.173 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Select angkatan: 2024 Ganjil
+2026-01-17 10:35:56.329 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Select gender: Male
+2026-01-17 10:35:56.407 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input birth date: 01/01/2000
+2026-01-17 10:35:56.496 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input address
+2026-01-17 10:35:56.663 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input NIK: 1234567890123456
+2026-01-17 10:35:56.802 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input NPWP: 123456789012345
+2026-01-17 10:35:56.936 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Click submit Add Employee
+2026-01-17 10:35:57.015 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.components.ToastComponent - Verify toast visible: Success create employee
+2026-01-17 10:35:57.542 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.EmployeeListPage - Search employee by name: SRC_SEED_
+2026-01-17 10:41:23.688 [Test worker] INFO  dibimbing.core.ConfigReader - Loading properties from: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 10:41:23.690 [Test worker] INFO  dibimbing.core.ConfigReader - Loaded properties: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 10:41:23.691 [Test worker] INFO  dibimbing.tests.base.BaseTest - Loaded config env: staging
+2026-01-17 10:41:27.156 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.LoginPage - Logging in with email: arwendymelyn@dibimbing.id
+2026-01-17 10:41:27.998 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Verify Employee & Training menu visible
+2026-01-17 10:41:29.071 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Clik employee menu
+2026-01-17 10:41:29.115 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.EmployeeListPage - Verify Employee List Page loaded
+2026-01-17 10:41:30.697 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.EmployeeListPage - Click Add Employee button
+2026-01-17 10:41:30.797 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input employee name: SRC_SEED_312574969797375
+2026-01-17 10:41:31.025 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input employee ID: EMP-SRC-312574969797375
+2026-01-17 10:41:31.226 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input employee email: seed.src+312574969797375@example.com
+2026-01-17 10:41:31.462 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input employee phone number: 623125749697
+2026-01-17 10:41:31.638 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Select division: Quality Assurance Data Test Division
+2026-01-17 10:41:31.827 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input role: Member
+2026-01-17 10:41:32.017 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Select angkatan: 2024 Ganjil
+2026-01-17 10:41:32.170 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Select gender: Male
+2026-01-17 10:41:32.241 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input birth date: 01/01/2000
+2026-01-17 10:41:32.326 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input address
+2026-01-17 10:41:32.480 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input NIK: 1234567890123456
+2026-01-17 10:41:32.618 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Input NPWP: 123456789012345
+2026-01-17 10:41:32.754 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.AddEmployeeModal - Click submit Add Employee
+2026-01-17 10:41:32.831 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.components.ToastComponent - Verify toast visible: Success create employee
+2026-01-17 10:41:33.358 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.employee.EmployeeListPage - Search employee by name: SRC_SEED_312574969797375

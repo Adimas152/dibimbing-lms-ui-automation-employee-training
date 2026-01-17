@@ -23,6 +23,9 @@ public class ToastComponent extends BasePage {
     @FindBy(xpath = "//p[normalize-space()='Success update employee']")
     private WebElement toastSuccessUpdateEmployee;
 
+    @FindBy(xpath = "//p[contains(text(),'Succes delete employee')]")
+    private WebElement toastSuccessDeleteEmployee;
+
     // ===== ERROR/FAILED TOASTS =====
     @FindBy(xpath = "//p[normalize-space()='Harap isi field yang wajib diisi.']")
     private WebElement toastErrorCreateEmployeeRequiredFields;
@@ -45,6 +48,11 @@ public class ToastComponent extends BasePage {
         return getText(toastSuccessUpdateEmployee);
     }
 
+    public String getSuccessDeleteEmployeeText() {
+        log.info("Get toast text: Success delete employee");
+        return getText(toastSuccessDeleteEmployee);
+    }
+
     public String getErrorCreateEmployeeRequiredFieldsText() {
         log.info("Get toast text: Harap isi field yang wajib diisi.");
         return getText(toastErrorCreateEmployeeRequiredFields);
@@ -65,6 +73,13 @@ public class ToastComponent extends BasePage {
         Assert.assertTrue(waitForVisibility(toastSuccessUpdateEmployee).isDisplayed(),
                 "Toast success update employee tidak tampil");
     }
+
+    public void verifySuccessDeleteEmployeeVisible() {
+        log.info("Verify toast visible: Success update employee");
+        Assert.assertTrue(waitForVisibility(toastSuccessDeleteEmployee).isDisplayed(),
+                "Toast success delete employee tidak tampil.");
+    }
+
 
     public void verifyErrorCreateEmployeeRequiredFieldsVisible() {
         log.info("Verify toast visible: Required fields error");

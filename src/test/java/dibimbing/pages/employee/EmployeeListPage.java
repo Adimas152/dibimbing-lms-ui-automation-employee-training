@@ -130,6 +130,12 @@ public class EmployeeListPage extends BasePage {
         return getText(employeeCountBadge);
     }
 
+    public void verifyEmployeeRowByNameVisible(String name) {
+        By rowByName = By.xpath("//tr[.//td[normalize-space()='" + name + "']]");
+        Assert.assertTrue(isDisplayed(waitForVisibility(rowByName)),
+                "Employee tidak muncul di hasil search. Name: " + name);
+    }
+
     public void openEmployeeDetailByName(String name) {
         log.info("Open employee detail by name: {}", name);
 
