@@ -35,8 +35,7 @@ public class TrainingListPage extends BasePage {
     @FindBy(id = "title-feedback")
     private WebElement trainingNameRequiredMsg;
 
-    @FindBy(xpath = "//button[contains(@id,'button-detail-training')]")
-    private WebElement detailTrainingOne;
+    private final By detailTrainingTopButton = By.id("button-detail-training-0");
 
     // ===== optional: row hasil paling atas (buat verify search result) =====
     private final By topRow = By.xpath("//tbody/tr[1]");
@@ -74,7 +73,9 @@ public class TrainingListPage extends BasePage {
 
     public void clickdetailTrainingOne() {
         log.info("Click Detail Training paling atas");
-        click(detailTrainingOne);
+        WebElement detailBtn = waitForClickable(detailTrainingTopButton);
+        scrollToElement(detailBtn);
+        click(detailBtn);
     }
 
 
@@ -144,16 +145,16 @@ public class TrainingListPage extends BasePage {
         log.info("Click Detail on top search result");
 
         // verify tengah: tombol detail clickable (ini pengganti jeda manual)
-        wait.until(ExpectedConditions.elementToBeClickable(detailTrainingOne));
-        scrollToElement(detailTrainingOne);
+        WebElement detailBtn = waitForClickable(detailTrainingTopButton);
+        scrollToElement(detailBtn);
 
         String beforeUrl = driver.getCurrentUrl();
 
         try {
-            detailTrainingOne.click();
+            detailBtn.click();
         } catch (Exception e) {
             log.warn("Normal click failed, fallback to JS click. Reason: {}", e.getMessage());
-            jsClick(detailTrainingOne);
+            jsClick(detailBtn);
         }
 
         // verify setelah klik: pindah halaman (wajib biar ga flakey)
@@ -190,10 +191,8 @@ public class TrainingListPage extends BasePage {
 
         searchTrainingByName(keyword);
 
-        By btnDetailTop = By.id("button-detail-training-0");
-
         // tunggu tombolnya muncul & clickable
-        WebElement detailBtn = wait.until(ExpectedConditions.elementToBeClickable(btnDetailTop));
+        WebElement detailBtn = waitForClickable(detailTrainingTopButton);
 
         // scroll biar pasti kelihatan
         scrollToElement(detailBtn);
@@ -228,4 +227,3 @@ public class TrainingListPage extends BasePage {
         return getText(trainingNameRequiredMsg);
     }
 }
-

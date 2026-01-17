@@ -6,7 +6,11 @@ import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+
+import java.time.Duration;
 
 public class DetailTrainingPage extends BasePage {
     private static final Logger log = LogManager.getLogger(DetailTrainingPage.class);
@@ -41,8 +45,17 @@ public class DetailTrainingPage extends BasePage {
 
     public void verifyDetailTrainingPageLoaded() {
         log.info("Verify Detail Training page loaded");
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        boolean isDetailLoaded = wait.until(
+                ExpectedConditions.or(
+                        ExpectedConditions.visibilityOf(btnEditTraining),
+                        ExpectedConditions.visibilityOf(tabContentChapter),
+                        ExpectedConditions.visibilityOf(tabAssignedEmployee)
+                )
+        );
+
         Assert.assertTrue(
-                isDisplayed(btnEditTraining) || isDisplayed(tabContentChapter),
+                isDetailLoaded,
                 "Detail Training page tidak terbuka / elemen utama tidak tampil"
         );
     }
