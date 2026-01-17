@@ -3763,3 +3763,212 @@ Session ID: bb2233870c41be3c19eb6477db4e95b0
 2026-01-17 13:45:48.636 [TestNG-test-RegressionTests-3] INFO  dibimbing.pages.employee.EditEmployeeModal - Update employee id: EMP-EDIT4-A-323621666019041
 2026-01-17 13:45:48.884 [TestNG-test-RegressionTests-3] INFO  dibimbing.pages.employee.EditEmployeeModal - Click Save Changes
 2026-01-17 13:45:48.956 [TestNG-test-RegressionTests-3] INFO  dibimbing.pages.components.ToastComponent - Check toast visible: Success update employee
+2026-01-17 16:02:27.101 [Test worker] INFO  dibimbing.core.ConfigReader - Loading properties from: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 16:02:27.102 [Test worker] INFO  dibimbing.core.ConfigReader - Loaded properties: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 16:02:27.102 [Test worker] INFO  dibimbing.tests.base.BaseTest - Loaded config env: staging
+2026-01-17 16:03:35.927 [Test worker] INFO  dibimbing.core.ConfigReader - Loading properties from: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 16:03:35.928 [Test worker] INFO  dibimbing.core.ConfigReader - Loaded properties: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 16:03:35.929 [Test worker] INFO  dibimbing.tests.base.BaseTest - Loaded config env: staging
+2026-01-17 16:03:42.841 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.LoginPage - Logging in with email: arwendymelyn@dibimbing.id
+2026-01-17 16:03:43.672 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Verify Employee & Training menu visible
+2026-01-17 16:03:44.746 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Click Division tab
+2026-01-17 16:05:20.897 [Test worker] INFO  dibimbing.core.ConfigReader - Loading properties from: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 16:05:20.898 [Test worker] INFO  dibimbing.core.ConfigReader - Loaded properties: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 16:05:20.898 [Test worker] INFO  dibimbing.tests.base.BaseTest - Loaded config env: staging
+2026-01-17 16:05:24.269 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.LoginPage - Logging in with email: arwendymelyn@dibimbing.id
+2026-01-17 16:05:25.072 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Verify Employee & Training menu visible
+2026-01-17 16:05:26.139 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Clik employee menu
+2026-01-17 16:05:26.183 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Click Division tab
+2026-01-17 16:05:26.764 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Verify Division tab visible
+2026-01-17 16:05:26.786 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Click Add Division button
+2026-01-17 16:05:27.366 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Verify Add Division modal visible
+2026-01-17 16:05:27.439 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Fill Division form
+2026-01-17 16:05:27.439 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Input Division Name: DIV_AUTO_332011639189833
+2026-01-17 16:05:27.546 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Input Division Description: Division automation desc 332011639189833
+2026-01-17 16:05:27.675 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Click Save Add Division
+2026-01-17 16:05:27.750 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.components.ToastComponent - Verify toast visible: Success create employee
+2026-01-17 16:05:28.277 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.components.ToastComponent - Get toast text: Success create division
+2026-01-17 16:10:38.312 [Test worker] INFO  dibimbing.core.ConfigReader - Loading properties from: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 16:10:38.314 [Test worker] INFO  dibimbing.core.ConfigReader - Loaded properties: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 16:10:38.314 [Test worker] INFO  dibimbing.tests.base.BaseTest - Loaded config env: staging
+2026-01-17 16:10:41.128 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.LoginPage - Logging in with email: arwendymelyn@dibimbing.id
+2026-01-17 16:10:41.953 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Verify Employee & Training menu visible
+2026-01-17 16:10:42.542 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Clik employee menu
+2026-01-17 16:10:42.591 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Click Division tab
+2026-01-17 16:10:43.162 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Verify Division tab visible
+2026-01-17 16:10:43.184 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Click Add Division button
+2026-01-17 16:10:43.769 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Verify Add Division modal visible
+2026-01-17 16:10:43.838 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Input Division Name: 
+2026-01-17 16:10:43.902 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Input Division Description: Division desc valid 332328033724500
+2026-01-17 16:10:44.024 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Click Save Add Division
+2026-01-17 16:10:44.089 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Verify Division Name required message visible
+2026-01-17 16:10:44.114 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.components.ToastComponent - Check toast visible: Success create division
+2026-01-17 16:10:49.256 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Click Close Add Division modal
+2026-01-17 16:10:49.315 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Click Add Division button
+2026-01-17 16:10:49.497 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Verify Add Division modal visible
+2026-01-17 16:10:49.559 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Input Division Name: DIV_NEG_332328033724500
+2026-01-17 16:10:49.662 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Input Division Description: 
+2026-01-17 16:10:49.728 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Click Save Add Division
+2026-01-17 16:10:49.787 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Verify Division Desc required message visible
+2026-01-17 16:10:49.809 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.components.ToastComponent - Check toast visible: Success create division
+2026-01-17 16:13:37.188 [Test worker] INFO  dibimbing.core.ConfigReader - Loading properties from: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 16:13:37.189 [Test worker] INFO  dibimbing.core.ConfigReader - Loaded properties: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 16:13:37.189 [Test worker] INFO  dibimbing.tests.base.BaseTest - Loaded config env: staging
+2026-01-17 16:13:40.730 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.LoginPage - Logging in with email: arwendymelyn@dibimbing.id
+2026-01-17 16:13:41.560 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Verify Employee & Training menu visible
+2026-01-17 16:13:42.632 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Clik employee menu
+2026-01-17 16:13:42.701 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Click Division tab
+2026-01-17 16:13:43.289 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Verify Division tab visible
+2026-01-17 16:13:43.307 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Click Add Division button
+2026-01-17 16:13:43.992 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Verify Add Division modal visible
+2026-01-17 16:13:44.064 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Input Division Name: 
+2026-01-17 16:13:44.123 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Input Division Description: Division desc valid 332508259633791
+2026-01-17 16:13:44.245 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Click Save Add Division
+2026-01-17 16:13:44.310 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Verify Division Name required message visible
+2026-01-17 16:13:44.332 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Click Close Add Division modal
+2026-01-17 16:13:44.403 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Click Add Division button
+2026-01-17 16:13:44.583 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Verify Add Division modal visible
+2026-01-17 16:13:44.648 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Input Division Name: DIV_NEG_332508259633791
+2026-01-17 16:13:44.747 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Input Division Description: 
+2026-01-17 16:13:44.809 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Click Save Add Division
+2026-01-17 16:13:44.866 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Verify Division Desc required message visible
+2026-01-17 16:15:23.114 [Test worker] INFO  dibimbing.core.ConfigReader - Loading properties from: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 16:15:23.116 [Test worker] INFO  dibimbing.core.ConfigReader - Loaded properties: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 16:15:23.116 [Test worker] INFO  dibimbing.tests.base.BaseTest - Loaded config env: staging
+2026-01-17 16:15:26.383 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.LoginPage - Logging in with email: arwendymelyn@dibimbing.id
+2026-01-17 16:15:27.219 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Verify Employee & Training menu visible
+2026-01-17 16:15:28.290 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Clik employee menu
+2026-01-17 16:15:28.331 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Click Division tab
+2026-01-17 16:15:28.908 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Verify Division tab visible
+2026-01-17 16:15:28.927 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Click Add Division button
+2026-01-17 16:15:29.519 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Verify Add Division modal visible
+2026-01-17 16:15:29.620 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Input Division Name: 
+2026-01-17 16:15:29.702 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Input Division Description: Division desc valid 332613121995333
+2026-01-17 16:15:29.835 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Click Save Add Division
+2026-01-17 16:15:29.917 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Verify Division Name required message visible
+2026-01-17 16:15:29.944 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Click Close Add Division modal
+2026-01-17 16:15:30.013 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Click Add Division button
+2026-01-17 16:15:30.188 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Verify Add Division modal visible
+2026-01-17 16:15:30.253 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Input Division Name: DIV_NEG_332613121995333
+2026-01-17 16:15:30.348 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Input Division Description: 
+2026-01-17 16:15:30.413 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Click Save Add Division
+2026-01-17 16:15:30.470 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Verify Division Desc required message visible
+2026-01-17 16:16:59.865 [Test worker] INFO  dibimbing.core.ConfigReader - Loading properties from: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 16:16:59.867 [Test worker] INFO  dibimbing.core.ConfigReader - Loaded properties: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 16:16:59.867 [Test worker] INFO  dibimbing.tests.base.BaseTest - Loaded config env: staging
+2026-01-17 16:17:02.953 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.LoginPage - Logging in with email: arwendymelyn@dibimbing.id
+2026-01-17 16:17:03.340 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Verify Employee & Training menu visible
+2026-01-17 16:17:04.425 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Clik employee menu
+2026-01-17 16:17:04.473 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Click Division tab
+2026-01-17 16:17:05.053 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Verify Division tab visible
+2026-01-17 16:17:05.074 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Click Add Division button
+2026-01-17 16:17:05.660 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Verify Add Division modal visible
+2026-01-17 16:17:05.745 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Input Division Name: 
+2026-01-17 16:17:05.820 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Input Division Description: Division desc valid 332709269092166
+2026-01-17 16:17:05.938 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Click Save Add Division
+2026-01-17 16:17:06.002 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Verify Division Name required message visible
+2026-01-17 16:17:21.044 [Test worker] INFO  dibimbing.core.ConfigReader - Loading properties from: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 16:17:21.045 [Test worker] INFO  dibimbing.core.ConfigReader - Loaded properties: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 16:17:21.046 [Test worker] INFO  dibimbing.tests.base.BaseTest - Loaded config env: staging
+2026-01-17 16:17:23.458 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.LoginPage - Logging in with email: arwendymelyn@dibimbing.id
+2026-01-17 16:17:23.777 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Verify Employee & Training menu visible
+2026-01-17 16:17:24.410 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Clik employee menu
+2026-01-17 16:17:24.464 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Click Division tab
+2026-01-17 16:17:25.050 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Verify Division tab visible
+2026-01-17 16:17:25.071 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Click Add Division button
+2026-01-17 16:17:25.655 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Verify Add Division modal visible
+2026-01-17 16:17:25.718 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Input Division Name: 
+2026-01-17 16:17:25.774 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Input Division Description: Division desc valid 332729265957083
+2026-01-17 16:17:25.899 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Click Save Add Division
+2026-01-17 16:17:25.968 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Verify Division Name required message visible
+2026-01-17 16:18:48.617 [Test worker] INFO  dibimbing.core.ConfigReader - Loading properties from: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 16:18:48.619 [Test worker] INFO  dibimbing.core.ConfigReader - Loaded properties: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 16:18:48.619 [Test worker] INFO  dibimbing.tests.base.BaseTest - Loaded config env: staging
+2026-01-17 16:18:51.878 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.LoginPage - Logging in with email: arwendymelyn@dibimbing.id
+2026-01-17 16:18:52.743 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Verify Employee & Training menu visible
+2026-01-17 16:18:53.840 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Clik employee menu
+2026-01-17 16:18:53.902 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Click Division tab
+2026-01-17 16:18:54.481 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Verify Division tab visible
+2026-01-17 16:18:54.501 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Click Add Division button
+2026-01-17 16:18:55.102 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Verify Add Division modal visible
+2026-01-17 16:18:55.251 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Fill Division form
+2026-01-17 16:18:55.251 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Input Division Name: DIV_DUP_332818695277500
+2026-01-17 16:18:55.354 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Input Division Description: Division duplicate test 332818695277500
+2026-01-17 16:18:55.474 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Click Save Add Division
+2026-01-17 16:18:55.531 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.components.ToastComponent - Verify toast visible: Success create employee
+2026-01-17 16:18:56.068 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.components.ToastComponent - Get toast text: Success create division
+2026-01-17 16:18:56.093 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Click Add Division button
+2026-01-17 16:18:56.145 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Verify Add Division modal visible
+2026-01-17 16:18:56.210 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Input Division Name: DIV_DUP_332818695277500
+2026-01-17 16:18:56.304 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Input Division Description: Another desc 332818695277500
+2026-01-17 16:18:56.409 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Click Save Add Division
+2026-01-17 16:18:56.467 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.components.ToastComponent - Check toast visible: Success create division
+2026-01-17 16:44:49.574 [Test worker] INFO  dibimbing.core.ConfigReader - Loading properties from: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 16:44:49.575 [Test worker] INFO  dibimbing.core.ConfigReader - Loaded properties: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 16:44:49.575 [Test worker] INFO  dibimbing.tests.base.BaseTest - Loaded config env: staging
+2026-01-17 16:44:52.499 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.LoginPage - Logging in with email: arwendymelyn@dibimbing.id
+2026-01-17 16:44:52.822 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Verify Employee & Training menu visible
+2026-01-17 16:44:53.385 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Clik employee menu
+2026-01-17 16:44:53.431 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Click Division tab
+2026-01-17 16:44:54.017 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Verify Division tab visible
+2026-01-17 16:44:54.051 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Click Add Division button
+2026-01-17 16:44:54.634 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Verify Add Division modal visible
+2026-01-17 16:44:54.708 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Fill Division form
+2026-01-17 16:44:54.708 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Input Division Name: DIV_EDIT_SEED_334378229995166
+2026-01-17 16:44:54.824 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Input Division Description: Seed division desc 334378229995166
+2026-01-17 16:44:54.943 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Click Save Add Division
+2026-01-17 16:44:55.000 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.components.ToastComponent - Verify toast visible: Success create division
+2026-01-17 16:44:55.552 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Open division detail by name: DIV_EDIT_SEED_334378229995166
+2026-01-17 16:44:55.552 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Search division by keyword: DIV_EDIT_SEED_334378229995166
+2026-01-17 16:44:56.797 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DetailDivisionPage - Verify Detail Division page loaded
+2026-01-17 16:44:57.330 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DetailDivisionPage - Click Edit Division button
+2026-01-17 16:44:57.387 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DetailDivisionPage - Verify Edit Division modal visible
+2026-01-17 16:44:57.459 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DetailDivisionPage - Clear Division Name
+2026-01-17 16:44:57.565 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DetailDivisionPage - Update Division Name: DIV_EDIT_SEED_334378229995166_UPD
+2026-01-17 16:44:57.677 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DetailDivisionPage - Clear Division Description
+2026-01-17 16:44:57.770 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DetailDivisionPage - Update Division Description: Updated division desc 334378229995166
+2026-01-17 16:44:57.880 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DetailDivisionPage - Click Save Edit Division
+2026-01-17 16:44:57.939 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.components.ToastComponent - Check toast visible: Success update division
+2026-01-17 16:44:58.476 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.components.ToastComponent - Get toast text: Success update division
+2026-01-17 16:55:41.266 [Test worker] INFO  dibimbing.core.ConfigReader - Loading properties from: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 16:55:41.267 [Test worker] INFO  dibimbing.core.ConfigReader - Loaded properties: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 16:55:41.268 [Test worker] INFO  dibimbing.tests.base.BaseTest - Loaded config env: staging
+2026-01-17 16:55:44.731 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.LoginPage - Logging in with email: arwendymelyn@dibimbing.id
+2026-01-17 16:55:45.570 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Verify Employee & Training menu visible
+2026-01-17 16:55:46.672 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Clik employee menu
+2026-01-17 16:55:46.739 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Click Division tab
+2026-01-17 16:55:47.318 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Verify Division tab visible
+2026-01-17 16:55:47.338 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Click Add Division button
+2026-01-17 16:55:47.931 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Verify Add Division modal visible
+2026-01-17 16:55:48.004 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Fill Division form
+2026-01-17 16:55:48.004 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Input Division Name: DIV_DEL_SEED_335031513897583
+2026-01-17 16:55:48.115 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Input Division Description: Division delete seed 335031513897583
+2026-01-17 16:55:48.249 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Click Save Add Division
+2026-01-17 16:55:48.312 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.components.ToastComponent - Verify toast visible: Success create division
+2026-01-17 16:55:48.844 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Open division detail by name: DIV_DEL_SEED_335031513897583
+2026-01-17 16:55:48.844 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Search division by keyword: DIV_DEL_SEED_335031513897583
+2026-01-17 16:55:50.094 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DetailDivisionPage - Verify Detail Division page loaded
+2026-01-17 16:55:50.628 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DetailDivisionPage - Click Delete Division button
+2026-01-17 16:56:33.745 [Test worker] INFO  dibimbing.core.ConfigReader - Loading properties from: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 16:56:33.746 [Test worker] INFO  dibimbing.core.ConfigReader - Loaded properties: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 16:56:33.747 [Test worker] INFO  dibimbing.tests.base.BaseTest - Loaded config env: staging
+2026-01-17 16:56:36.853 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.LoginPage - Logging in with email: arwendymelyn@dibimbing.id
+2026-01-17 16:56:37.152 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Verify Employee & Training menu visible
+2026-01-17 16:56:38.224 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Clik employee menu
+2026-01-17 16:56:38.269 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Click Division tab
+2026-01-17 16:56:38.847 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Verify Division tab visible
+2026-01-17 16:56:38.869 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Click Add Division button
+2026-01-17 16:56:39.466 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Verify Add Division modal visible
+2026-01-17 16:56:39.534 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Fill Division form
+2026-01-17 16:56:39.535 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Input Division Name: DIV_DEL_SEED_335083045102833
+2026-01-17 16:56:39.647 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Input Division Description: Division delete seed 335083045102833
+2026-01-17 16:56:39.792 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Click Save Add Division
+2026-01-17 16:56:39.849 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.components.ToastComponent - Verify toast visible: Success create division
+2026-01-17 16:56:40.383 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Open division detail by name: DIV_DEL_SEED_335083045102833
+2026-01-17 16:56:40.383 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Search division by keyword: DIV_DEL_SEED_335083045102833
+2026-01-17 16:56:42.121 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DetailDivisionPage - Verify Detail Division page loaded
+2026-01-17 16:56:42.658 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DetailDivisionPage - Click Edit Division button
+2026-01-17 16:56:42.718 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DetailDivisionPage - Click Delete Division button
+2026-01-17 16:56:43.291 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DetailDivisionPage - Confirm delete division
+2026-01-17 16:56:43.351 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.components.ToastComponent - Check toast visible: Success delete division
+2026-01-17 16:56:43.888 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.components.ToastComponent - Get toast text: Success delete division

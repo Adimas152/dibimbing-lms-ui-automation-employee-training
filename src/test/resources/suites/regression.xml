@@ -15,6 +15,10 @@
             <class name="dibimbing.tests.employee.EmployeeEditTests"/>
 <!--            <class name="dibimbing.tests.employee.EmployeeTransferTests"/>-->
 <!--            <class name="dibimbing.tests.employee.EmployeeImportTests"/>-->
+
+            <class name="dibimbing.tests.division.DivisionAddTests"/>
+            <class name="dibimbing.tests.division.DivisionDeleteTests"/>
+            <class name="dibimbing.tests.division.DivisionEditTests"/>
         </classes>
     </test>
 </suite>
