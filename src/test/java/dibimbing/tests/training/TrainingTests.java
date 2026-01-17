@@ -3,7 +3,7 @@ package dibimbing.tests.training;
 import dibimbing.tests.base.BaseTest;
 import org.testng.annotations.Test;
 
-public class TrainingCrudTests extends BaseTest {
+public class TrainingTests extends BaseTest {
     @Test(description = "TRN-ADD-001 - Create training with valid data - Success create training", groups = {"training","positive"})
     public void TRN_ADD_001_createTrainingSuccessfully() {}
 

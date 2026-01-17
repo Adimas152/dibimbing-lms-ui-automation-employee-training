@@ -1,4 +1,145 @@
-package dibimbing.pages.Employee;
+package dibimbing.pages.employee;
 
-public class EmployeeListPage {
+import dibimbing.pages.BasePage;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+
+import java.time.Duration;
+
+public class EmployeeListPage extends BasePage {
+    private static final Logger log = LogManager.getLogger(EmployeeListPage.class);
+
+    /* ================= TAB & HEADER ================= */
+
+    @FindBy(id = "tabs-admin-employee--tab-0")
+    private WebElement employeeListTab;
+
+    @FindBy(id = "employee-list-count")
+    private WebElement employeeCountBadge;
+
+    /* ================= SEARCH ================= */
+
+    @FindBy(xpath = "//*[@id=\"input-admin-employee-search\"]/input")
+    private WebElement employeeSearchInput;
+
+    /* ================= FILTER ================= */
+
+    @FindBy(xpath = "//p[text()='Filter by Angkatan']")
+    private WebElement angkatanFilterDropdown;
+
+    @FindBy(xpath = "(//button[@role='menuitem' and normalize-space()='2024 Ganjil'])[1]")
+    private WebElement angkatanFilterOption2024Ganjil;
+
+    @FindBy(xpath = "(//button[@role='menuitem' and normalize-space()='2024 Genap'])[1]")
+    private WebElement angkatanFilterOption2024Genap;
+
+    @FindBy(xpath = "(//button[@role='menuitem' and normalize-space()='2025 Ganjil'])[1]")
+    private WebElement angkatanFilterOptionGanjil;
+
+    @FindBy(xpath = "(//button[@role='menuitem' and normalize-space()='2025 Genap'])[1]")
+    private WebElement angkatanFilterOption2025Genap;
+
+    /* ================= ACTION DROPDOWN ================= */
+
+    @FindBy(id = "menu-button-admin-employee-action")
+    private WebElement actionDropdownButton;
+
+    @FindBy(xpath = "//button[@role='menuitem' and normalize-space()='Download']")
+    private WebElement downloadEmployeeMenuItem;
+
+    @FindBy(xpath = "//button[@role='menuitem' and @data-action='import']")
+    private WebElement importEmployeeMenuItem;
+
+    @FindBy(xpath = "//button[@role='menuitem' and @data-action='transfer']")
+    private WebElement transferEmployeeMenuItem;
+
+    /* ================= BUTTON ADD EMPLOYEE================= */
+
+    @FindBy(id = "button-add-employee")
+    private WebElement addEmployeeButton;
+
+    /* ================= CONSTRUCTOR ================= */
+
+    public EmployeeListPage(WebDriver driver) {
+        super(driver);
+    }
+
+    /* ================= VERIFICATION ================= */
+
+    public void verifyEmployeeListPageLoaded() {
+        log.info("Verify Employee List Page loaded");
+        Assert.assertTrue(isDisplayed(employeeListTab), "Employee List tab tidak tampil");
+        Assert.assertTrue(isDisplayed(addEmployeeButton), "Button Add Employee tidak tampil");
+    }
+
+    /* ================= ACTION ================= */
+
+    public void clickAddEmployee() {
+        log.info("Click Add Employee button");
+        click(addEmployeeButton);
+    }
+
+    public void searchEmployeeByName(String name) {
+        log.info("Search employee by name: {}", name);
+        type(employeeSearchInput, name);
+    }
+
+    public void openActionDropdown() {
+        log.info("Open action dropdown");
+        click(actionDropdownButton);
+    }
+
+    public void clickDownloadEmployee() {
+        openActionDropdown();
+        click(downloadEmployeeMenuItem);
+    }
+
+    public void clickImportEmployee() {
+        openActionDropdown();
+        click(importEmployeeMenuItem);
+    }
+
+    public void clickTransferEmployee() {
+        openActionDropdown();
+        click(transferEmployeeMenuItem);
+    }
+
+    /* ================= FILTER ================= */
+
+    public void selectAngkatan(String angkatan) {
+        log.info("Select angkatan: {}", angkatan);
+        click(angkatanFilterDropdown);
+
+        WebElement option = driver.findElement(By.xpath(
+                "//button[@role='menuitem' and normalize-space()='" + angkatan + "']"
+        ));
+
+        click(option);
+    }
+
+    /* ================= DATA ================= */
+
+    public String getEmployeeCountBadge() {
+        return getText(employeeCountBadge);
+    }
+
+    public void openEmployeeDetailByName(String name) {
+        log.info("Open employee detail by name: {}", name);
+
+        searchEmployeeByName(name);
+
+        By rowByName = By.xpath("//tr[.//td[normalize-space()='" + name + "']]");
+        waitForVisibility(rowByName);
+
+        By detailLink = By.xpath("//tr[.//td[normalize-space()='" + name + "']]//a[normalize-space()='Detail']");
+        click(driver.findElement(detailLink));
+    }
+
 }

@@ -1,0 +1,30 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="RegressionCrossBrowser" parallel="tests" thread-count="2">
+    <listeners>
+        <listener class-name="dibimbing.core.TestListener"/>
+    </listeners>
+
+    <test name="chromeTests">
+        <parameter name="browser" value="chrome"/>
+        <groups>
+            <run>
+                <include name="regression"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="dibimbing.tests.login.LoginTest"/>
+        </classes>
+    </test>
+
+    <test name="firefoxTests">
+        <parameter name="browser" value="firefox"/>
+        <groups>
+            <run>
+                <include name="regression"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="dibimbing.tests.login.LoginTest"/>
+        </classes>
+    </test>
+</suite>

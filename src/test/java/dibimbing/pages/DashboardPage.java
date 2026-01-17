@@ -1,6 +1,5 @@
-package dibimbing.pages.DasboardPage;
+package dibimbing.pages;
 
-import dibimbing.pages.BasePage;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
@@ -35,12 +34,12 @@ public class DashboardPage extends BasePage {
         Assert.assertTrue(employeeSidebarMenu.isDisplayed(), "Employee menu tidak tampil");
         Assert.assertTrue(trainingSidebarMenu.isDisplayed(), "Training menu tidak tampil");
     }
-    public void clickEmployeeMenu(){
+    public void clickEmployeeSidebareMenu(){
         log.info("Clik employee menu");
         employeeSidebarMenu.click();
     }
 
-    public void clickTrainingMenu(){
+    public void clickTrainingSidebarMenu(){
         log.info("Clik training menu");
         trainingSidebarMenu.click();
     }

@@ -1,9 +1,9 @@
-package dibimbing.tests;
+package dibimbing.tests.login;
 
-import dibimbing.core.BaseTest;
+import dibimbing.tests.base.BaseTest;
 import dibimbing.core.DriverManager;
-import dibimbing.pages.DasboardPage.DashboardPage;
-import dibimbing.pages.auth.LoginPage;
+import dibimbing.pages.DashboardPage;
+import dibimbing.pages.LoginPage;
 import org.testng.annotations.Test;
 
 public class LoginTest extends BaseTest {
@@ -13,7 +13,7 @@ public class LoginTest extends BaseTest {
         LoginPage loginPage = new LoginPage(DriverManager.getDriver());
         DashboardPage dashboardPage = new DashboardPage(DriverManager.getDriver());
         loginPage.login(config.getProperty("test.email"), config.getProperty("test.password"));
-        dashboardPage.verifyEmployeeMenuVisible();
+        dashboardPage.verifyEmployeeTrainingMenuVisible();
 
     }
 }
