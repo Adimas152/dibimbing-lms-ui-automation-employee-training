@@ -26,9 +26,18 @@ public class ToastComponent extends BasePage {
     @FindBy(xpath = "//p[contains(text(),'Succes delete employee')]")
     private WebElement toastSuccessDeleteEmployee;
 
+    @FindBy(xpath = "//p[contains(text(),'Succes activate employee account')]")
+    private WebElement toastSuccessActivateEmployee;
+
+    @FindBy(xpath = "//p[contains(text(),'Succes inactivate employee account')]")
+    private WebElement toastSuccessInactivateEmployee;
+
     // ===== ERROR/FAILED TOASTS =====
     @FindBy(xpath = "//p[normalize-space()='Harap isi field yang wajib diisi.']")
     private WebElement toastErrorCreateEmployeeRequiredFields;
+
+    @FindBy(xpath = "//p[normalize-space()='Please fill required field']")
+    private WebElement toastErrorUpdateEmployeeRequiredFields;
 
     public ToastComponent(WebDriver driver) {
         super(driver);
@@ -51,6 +60,16 @@ public class ToastComponent extends BasePage {
     public String getSuccessDeleteEmployeeText() {
         log.info("Get toast text: Success delete employee");
         return getText(toastSuccessDeleteEmployee);
+    }
+
+    public String getSuccessActivateEmployeeText() {
+        log.info("Get toast text: Success activate employee account");
+        return getText(toastSuccessActivateEmployee);
+    }
+
+    public String getSuccessInactivateEmployeeText() {
+        log.info("Get toast text: Success inactivate employee account");
+        return getText(toastSuccessInactivateEmployee);
     }
 
     public String getErrorCreateEmployeeRequiredFieldsText() {
@@ -80,6 +99,21 @@ public class ToastComponent extends BasePage {
                 "Toast success delete employee tidak tampil.");
     }
 
+    public void verifySuccessActivateEmployeeVisible() {
+        log.info("Verify toast visible: Success activate employee account");
+        Assert.assertTrue(
+                waitForVisibility(toastSuccessActivateEmployee).isDisplayed(),
+                "Toast success activate employee account tidak tampil"
+        );
+    }
+
+    public void verifySuccessInactivateEmployeeVisible() {
+        log.info("Verify toast visible: Success inactivate employee account");
+        Assert.assertTrue(
+                waitForVisibility(toastSuccessInactivateEmployee).isDisplayed(),
+                "Toast success inactivate employee account tidak tampil"
+        );
+    }
 
     public void verifyErrorCreateEmployeeRequiredFieldsVisible() {
         log.info("Verify toast visible: Required fields error");
@@ -87,9 +121,28 @@ public class ToastComponent extends BasePage {
                 "Toast error required fields tidak tampil");
     }
 
-
     public boolean isSuccessCreateEmployeeToastVisible() {
         return isDisplayed(toastSuccessCreateEmployee);
+    }
+
+    public boolean isSuccessActivateEmployeeToastVisible() {
+        log.info("Check toast visible: Success activate employee account");
+        return isDisplayed(toastSuccessActivateEmployee);
+    }
+
+    public boolean isSuccessInactivateEmployeeToastVisible() {
+        log.info("Check toast visible: Success inactivate employee account");
+        return isDisplayed(toastSuccessInactivateEmployee);
+    }
+
+    public boolean isSuccessUpdateEmployeeToastVisible() {
+        log.info("Check toast visible: Success update employee");
+        return isDisplayed(toastSuccessUpdateEmployee);
+    }
+
+    public boolean isErrorUpdateEmployeeRequiredFieldsVisible() {
+        log.info("Check toast visible: Please fill required field");
+        return isDisplayed( toastErrorUpdateEmployeeRequiredFields);
     }
 
 

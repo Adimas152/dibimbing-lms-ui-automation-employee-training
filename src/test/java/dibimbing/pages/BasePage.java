@@ -1,6 +1,7 @@
 package dibimbing.pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
@@ -57,5 +58,24 @@ public class BasePage {
         } catch (Exception e) {
             return false;
         }
+    }
+
+    protected void clearAndType(WebElement element, String text) {
+        element.click();
+        element.sendKeys(Keys.chord(Keys.CONTROL, "a"));
+        element.sendKeys(Keys.DELETE);
+        element.sendKeys(text);
+    }
+
+    protected void clearField(WebElement element) {
+        waitForVisibility(element);
+        element.click();
+
+        // Mac pakai COMMAND, Windows/Linux pakai CONTROL
+        String os = System.getProperty("os.name").toLowerCase();
+        Keys cmdCtrl = os.contains("mac") ? Keys.COMMAND : Keys.CONTROL;
+
+        element.sendKeys(cmdCtrl, "a");
+        element.sendKeys(Keys.BACK_SPACE);
     }
 }
