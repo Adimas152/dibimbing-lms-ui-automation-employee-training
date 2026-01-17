@@ -3972,3 +3972,439 @@ Session ID: bb2233870c41be3c19eb6477db4e95b0
 2026-01-17 16:56:43.291 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DetailDivisionPage - Confirm delete division
 2026-01-17 16:56:43.351 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.components.ToastComponent - Check toast visible: Success delete division
 2026-01-17 16:56:43.888 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.components.ToastComponent - Get toast text: Success delete division
+2026-01-17 17:28:15.171 [Test worker] INFO  dibimbing.core.ConfigReader - Loading properties from: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 17:28:15.172 [Test worker] INFO  dibimbing.core.ConfigReader - Loaded properties: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 17:28:15.172 [Test worker] INFO  dibimbing.tests.base.BaseTest - Loaded config env: staging
+2026-01-17 17:29:32.015 [Test worker] INFO  dibimbing.core.ConfigReader - Loading properties from: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 17:29:32.016 [Test worker] INFO  dibimbing.core.ConfigReader - Loaded properties: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 17:29:32.016 [Test worker] INFO  dibimbing.tests.base.BaseTest - Loaded config env: staging
+2026-01-17 17:29:35.317 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.LoginPage - Logging in with email: arwendymelyn@dibimbing.id
+2026-01-17 17:29:35.658 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Verify Employee & Training menu visible
+2026-01-17 17:29:36.227 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Clik training menu
+2026-01-17 17:29:36.294 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Verify Training List page loaded
+2026-01-17 17:29:36.347 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Click Add Training button
+2026-01-17 17:29:36.453 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Verify Add Training modal visible
+2026-01-17 17:29:36.478 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Fill Training form
+2026-01-17 17:29:36.478 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Input Training Name: TRN_AUTO_337060647410166
+2026-01-17 17:29:36.606 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Input Training Description
+2026-01-17 17:29:36.755 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Click Confirm Add Training
+2026-01-17 17:29:36.823 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.components.ToastComponent - Check toast visible: Success create program
+2026-01-17 17:29:37.358 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.components.ToastComponent - Get toast text: Success create program
+2026-01-17 17:34:55.213 [Test worker] INFO  dibimbing.core.ConfigReader - Loading properties from: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 17:34:55.215 [Test worker] INFO  dibimbing.core.ConfigReader - Loaded properties: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 17:34:55.215 [Test worker] INFO  dibimbing.tests.base.BaseTest - Loaded config env: staging
+2026-01-17 17:34:59.478 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.LoginPage - Logging in with email: arwendymelyn@dibimbing.id
+2026-01-17 17:35:00.313 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Verify Employee & Training menu visible
+2026-01-17 17:35:00.875 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Clik training menu
+2026-01-17 17:35:00.925 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Verify Training List page loaded
+2026-01-17 17:35:00.997 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Click Add Training button
+2026-01-17 17:35:01.108 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Verify Add Training modal visible
+2026-01-17 17:35:01.135 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Input Training Name: 
+2026-01-17 17:35:01.197 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Input Training Description
+2026-01-17 17:35:01.349 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Click Confirm Add Training
+2026-01-17 17:35:01.424 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Verify Training Name required message visible
+2026-01-17 17:35:01.450 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.components.ToastComponent - Check toast visible: Success create program
+2026-01-17 17:35:37.375 [Test worker] INFO  dibimbing.core.ConfigReader - Loading properties from: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 17:35:37.376 [Test worker] INFO  dibimbing.core.ConfigReader - Loaded properties: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 17:35:37.377 [Test worker] INFO  dibimbing.tests.base.BaseTest - Loaded config env: staging
+2026-01-17 17:35:40.054 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.LoginPage - Logging in with email: arwendymelyn@dibimbing.id
+2026-01-17 17:35:40.345 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Verify Employee & Training menu visible
+2026-01-17 17:35:40.913 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Clik training menu
+2026-01-17 17:35:40.969 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Verify Training List page loaded
+2026-01-17 17:35:41.045 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Click Add Training button
+2026-01-17 17:35:41.156 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Verify Add Training modal visible
+2026-01-17 17:35:41.182 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Input Training Name: 
+2026-01-17 17:35:41.249 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Input Training Description
+2026-01-17 17:35:41.409 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Click Confirm Add Training
+2026-01-17 17:35:41.492 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Verify Training Name required message visible
+2026-01-17 19:06:43.659 [Test worker] INFO  dibimbing.core.ConfigReader - Loading properties from: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 19:06:43.661 [Test worker] INFO  dibimbing.core.ConfigReader - Loaded properties: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 19:06:43.661 [Test worker] INFO  dibimbing.tests.base.BaseTest - Loaded config env: staging
+2026-01-17 19:06:51.609 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.LoginPage - Logging in with email: arwendymelyn@dibimbing.id
+2026-01-17 19:06:52.445 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Verify Employee & Training menu visible
+2026-01-17 19:06:53.517 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Clik training menu
+2026-01-17 19:06:53.600 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Verify Training List page loaded
+2026-01-17 19:06:53.660 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Click Add Training button
+2026-01-17 19:06:53.757 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Verify Add Training modal visible
+2026-01-17 19:06:53.784 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Fill Training form
+2026-01-17 19:06:53.784 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Input Training Name: TRN_EDIT_SEED_342897804160833
+2026-01-17 19:06:53.930 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Input Training Description
+2026-01-17 19:06:54.076 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Click Confirm Add Training
+2026-01-17 19:06:54.179 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.components.ToastComponent - Check toast visible: Success create program
+2026-01-17 19:06:54.709 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Open training detail by name: TRN_EDIT_SEED_342897804160833
+2026-01-17 19:06:54.709 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Search training by keyword: TRN_EDIT_SEED_342897804160833
+2026-01-17 19:06:54.981 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.DetailTrainingPage - Verify Detail Training page loaded
+2026-01-17 19:09:38.827 [Test worker] INFO  dibimbing.core.ConfigReader - Loading properties from: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 19:09:38.829 [Test worker] INFO  dibimbing.core.ConfigReader - Loaded properties: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 19:09:38.829 [Test worker] INFO  dibimbing.tests.base.BaseTest - Loaded config env: staging
+2026-01-17 19:09:43.261 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.LoginPage - Logging in with email: arwendymelyn@dibimbing.id
+2026-01-17 19:09:43.577 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Verify Employee & Training menu visible
+2026-01-17 19:09:44.656 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Clik training menu
+2026-01-17 19:09:44.743 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Verify Training List page loaded
+2026-01-17 19:09:44.816 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Click Add Training button
+2026-01-17 19:09:44.914 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Verify Add Training modal visible
+2026-01-17 19:09:44.939 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Fill Training form
+2026-01-17 19:09:44.939 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Input Training Name: TRN_EDIT_SEED_343068959797708
+2026-01-17 19:09:45.082 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Input Training Description
+2026-01-17 19:09:45.223 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Click Confirm Add Training
+2026-01-17 19:09:45.292 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.components.ToastComponent - Check toast visible: Success create program
+2026-01-17 19:09:45.837 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Open training detail by name: TRN_EDIT_SEED_343068959797708
+2026-01-17 19:09:45.837 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Search training by keyword: TRN_EDIT_SEED_343068959797708
+2026-01-17 19:09:46.145 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.DetailTrainingPage - Verify Detail Training page loaded
+2026-01-17 19:14:21.529 [Test worker] INFO  dibimbing.core.ConfigReader - Loading properties from: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 19:14:21.531 [Test worker] INFO  dibimbing.core.ConfigReader - Loaded properties: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 19:14:21.531 [Test worker] INFO  dibimbing.tests.base.BaseTest - Loaded config env: staging
+2026-01-17 19:14:27.216 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.LoginPage - Logging in with email: arwendymelyn@dibimbing.id
+2026-01-17 19:14:29.069 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Verify Employee & Training menu visible
+2026-01-17 19:14:30.154 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Clik training menu
+2026-01-17 19:14:30.203 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Verify Training List page loaded
+2026-01-17 19:14:31.788 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Click Add Training button
+2026-01-17 19:14:31.859 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Verify Add Training modal visible
+2026-01-17 19:14:31.893 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Fill Training form
+2026-01-17 19:14:31.894 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Input Training Name: TRN_EDIT_SEED_343355930206083
+2026-01-17 19:14:32.033 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Input Training Description
+2026-01-17 19:14:32.182 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Click Confirm Add Training
+2026-01-17 19:14:32.262 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.components.ToastComponent - Check toast visible: Success create program
+2026-01-17 19:14:32.810 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Open training detail by name: TRN_EDIT_SEED_343355930206083
+2026-01-17 19:14:32.810 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Search training by keyword: TRN_EDIT_SEED_343355930206083
+2026-01-17 19:14:33.093 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.DetailTrainingPage - Verify Detail Training page loaded
+2026-01-17 19:22:00.758 [Test worker] INFO  dibimbing.core.ConfigReader - Loading properties from: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 19:22:00.759 [Test worker] INFO  dibimbing.core.ConfigReader - Loaded properties: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 19:22:00.760 [Test worker] INFO  dibimbing.tests.base.BaseTest - Loaded config env: staging
+2026-01-17 19:22:06.696 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.LoginPage - Logging in with email: arwendymelyn@dibimbing.id
+2026-01-17 19:22:07.530 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Verify Employee & Training menu visible
+2026-01-17 19:22:12.527 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Clik training menu
+2026-01-17 19:22:12.571 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Verify Training List page loaded
+2026-01-17 19:22:13.640 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Click Add Training button
+2026-01-17 19:22:13.722 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Verify Add Training modal visible
+2026-01-17 19:22:13.752 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Fill Training form
+2026-01-17 19:22:13.752 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Input Training Name: TRN_EDIT_SEED_343817782738458
+2026-01-17 19:22:13.912 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Input Training Description
+2026-01-17 19:22:14.046 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Click Confirm Add Training
+2026-01-17 19:22:14.113 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.components.ToastComponent - Check toast visible: Success create program
+2026-01-17 19:22:14.649 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Open training detail by name: TRN_EDIT_SEED_343817782738458
+2026-01-17 19:23:58.184 [Test worker] INFO  dibimbing.core.ConfigReader - Loading properties from: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 19:23:58.186 [Test worker] INFO  dibimbing.core.ConfigReader - Loaded properties: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 19:23:58.186 [Test worker] INFO  dibimbing.tests.base.BaseTest - Loaded config env: staging
+2026-01-17 19:24:02.998 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.LoginPage - Logging in with email: arwendymelyn@dibimbing.id
+2026-01-17 19:24:03.866 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Verify Employee & Training menu visible
+2026-01-17 19:24:05.062 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Clik training menu
+2026-01-17 19:24:05.129 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Verify Training List page loaded
+2026-01-17 19:24:05.396 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Click Add Training button
+2026-01-17 19:24:05.478 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Verify Add Training modal visible
+2026-01-17 19:24:05.510 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Fill Training form
+2026-01-17 19:24:05.510 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Input Training Name: TRN_EDIT_SEED_343929537999333
+2026-01-17 19:24:05.677 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Input Training Description
+2026-01-17 19:24:05.819 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Click Confirm Add Training
+2026-01-17 19:24:05.890 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.components.ToastComponent - Check toast visible: Success create program
+2026-01-17 19:24:06.428 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Open training detail by name: TRN_EDIT_SEED_343929537999333
+2026-01-17 19:24:06.843 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.DetailTrainingPage - Verify Detail Training page loaded
+2026-01-17 19:24:13.547 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.DetailTrainingPage - Click Edit/Update Training button
+2026-01-17 19:24:13.625 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.DetailTrainingPage - Verify Edit Training form visible
+2026-01-17 19:24:13.655 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.DetailTrainingPage - Clear Training Name
+2026-01-17 19:24:13.772 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.DetailTrainingPage - Update Training Name: TRN_EDIT_SEED_343929537999333_UPD
+2026-01-17 19:24:13.902 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.DetailTrainingPage - Clear Training Desc
+2026-01-17 19:24:14.041 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.DetailTrainingPage - Update Training Desc
+2026-01-17 19:24:14.168 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.DetailTrainingPage - Click Save Edit Training
+2026-01-17 19:24:14.232 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.components.ToastComponent - Check toast visible: Success update program
+2026-01-17 19:24:14.768 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.components.ToastComponent - Get toast text: Success update program
+2026-01-17 19:24:29.391 [Test worker] INFO  dibimbing.core.ConfigReader - Loading properties from: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 19:24:29.393 [Test worker] INFO  dibimbing.core.ConfigReader - Loaded properties: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 19:24:29.394 [Test worker] INFO  dibimbing.tests.base.BaseTest - Loaded config env: staging
+2026-01-17 19:24:32.477 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.LoginPage - Logging in with email: arwendymelyn@dibimbing.id
+2026-01-17 19:24:33.867 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Verify Employee & Training menu visible
+2026-01-17 19:24:34.948 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Clik training menu
+2026-01-17 19:24:35.002 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Verify Training List page loaded
+2026-01-17 19:24:36.167 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Click Add Training button
+2026-01-17 19:24:36.248 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Verify Add Training modal visible
+2026-01-17 19:24:36.278 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Fill Training form
+2026-01-17 19:24:36.278 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Input Training Name: TRN_EDIT_SEED_343960308705000
+2026-01-17 19:24:36.426 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Input Training Description
+2026-01-17 19:24:36.565 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Click Confirm Add Training
+2026-01-17 19:24:36.631 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.components.ToastComponent - Check toast visible: Success create program
+2026-01-17 19:24:37.178 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Open training detail by name: TRN_EDIT_SEED_343960308705000
+2026-01-17 19:24:37.597 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.DetailTrainingPage - Verify Detail Training page loaded
+2026-01-17 19:34:44.435 [Test worker] INFO  dibimbing.core.ConfigReader - Loading properties from: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 19:34:44.437 [Test worker] INFO  dibimbing.core.ConfigReader - Loaded properties: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 19:34:44.437 [Test worker] INFO  dibimbing.tests.base.BaseTest - Loaded config env: staging
+2026-01-17 19:34:51.168 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.LoginPage - Logging in with email: arwendymelyn@dibimbing.id
+2026-01-17 19:34:52.019 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Verify Employee & Training menu visible
+2026-01-17 19:34:53.099 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Clik training menu
+2026-01-17 19:34:53.170 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Verify Training List page loaded
+2026-01-17 19:34:53.774 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Click Add Training button
+2026-01-17 19:34:53.864 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Verify Add Training modal visible
+2026-01-17 19:34:53.897 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Fill Training form
+2026-01-17 19:34:53.897 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Input Training Name: TRN_EDIT_SEED_344577913411291
+2026-01-17 19:34:54.033 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Input Training Description
+2026-01-17 19:34:54.195 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Click Confirm Add Training
+2026-01-17 19:34:54.279 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.components.ToastComponent - Check toast visible: Success create program
+2026-01-17 19:34:54.816 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Open training detail by name: TRN_EDIT_SEED_344577913411291
+2026-01-17 19:34:54.816 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Search training by keyword: TRN_EDIT_SEED_344577913411291
+2026-01-17 19:34:55.109 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.DetailTrainingPage - Verify Detail Training page loaded
+2026-01-17 19:35:16.240 [Test worker] INFO  dibimbing.core.ConfigReader - Loading properties from: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 19:35:16.241 [Test worker] INFO  dibimbing.core.ConfigReader - Loaded properties: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 19:35:16.241 [Test worker] INFO  dibimbing.tests.base.BaseTest - Loaded config env: staging
+2026-01-17 19:35:21.682 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.LoginPage - Logging in with email: arwendymelyn@dibimbing.id
+2026-01-17 19:35:22.018 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Verify Employee & Training menu visible
+2026-01-17 19:35:23.603 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Clik training menu
+2026-01-17 19:35:23.639 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Verify Training List page loaded
+2026-01-17 19:35:24.207 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Click Add Training button
+2026-01-17 19:35:24.308 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Verify Add Training modal visible
+2026-01-17 19:35:24.336 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Fill Training form
+2026-01-17 19:35:24.336 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Input Training Name: TRN_EDIT_SEED_344608346190333
+2026-01-17 19:35:24.478 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Input Training Description
+2026-01-17 19:35:24.617 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Click Confirm Add Training
+2026-01-17 19:35:24.689 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.components.ToastComponent - Check toast visible: Success create program
+2026-01-17 19:35:25.222 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Open training detail by name: TRN_EDIT_SEED_344608346190333
+2026-01-17 19:35:25.222 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Search training by keyword: TRN_EDIT_SEED_344608346190333
+2026-01-17 19:35:25.516 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.DetailTrainingPage - Verify Detail Training page loaded
+2026-01-17 19:36:09.892 [Test worker] INFO  dibimbing.core.ConfigReader - Loading properties from: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 19:36:09.893 [Test worker] INFO  dibimbing.core.ConfigReader - Loaded properties: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 19:36:09.893 [Test worker] INFO  dibimbing.tests.base.BaseTest - Loaded config env: staging
+2026-01-17 19:36:12.069 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.LoginPage - Logging in with email: arwendymelyn@dibimbing.id
+2026-01-17 19:36:14.932 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Verify Employee & Training menu visible
+2026-01-17 19:36:16.591 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Clik training menu
+2026-01-17 19:36:16.668 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Verify Training List page loaded
+2026-01-17 19:36:17.273 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Click Add Training button
+2026-01-17 19:36:17.388 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Verify Add Training modal visible
+2026-01-17 19:36:17.445 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Fill Training form
+2026-01-17 19:36:17.446 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Input Training Name: TRN_EDIT_SEED_344661412285333
+2026-01-17 19:36:17.673 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Input Training Description
+2026-01-17 19:36:17.967 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Click Confirm Add Training
+2026-01-17 19:36:18.130 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.components.ToastComponent - Check toast visible: Success create program
+2026-01-17 19:36:18.867 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Open training detail by name: TRN_EDIT_SEED_344661412285333
+2026-01-17 19:36:18.867 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Search training by keyword: TRN_EDIT_SEED_344661412285333
+2026-01-17 19:36:19.289 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.DetailTrainingPage - Verify Detail Training page loaded
+2026-01-17 19:41:02.709 [Test worker] INFO  dibimbing.core.ConfigReader - Loading properties from: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 19:41:02.711 [Test worker] INFO  dibimbing.core.ConfigReader - Loaded properties: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 19:41:02.711 [Test worker] INFO  dibimbing.tests.base.BaseTest - Loaded config env: staging
+2026-01-17 19:41:08.536 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.LoginPage - Logging in with email: arwendymelyn@dibimbing.id
+2026-01-17 19:41:08.848 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Verify Employee & Training menu visible
+2026-01-17 19:41:10.460 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Clik training menu
+2026-01-17 19:41:10.531 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Verify Training List page loaded
+2026-01-17 19:41:10.579 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Click Add Training button
+2026-01-17 19:41:10.688 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Verify Add Training modal visible
+2026-01-17 19:41:10.713 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Fill Training form
+2026-01-17 19:41:10.713 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Input Training Name: TRN_EDIT_SEED_344954717576708
+2026-01-17 19:41:10.876 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Input Training Description
+2026-01-17 19:41:11.013 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Click Confirm Add Training
+2026-01-17 19:41:11.081 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.components.ToastComponent - Check toast visible: Success create program
+2026-01-17 19:41:11.630 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Open training detail by name (top result): TRN_EDIT_SEED_344954717576708
+2026-01-17 19:41:11.630 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Search training by keyword: TRN_EDIT_SEED_344954717576708
+2026-01-17 19:41:11.896 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Clicked Detail on top search result
+2026-01-17 19:41:11.896 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.DetailTrainingPage - Verify Detail Training page loaded
+2026-01-17 19:44:31.201 [Test worker] INFO  dibimbing.core.ConfigReader - Loading properties from: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 19:44:31.202 [Test worker] INFO  dibimbing.core.ConfigReader - Loaded properties: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 19:44:31.202 [Test worker] INFO  dibimbing.tests.base.BaseTest - Loaded config env: staging
+2026-01-17 19:44:35.133 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.LoginPage - Logging in with email: arwendymelyn@dibimbing.id
+2026-01-17 19:44:35.961 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Verify Employee & Training menu visible
+2026-01-17 19:44:37.031 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Clik training menu
+2026-01-17 19:44:37.083 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Verify Training List page loaded
+2026-01-17 19:44:37.658 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Click Add Training button
+2026-01-17 19:44:37.741 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Verify Add Training modal visible
+2026-01-17 19:44:37.776 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Fill Training form
+2026-01-17 19:44:37.776 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Input Training Name: TRN_EDIT_SEED_345161795345083
+2026-01-17 19:44:37.914 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Input Training Description
+2026-01-17 19:44:38.041 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Click Confirm Add Training
+2026-01-17 19:44:38.106 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.components.ToastComponent - Check toast visible: Success create program
+2026-01-17 19:44:38.643 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Open training detail by name (top result): TRN_EDIT_SEED_345161795345083
+2026-01-17 19:44:38.643 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Search training by keyword: TRN_EDIT_SEED_345161795345083
+2026-01-17 19:46:32.306 [Test worker] INFO  dibimbing.core.ConfigReader - Loading properties from: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 19:46:32.307 [Test worker] INFO  dibimbing.core.ConfigReader - Loaded properties: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 19:46:32.307 [Test worker] INFO  dibimbing.tests.base.BaseTest - Loaded config env: staging
+2026-01-17 19:46:41.563 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.LoginPage - Logging in with email: arwendymelyn@dibimbing.id
+2026-01-17 19:46:42.398 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Verify Employee & Training menu visible
+2026-01-17 19:46:43.543 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Clik training menu
+2026-01-17 19:46:43.599 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Verify Training List page loaded
+2026-01-17 19:46:45.196 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Click Add Training button
+2026-01-17 19:46:45.291 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Verify Add Training modal visible
+2026-01-17 19:46:45.316 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Fill Training form
+2026-01-17 19:46:45.316 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Input Training Name: TRN_EDIT_SEED_345289333380583
+2026-01-17 19:46:45.461 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Input Training Description
+2026-01-17 19:46:45.605 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Click Confirm Add Training
+2026-01-17 19:46:45.685 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.components.ToastComponent - Verify toast visible: Success create program
+2026-01-17 19:46:46.213 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Open training detail by name (top result): TRN_EDIT_SEED_345289333380583
+2026-01-17 19:46:46.213 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Search training by keyword: TRN_EDIT_SEED_345289333380583
+2026-01-17 19:47:57.347 [Test worker] INFO  dibimbing.core.ConfigReader - Loading properties from: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 19:47:57.348 [Test worker] INFO  dibimbing.core.ConfigReader - Loaded properties: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 19:47:57.348 [Test worker] INFO  dibimbing.tests.base.BaseTest - Loaded config env: staging
+2026-01-17 19:48:01.242 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.LoginPage - Logging in with email: arwendymelyn@dibimbing.id
+2026-01-17 19:48:02.600 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Verify Employee & Training menu visible
+2026-01-17 19:48:03.162 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Clik training menu
+2026-01-17 19:48:03.223 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Verify Training List page loaded
+2026-01-17 19:48:03.776 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Click Add Training button
+2026-01-17 19:48:03.856 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Verify Add Training modal visible
+2026-01-17 19:48:03.884 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Fill Training form
+2026-01-17 19:48:03.885 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Input Training Name: TRN_EDIT_SEED_345367913328958
+2026-01-17 19:48:04.033 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Input Training Description
+2026-01-17 19:48:04.170 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Click Confirm Add Training
+2026-01-17 19:48:04.237 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.components.ToastComponent - Verify toast visible: Success create program
+2026-01-17 19:48:04.784 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Open training detail by name (top result): TRN_EDIT_SEED_345367913328958
+2026-01-17 19:48:04.784 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Search training by keyword: TRN_EDIT_SEED_345367913328958
+2026-01-17 19:48:05.073 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Clicked Detail on top search result
+2026-01-17 19:48:05.073 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.DetailTrainingPage - Verify Detail Training page loaded
+2026-01-17 20:02:01.623 [Test worker] INFO  dibimbing.core.ConfigReader - Loading properties from: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 20:02:01.625 [Test worker] INFO  dibimbing.core.ConfigReader - Loaded properties: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 20:02:01.625 [Test worker] INFO  dibimbing.tests.base.BaseTest - Loaded config env: staging
+2026-01-17 20:02:05.199 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.LoginPage - Logging in with email: arwendymelyn@dibimbing.id
+2026-01-17 20:02:06.029 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Verify Employee & Training menu visible
+2026-01-17 20:02:07.104 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Clik training menu
+2026-01-17 20:02:07.164 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Verify Training List page loaded
+2026-01-17 20:02:07.270 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Click Add Training button
+2026-01-17 20:02:07.367 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Verify Add Training modal visible
+2026-01-17 20:02:07.399 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Fill Training form
+2026-01-17 20:02:07.399 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Input Training Name: TRN_EDIT_SEED_346211405814500
+2026-01-17 20:02:07.540 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Input Training Description
+2026-01-17 20:02:07.678 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Click Confirm Add Training
+2026-01-17 20:02:07.746 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.components.ToastComponent - Verify toast visible: Success create program
+2026-01-17 20:02:08.286 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Open training detail (top result) by keyword: TRN_EDIT_SEED_346211405814500
+2026-01-17 20:02:08.286 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Search training by keyword: TRN_EDIT_SEED_346211405814500
+2026-01-17 20:02:08.613 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Clicked Detail on top search result
+2026-01-17 20:02:08.613 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.DetailTrainingPage - Verify Detail Training page loaded
+2026-01-17 20:02:38.788 [Test worker] INFO  dibimbing.core.ConfigReader - Loading properties from: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 20:02:38.790 [Test worker] INFO  dibimbing.core.ConfigReader - Loaded properties: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 20:02:38.790 [Test worker] INFO  dibimbing.tests.base.BaseTest - Loaded config env: staging
+2026-01-17 20:02:42.144 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.LoginPage - Logging in with email: arwendymelyn@dibimbing.id
+2026-01-17 20:02:43.527 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Verify Employee & Training menu visible
+2026-01-17 20:02:44.603 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Clik training menu
+2026-01-17 20:02:44.683 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Verify Training List page loaded
+2026-01-17 20:02:44.757 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Click Add Training button
+2026-01-17 20:02:44.834 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Verify Add Training modal visible
+2026-01-17 20:02:44.862 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Fill Training form
+2026-01-17 20:02:44.862 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Input Training Name: TRN_EDIT_SEED_346248892335500
+2026-01-17 20:02:45.006 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Input Training Description
+2026-01-17 20:02:45.154 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Click Confirm Add Training
+2026-01-17 20:02:45.220 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.components.ToastComponent - Verify toast visible: Success create program
+2026-01-17 20:02:45.768 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Open training detail (top result) by keyword: TRN_EDIT_SEED_346248892335500
+2026-01-17 20:02:45.769 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Search training by keyword: TRN_EDIT_SEED_346248892335500
+2026-01-17 20:02:46.047 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Clicked Detail on top search result
+2026-01-17 20:02:46.047 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.DetailTrainingPage - Verify Detail Training page loaded
+2026-01-17 20:02:52.240 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.DetailTrainingPage - Click Edit/Update Training button
+2026-01-17 20:02:52.814 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.DetailTrainingPage - Verify Edit Training form visible
+2026-01-17 20:02:52.838 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.DetailTrainingPage - Clear Training Name
+2026-01-17 20:02:52.938 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.DetailTrainingPage - Update Training Name: TRN_EDIT_SEED_346248892335500_UPD
+2026-01-17 20:02:53.055 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.DetailTrainingPage - Clear Training Desc
+2026-01-17 20:02:53.154 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.DetailTrainingPage - Update Training Desc
+2026-01-17 20:02:53.261 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.DetailTrainingPage - Click Save Edit Training
+2026-01-17 20:02:53.321 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.components.ToastComponent - Check toast visible: Success update program
+2026-01-17 20:02:53.852 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.components.ToastComponent - Get toast text: Success update program
+2026-01-17 20:02:57.352 [Test worker] INFO  dibimbing.core.ConfigReader - Loading properties from: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 20:02:57.354 [Test worker] INFO  dibimbing.core.ConfigReader - Loaded properties: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 20:02:57.354 [Test worker] INFO  dibimbing.tests.base.BaseTest - Loaded config env: staging
+2026-01-17 20:02:59.802 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.LoginPage - Logging in with email: arwendymelyn@dibimbing.id
+2026-01-17 20:03:01.206 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Verify Employee & Training menu visible
+2026-01-17 20:03:01.785 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Clik training menu
+2026-01-17 20:03:01.841 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Verify Training List page loaded
+2026-01-17 20:03:01.944 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Click Add Training button
+2026-01-17 20:03:02.021 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Verify Add Training modal visible
+2026-01-17 20:03:02.050 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Fill Training form
+2026-01-17 20:03:02.050 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Input Training Name: TRN_EDIT_SEED_346266079786083
+2026-01-17 20:03:02.189 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Input Training Description
+2026-01-17 20:03:02.337 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Click Confirm Add Training
+2026-01-17 20:03:02.405 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.components.ToastComponent - Verify toast visible: Success create program
+2026-01-17 20:03:02.943 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Open training detail (top result) by keyword: TRN_EDIT_SEED_346266079786083
+2026-01-17 20:03:02.943 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Search training by keyword: TRN_EDIT_SEED_346266079786083
+2026-01-17 20:03:03.213 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Clicked Detail on top search result
+2026-01-17 20:03:03.213 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.DetailTrainingPage - Verify Detail Training page loaded
+2026-01-17 20:11:13.949 [Test worker] INFO  dibimbing.core.ConfigReader - Loading properties from: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 20:11:13.950 [Test worker] INFO  dibimbing.core.ConfigReader - Loaded properties: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 20:11:13.950 [Test worker] INFO  dibimbing.tests.base.BaseTest - Loaded config env: staging
+2026-01-17 20:11:18.606 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.LoginPage - Logging in with email: arwendymelyn@dibimbing.id
+2026-01-17 20:11:19.440 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Verify Employee & Training menu visible
+2026-01-17 20:11:20.525 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Clik training menu
+2026-01-17 20:11:20.588 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Verify Training List page loaded
+2026-01-17 20:11:21.143 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Click Add Training button
+2026-01-17 20:11:21.215 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Verify Add Training modal visible
+2026-01-17 20:11:21.240 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Fill Training form
+2026-01-17 20:11:21.240 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Input Training Name: TRN_EDIT_SEED_346765270301166
+2026-01-17 20:11:21.379 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Input Training Description
+2026-01-17 20:11:21.516 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Click Confirm Add Training
+2026-01-17 20:11:21.586 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.components.ToastComponent - Verify toast visible: Success create program
+2026-01-17 20:11:22.130 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Open training detail (top result) by keyword: TRN_EDIT_SEED_346765270301166
+2026-01-17 20:11:22.130 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Search training by keyword: TRN_EDIT_SEED_346765270301166
+2026-01-17 20:11:22.395 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Clicked Detail on top search result
+2026-01-17 20:11:22.395 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Click Detail Training paling atas
+2026-01-17 20:11:22.450 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.DetailTrainingPage - Verify Detail Training page loaded
+2026-01-17 20:19:38.958 [Test worker] INFO  dibimbing.core.ConfigReader - Loading properties from: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 20:19:38.959 [Test worker] INFO  dibimbing.core.ConfigReader - Loaded properties: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 20:19:38.959 [Test worker] INFO  dibimbing.tests.base.BaseTest - Loaded config env: staging
+2026-01-17 20:19:43.782 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.LoginPage - Logging in with email: arwendymelyn@dibimbing.id
+2026-01-17 20:19:44.627 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Verify Employee & Training menu visible
+2026-01-17 20:19:47.769 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Clik training menu
+2026-01-17 20:19:47.838 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Verify Training List page loaded
+2026-01-17 20:19:47.884 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Click Add Training button
+2026-01-17 20:19:47.966 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Verify Add Training modal visible
+2026-01-17 20:19:47.991 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Fill Training form
+2026-01-17 20:19:47.991 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Input Training Name: TRN_EDIT_SEED_347272008945916
+2026-01-17 20:19:48.158 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Input Training Description
+2026-01-17 20:19:48.289 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Click Confirm Add Training
+2026-01-17 20:19:48.354 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.components.ToastComponent - Verify toast visible: Success create program
+2026-01-17 20:19:48.891 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Search training by keyword: TRN_EDIT_SEED_347272008945916
+2026-01-17 20:19:49.158 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Verify search result row displayed
+2026-01-17 20:19:49.182 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Verify top search result contains keyword: TRN_EDIT_SEED_347272008945916
+2026-01-17 20:19:49.205 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Click Detail on top search result
+2026-01-17 20:19:49.784 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Success click Detail, URL changed
+2026-01-17 20:19:49.784 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.DetailTrainingPage - Verify Detail Training page loaded
+2026-01-17 20:21:20.121 [Test worker] INFO  dibimbing.core.ConfigReader - Loading properties from: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 20:21:20.122 [Test worker] INFO  dibimbing.core.ConfigReader - Loaded properties: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 20:21:20.122 [Test worker] INFO  dibimbing.tests.base.BaseTest - Loaded config env: staging
+2026-01-17 20:21:24.984 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.LoginPage - Logging in with email: arwendymelyn@dibimbing.id
+2026-01-17 20:21:25.346 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Verify Employee & Training menu visible
+2026-01-17 20:21:27.135 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Clik training menu
+2026-01-17 20:21:27.215 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Verify Training List page loaded
+2026-01-17 20:21:27.319 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Click Add Training button
+2026-01-17 20:21:27.459 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Verify Add Training modal visible
+2026-01-17 20:21:27.504 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Fill Training form
+2026-01-17 20:21:27.504 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Input Training Name: TRN_EDIT_SEED_347371443887916
+2026-01-17 20:21:27.650 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Input Training Description
+2026-01-17 20:21:27.780 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Click Confirm Add Training
+2026-01-17 20:21:27.848 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.components.ToastComponent - Verify toast visible: Success create program
+2026-01-17 20:21:28.380 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Search training by keyword: TRN_EDIT_SEED_347371443887916
+2026-01-17 20:21:28.645 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Verify search result row displayed
+2026-01-17 20:21:28.666 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Verify top search result contains keyword: TRN_EDIT_SEED_347371443887916
+2026-01-17 20:21:28.690 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Click Detail on top search result
+2026-01-17 20:21:29.264 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Success click Detail, URL changed
+2026-01-17 20:21:29.265 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.DetailTrainingPage - Verify Detail Training page loaded
+2026-01-17 20:24:33.552 [Test worker] INFO  dibimbing.core.ConfigReader - Loading properties from: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 20:24:33.553 [Test worker] INFO  dibimbing.core.ConfigReader - Loaded properties: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 20:24:33.553 [Test worker] INFO  dibimbing.tests.base.BaseTest - Loaded config env: staging
+2026-01-17 20:24:37.554 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.LoginPage - Logging in with email: arwendymelyn@dibimbing.id
+2026-01-17 20:24:38.411 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Verify Employee & Training menu visible
+2026-01-17 20:24:39.491 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Clik training menu
+2026-01-17 20:24:39.539 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Verify Training List page loaded
+2026-01-17 20:24:39.633 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Click Add Training button
+2026-01-17 20:24:39.710 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Verify Add Training modal visible
+2026-01-17 20:24:39.744 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Fill Training form
+2026-01-17 20:24:39.744 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Input Training Name: TRN_EDIT_SEED_347563756301791
+2026-01-17 20:24:39.892 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Input Training Description
+2026-01-17 20:24:40.029 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Click Confirm Add Training
+2026-01-17 20:24:40.117 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.components.ToastComponent - Verify toast visible: Success create program
+2026-01-17 20:24:40.652 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Search training by keyword: TRN_EDIT_SEED_347563756301791
+2026-01-17 20:24:40.904 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Verify search result row displayed
+2026-01-17 20:24:40.925 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Verify top search result contains keyword: TRN_EDIT_SEED_347563756301791
+2026-01-17 20:24:40.948 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Click Detail on top search result
+2026-01-17 20:24:41.518 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.TrainingListPage - Success click Detail, URL changed
+2026-01-17 20:24:41.519 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.training.DetailTrainingPage - Verify Detail Training page loaded
+2026-01-17 20:34:22.744 [Test worker] INFO  dibimbing.core.ConfigReader - Loading properties from: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 20:34:22.746 [Test worker] INFO  dibimbing.core.ConfigReader - Loaded properties: /Users/admin/IdeaProjects/Assignment/dibimbing-lms-ui-automation-employee-training/src/test/resources/config/staging.properties
+2026-01-17 20:34:22.747 [Test worker] INFO  dibimbing.tests.base.BaseTest - Loaded config env: staging
+2026-01-17 20:34:26.261 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.LoginPage - Logging in with email: arwendymelyn@dibimbing.id
+2026-01-17 20:34:27.106 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Verify Employee & Training menu visible
+2026-01-17 20:34:29.730 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.DashboardPage - Clik employee menu
+2026-01-17 20:34:29.774 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Click Division tab
+2026-01-17 20:34:31.397 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Verify Division tab visible
+2026-01-17 20:34:31.416 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Click Add Division button
+2026-01-17 20:34:31.995 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Verify Add Division modal visible
+2026-01-17 20:34:32.062 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Fill Division form
+2026-01-17 20:34:32.062 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Input Division Name: DIV_DEL_SEED_348155537140375
+2026-01-17 20:34:32.166 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Input Division Description: Division delete seed 348155537140375
+2026-01-17 20:34:32.274 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Click Save Add Division
+2026-01-17 20:34:32.341 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.components.ToastComponent - Verify toast visible: Success create division
+2026-01-17 20:34:32.875 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Open division detail by name: DIV_DEL_SEED_348155537140375
+2026-01-17 20:34:32.875 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DivisionPage - Search division by keyword: DIV_DEL_SEED_348155537140375
+2026-01-17 20:34:34.633 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DetailDivisionPage - Verify Detail Division page loaded
+2026-01-17 20:34:35.167 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DetailDivisionPage - Click Edit Division button
+2026-01-17 20:34:35.227 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DetailDivisionPage - Click Delete Division button
+2026-01-17 20:34:35.792 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.division.DetailDivisionPage - Confirm delete division
+2026-01-17 20:34:35.849 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.components.ToastComponent - Check toast visible: Success delete division
+2026-01-17 20:34:36.382 [TestNG-test-RegressionTests-1] INFO  dibimbing.pages.components.ToastComponent - Get toast text: Success delete division

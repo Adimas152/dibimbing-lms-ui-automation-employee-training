@@ -30,6 +30,12 @@ public class ToastComponent extends BasePage {
     @FindBy(xpath = "//p[contains(text(),'Success delete division')]")
     private WebElement toastSuccessDeleteDivision;
 
+    @FindBy(xpath = "//p[contains(text(),'Success create program')]")
+    private WebElement toastSuccessCreateProgram;
+
+    @FindBy(xpath = "//p[contains(text(),'Success update program')]")
+    private WebElement toastSuccessUpdateProgram;
+
     // ===== ERROR/FAILED TOASTS =====
     @FindBy(xpath = "//p[normalize-space()='Harap isi field yang wajib diisi.']")
     private WebElement toastErrorCreateEmployeeRequiredFields;
@@ -96,6 +102,16 @@ public class ToastComponent extends BasePage {
         return getText(toastSuccessDeleteDivision);
     }
 
+    public String getSuccessCreateProgramText() {
+        log.info("Get toast text: Success create program");
+        return getText(toastSuccessCreateProgram);
+    }
+
+    public String getSuccessUpdateProgramText() {
+        log.info("Get toast text: Success update program");
+        return getText(toastSuccessUpdateProgram);
+    }
+
     /* =========================
        VERIFICATION METHODS
        ========================= */
@@ -124,6 +140,15 @@ public class ToastComponent extends BasePage {
                 "Toast success create division tidak tampil");
     }
 
+    public void verifySuccessUpdateProgramVisible() {
+        log.info("Verify toast visible: Success update program");
+        Assert.assertTrue(
+                waitForVisibility(toastSuccessUpdateProgram).isDisplayed(),
+                "Toast success update program tidak tampil"
+        );
+    }
+
+
     public void verifySuccessUpdateDivisionVisible() {
         log.info("Verify toast visible: Success update division");
         Assert.assertTrue(waitForVisibility(toastSuccessUpdateDivision).isDisplayed(),
@@ -150,6 +175,14 @@ public class ToastComponent extends BasePage {
         log.info("Verify toast visible: Required fields error");
         Assert.assertTrue(waitForVisibility(toastErrorCreateEmployeeRequiredFields).isDisplayed(),
                 "Toast error required fields tidak tampil");
+    }
+
+    public void verifySuccessCreateProgramVisible() {
+        log.info("Verify toast visible: Success create program");
+        Assert.assertTrue(
+                waitForVisibility(toastSuccessCreateProgram).isDisplayed(),
+                "Toast success create program tidak tampil"
+        );
     }
 
     public boolean isSuccessCreateEmployeeToastVisible() {
@@ -190,6 +223,17 @@ public class ToastComponent extends BasePage {
         log.info("Check toast visible: Please fill required field");
         return isDisplayed( toastErrorUpdateEmployeeRequiredFields);
     }
+
+    public boolean isSuccessCreateProgramToastVisible() {
+        log.info("Check toast visible: Success create program");
+        return isDisplayed(toastSuccessCreateProgram);
+    }
+
+    public boolean isSuccessUpdateProgramToastVisible() {
+        log.info("Check toast visible: Success update program");
+        return isDisplayed(toastSuccessUpdateProgram);
+    }
+
 
 
 }

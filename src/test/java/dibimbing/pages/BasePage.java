@@ -1,9 +1,6 @@
 package dibimbing.pages;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -77,5 +74,18 @@ public class BasePage {
 
         element.sendKeys(cmdCtrl, "a");
         element.sendKeys(Keys.BACK_SPACE);
+    }
+
+    public WebElement waitForClickable(By locator) {
+        return new WebDriverWait(driver, Duration.ofSeconds(10))
+                .until(ExpectedConditions.elementToBeClickable(locator));
+    }
+
+    protected void scrollToElement(WebElement el) {
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block:'center'});", el);
+    }
+
+    protected void jsClick(WebElement el) {
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", el);
     }
 }
