@@ -123,9 +123,10 @@ public class TrainingListPage extends BasePage {
         trainingSearchInput.clear();
         trainingSearchInput.sendKeys(keyword);
 
-        // verify tengah: hasil search (row paling atas) muncul
+        // verify tengah: hasil search (row paling atas) muncul & terfilter
         log.info("Verify search result row displayed");
         waitForVisibility(topRow);
+        wait.until(ExpectedConditions.textToBePresentInElementLocated(topRowTrainingNameCell, keyword));
         Assert.assertTrue(driver.findElement(topRow).isDisplayed(),
                 "Hasil search training tidak muncul");
     }
@@ -167,6 +168,33 @@ public class TrainingListPage extends BasePage {
         searchTrainingByName(keyword);
         verifyTopSearchResultContains(keyword); // optional, kalau keyword full name
         clickDetailTrainingTopResult();
+    }
+
+    public void clickDetailTrainingByName(String trainingName) {
+        log.info("Click Detail by training name: {}", trainingName);
+
+        searchTrainingByName(trainingName);
+
+        By rowByName = By.xpath(String.format("//tbody/tr[td[1][contains(normalize-space(), '%s')]]", trainingName));
+        By detailButtonByName = By.xpath(String.format(
+                "//tbody/tr[td[1][contains(normalize-space(), '%s')]]//button[contains(@id,'button-detail-training')]",
+                trainingName));
+
+        waitForVisibility(rowByName);
+        WebElement detailButton = wait.until(ExpectedConditions.elementToBeClickable(detailButtonByName));
+        scrollToElement(detailButton);
+
+        String beforeUrl = driver.getCurrentUrl();
+
+        try {
+            detailButton.click();
+        } catch (Exception e) {
+            log.warn("Normal click failed, fallback to JS click. Reason: {}", e.getMessage());
+            jsClick(detailButton);
+        }
+
+        wait.until(ExpectedConditions.not(ExpectedConditions.urlToBe(beforeUrl)));
+        log.info("Success click Detail by training name, URL changed");
     }
 
 
@@ -228,4 +256,3 @@ public class TrainingListPage extends BasePage {
         return getText(trainingNameRequiredMsg);
     }
 }
-

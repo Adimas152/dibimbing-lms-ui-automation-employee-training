@@ -113,9 +113,7 @@ public class TrainingTests extends BaseTest {
 
         // ===== Open detail training by name =====
         // trainingListPage.openTrainingDetailByName(trainingName);
-        trainingListPage.searchTrainingByName(trainingName);
-        trainingListPage.verifyTopSearchResultContains(trainingName); // kalau pakai fullName
-        trainingListPage.clickDetailTrainingTopResult();
+        trainingListPage.clickDetailTrainingByName(trainingName);
 
         detailTrainingPage.verifyDetailTrainingPageLoaded();
 
