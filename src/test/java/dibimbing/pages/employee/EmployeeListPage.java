@@ -1,22 +1,16 @@
 package dibimbing.pages.employee;
 
-import dibimbing.pages.BasePage;
+import dibimbing.pages.base.BasePage;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-
-import java.time.Duration;
 
 public class EmployeeListPage extends BasePage {
     private static final Logger log = LogManager.getLogger(EmployeeListPage.class);
-
-    /* ================= TAB & HEADER ================= */
 
     @FindBy(id = "tabs-admin-employee--tab-0")
     private WebElement employeeListTab;
@@ -24,12 +18,8 @@ public class EmployeeListPage extends BasePage {
     @FindBy(id = "employee-list-count")
     private WebElement employeeCountBadge;
 
-    /* ================= SEARCH ================= */
-
-    @FindBy(xpath = "//*[@id=\"input-admin-employee-search\"]/input")
+    @FindBy(id = "input-admin-employee-search")
     private WebElement employeeSearchInput;
-
-    /* ================= FILTER ================= */
 
     @FindBy(xpath = "//p[text()='Filter by Angkatan']")
     private WebElement angkatanFilterDropdown;
@@ -46,8 +36,6 @@ public class EmployeeListPage extends BasePage {
     @FindBy(xpath = "(//button[@role='menuitem' and normalize-space()='2025 Genap'])[1]")
     private WebElement angkatanFilterOption2025Genap;
 
-    /* ================= ACTION DROPDOWN ================= */
-
     @FindBy(id = "menu-button-admin-employee-action")
     private WebElement actionDropdownButton;
 
@@ -60,26 +48,18 @@ public class EmployeeListPage extends BasePage {
     @FindBy(xpath = "//button[@role='menuitem' and @data-action='transfer']")
     private WebElement transferEmployeeMenuItem;
 
-    /* ================= BUTTON ADD EMPLOYEE================= */
-
     @FindBy(id = "button-add-employee")
     private WebElement addEmployeeButton;
-
-    /* ================= CONSTRUCTOR ================= */
 
     public EmployeeListPage(WebDriver driver) {
         super(driver);
     }
-
-    /* ================= VERIFICATION ================= */
 
     public void verifyEmployeeListPageLoaded() {
         log.info("Verify Employee List Page loaded");
         Assert.assertTrue(isDisplayed(employeeListTab), "Employee List tab tidak tampil");
         Assert.assertTrue(isDisplayed(addEmployeeButton), "Button Add Employee tidak tampil");
     }
-
-    /* ================= ACTION ================= */
 
     public void clickAddEmployee() {
         log.info("Click Add Employee button");
@@ -111,8 +91,6 @@ public class EmployeeListPage extends BasePage {
         click(transferEmployeeMenuItem);
     }
 
-    /* ================= FILTER ================= */
-
     public void selectAngkatan(String angkatan) {
         log.info("Select angkatan: {}", angkatan);
         click(angkatanFilterDropdown);
@@ -123,8 +101,6 @@ public class EmployeeListPage extends BasePage {
 
         click(option);
     }
-
-    /* ================= DATA ================= */
 
     public String getEmployeeCountBadge() {
         return getText(employeeCountBadge);

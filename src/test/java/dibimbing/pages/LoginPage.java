@@ -1,7 +1,7 @@
 package dibimbing.pages;
 
 
-import dibimbing.core.ConfigReader;
+import dibimbing.pages.base.BasePage;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
@@ -34,12 +34,16 @@ public class LoginPage extends BasePage {
         log.info("Logging in with email: {}", email);
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOf(emailInput));
+
         emailInput.clear();
         emailInput.sendKeys(email);
+
         passwordInput.clear();
         passwordInput.sendKeys(password);
+
         loginButton.click();
     }
+
 
     // overload: tinggal panggil loginPage.login()
     public void login(Properties config) {

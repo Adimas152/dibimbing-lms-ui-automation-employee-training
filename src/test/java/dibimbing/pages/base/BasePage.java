@@ -1,4 +1,4 @@
-package dibimbing.pages;
+package dibimbing.pages.base;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.PageFactory;
@@ -38,6 +38,13 @@ public class BasePage {
         waitForClickable(element).click();
     }
 
+    // Overloaded click method for already located WebElement
+    protected void clickBtn(WebElement element) {
+        wait.until(ExpectedConditions.elementToBeClickable(element));
+        element.click();
+    }
+
+
     protected void type(WebElement element, String text) {
         waitForVisibility(element);
         element.clear();
@@ -76,16 +83,13 @@ public class BasePage {
         element.sendKeys(Keys.BACK_SPACE);
     }
 
-    public WebElement waitForClickable(By locator) {
-        return new WebDriverWait(driver, Duration.ofSeconds(10))
-                .until(ExpectedConditions.elementToBeClickable(locator));
+    public void waitMillis(long millis) {
+        try {
+            Thread.sleep(millis);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+            throw new RuntimeException("Thread sleep interrupted", e);
+        }
     }
 
-    protected void scrollToElement(WebElement el) {
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block:'center'});", el);
-    }
-
-    protected void jsClick(WebElement el) {
-        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", el);
-    }
 }

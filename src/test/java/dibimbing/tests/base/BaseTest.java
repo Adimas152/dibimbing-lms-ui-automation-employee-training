@@ -7,31 +7,33 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.annotations.*;
 
-import java.util.Properties;
-
 public class BaseTest {
     private static final Logger log = LogManager.getLogger(BaseTest.class);
-    protected static Properties config;
 
     @BeforeSuite(alwaysRun = true)
     public void loadConfig() {
-        String env = System.getProperty("env"); // -Denv=staging
-        env = (env == null || env.isEmpty()) ? "staging" : env;
-        config = ConfigReader.loadProperties(env);
-        log.info("Loaded config env: {}", env);
+        log.info("BASE_URL loaded: {}", ConfigReader.get("BASE_URL"));
+        log.info("BROWSER loaded: {}", ConfigReader.getOrDefault("BROWSER", "chrome"));
     }
 
     @BeforeMethod(alwaysRun = true)
     @Parameters("browser")
-    public void setUp(@Optional("chrome") String browser) {
-        DriverManager.initDriver(browser);
+    public void setUp(@Optional("") String browser) {
+        String selectedBrowser = (browser != null && !browser.isBlank())
+                ? browser
+                : ConfigReader.getOrDefault("BROWSER", "chrome");
+
+        DriverManager.initDriver(selectedBrowser);
         DriverManager.getDriver().manage().window().maximize();
-        DriverManager.getDriver().get(config.getProperty("test.url"));
+        DriverManager.getDriver().get(ConfigReader.get("BASE_URL"));
     }
 
     protected void login() {
         LoginPage loginPage = new LoginPage(DriverManager.getDriver());
-        loginPage.login(config);
+        loginPage.login(
+                ConfigReader.get("EMAIL"),
+                ConfigReader.get("PASSWORD")
+        );
     }
 
     @AfterMethod(alwaysRun = true)

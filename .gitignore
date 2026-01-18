@@ -1,9 +1,19 @@
+# Test artifacts
+logs/
+reports/
+*.log
+*.png
+*.jpg
+*.jpeg
+*.webp
+
 .gradle
 build/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
 !**/src/test/**/build/
 .kotlin
+.env
 
 ### IntelliJ IDEA ###
 .idea/modules.xml

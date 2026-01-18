@@ -1,14 +1,12 @@
 package dibimbing.pages.training;
 
-import dibimbing.pages.BasePage;
-import dibimbing.pages.division.DetailDivisionPage;
+import dibimbing.pages.base.BasePage;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 
 public class TrainingListPage extends BasePage {
@@ -35,17 +33,31 @@ public class TrainingListPage extends BasePage {
     @FindBy(id = "title-feedback")
     private WebElement trainingNameRequiredMsg;
 
-    @FindBy(xpath = "//button[contains(@id,'button-detail-training')]")
-    private WebElement detailTrainingOne;
+    @FindBy(xpath = "//button[@id='button-detail-training-0']")
+    private WebElement btnDetailTrainingTopResult;
 
-    // ===== optional: row hasil paling atas (buat verify search result) =====
-    private final By topRow = By.xpath("//tbody/tr[1]");
-    private final By topRowTrainingNameCell = By.xpath("//tbody/tr[1]/td[1]"); // kolom training biasanya td pertama
+    @FindBy(xpath = "(//button[starts-with(@id,'button-detail-training-') and normalize-space()='Detail'])[1]")
+    private WebElement btnDetailTrainingFirst;
 
+    @FindBy(xpath = "(//tbody//tr)[1]")
+    private WebElement firstRow;
 
     public TrainingListPage(WebDriver driver) {
         super(driver);
     }
+
+    public void waitTrainingSearchResultLoaded() {
+        log.info("Wait training search result loaded");
+
+        // tunggu row pertama muncul (lebih stabil daripada nunggu tombol detail langsung)
+        waitForVisibility(firstRow);
+
+        // optional: pastikan tombol detail udah bisa diklik
+        waitForVisibility(btnDetailTrainingFirst);
+        waitForClickable(btnDetailTrainingFirst);
+    }
+
+
 
     public void verifyTrainingListPageLoaded() {
         log.info("Verify Training List page loaded");
@@ -63,9 +75,32 @@ public class TrainingListPage extends BasePage {
         );
     }
 
+    public void verifyDetailTrainingTopResultVisible() {
+        log.info("Verify Detail Training Top Result button visible");
+        Assert.assertTrue(
+                isDisplayed(btnDetailTrainingTopResult),
+                "Button Detail Training (top result) tidak tampil / elemen tidak muncul"
+        );
+    }
+
+
     /* =========================
        ACTIONS
        ========================= */
+
+    public void clickDetailTopSearchResult() {
+        log.info("Click Detail on top search result (index 0)");
+        waitForVisibility(btnDetailTrainingTopResult);
+        waitForClickable(btnDetailTrainingTopResult);
+        click(btnDetailTrainingTopResult);
+    }
+
+    public void clickv2DetailTopSearchResult() {
+        log.info("Click Detail on top search result (index 0) v2");
+        btnDetailTrainingTopResult.click();
+    }
+
+
 
     public void clickAddTraining() {
         log.info("Click Add Training button");
@@ -74,9 +109,8 @@ public class TrainingListPage extends BasePage {
 
     public void clickdetailTrainingOne() {
         log.info("Click Detail Training paling atas");
-        click(detailTrainingOne);
+        click(btnDetailTrainingTopResult);
     }
-
 
 
     public void clickConfirmAddTraining() {
@@ -113,101 +147,38 @@ public class TrainingListPage extends BasePage {
     /* =========================
        SEARCH
        ========================= */
-
     public void searchTrainingByName(String keyword) {
         log.info("Search training by keyword: {}", keyword);
-
-        // clear + type (lebih stabil dari type() biasa)
-        waitForVisibility(trainingSearchInput);
-        trainingSearchInput.click();
-        trainingSearchInput.clear();
-        trainingSearchInput.sendKeys(keyword);
-
-        // verify tengah: hasil search (row paling atas) muncul
-        log.info("Verify search result row displayed");
-        waitForVisibility(topRow);
-        Assert.assertTrue(driver.findElement(topRow).isDisplayed(),
-                "Hasil search training tidak muncul");
+        type(trainingSearchInput, keyword);
+        By detailTop = By.id("button-detail-training-0");
+        waitForVisibility(detailTop);
+        waitMillis(500);
     }
 
-    public void verifyTopSearchResultContains(String expectedKeyword) {
-        log.info("Verify top search result contains keyword: {}", expectedKeyword);
+    public void openTrainingDetailByName(String name) {
+        log.info("Open training detail by name: {}", name);
 
-        waitForVisibility(topRowTrainingNameCell);
-        String topName = driver.findElement(topRowTrainingNameCell).getText().trim();
+        searchTrainingByName(name);
 
-        Assert.assertTrue(topName.contains(expectedKeyword),
-                "Top search result tidak sesuai. Actual: " + topName);
+        By rowByName = By.xpath("//tr[.//td[normalize-space()='" + name + "']]");
+        waitForVisibility(rowByName);
+
+//        By detailLink = By.xpath("//tr[.//td[normalize-space()='" + name + "']]//a[normalize-space()='Detail']");
+//        waitForVisibility(driver.findElement(detailLink));
+//        click(driver.findElement(detailLink));
     }
 
-    public void clickDetailTrainingTopResult() {
-        log.info("Click Detail on top search result");
-
-        // verify tengah: tombol detail clickable (ini pengganti jeda manual)
-        wait.until(ExpectedConditions.elementToBeClickable(detailTrainingOne));
-        scrollToElement(detailTrainingOne);
-
-        String beforeUrl = driver.getCurrentUrl();
-
-        try {
-            detailTrainingOne.click();
-        } catch (Exception e) {
-            log.warn("Normal click failed, fallback to JS click. Reason: {}", e.getMessage());
-            jsClick(detailTrainingOne);
-        }
-
-        // verify setelah klik: pindah halaman (wajib biar ga flakey)
-        wait.until(ExpectedConditions.not(ExpectedConditions.urlToBe(beforeUrl)));
-        log.info("Success click Detail, URL changed");
-    }
-
-    public void openTrainingDetailTopResultByKeyword(String keyword) {
-        log.info("Open training detail (top result) by keyword: {}", keyword);
-
+    public void openTrainingDetailFromTopResult(String keyword) {
+        log.info("Open training detail from top result for keyword: {}", keyword);
         searchTrainingByName(keyword);
-        verifyTopSearchResultContains(keyword); // optional, kalau keyword full name
-        clickDetailTrainingTopResult();
+        // verify
+        waitForVisibility(btnDetailTrainingTopResult);
+        verifyDetailTrainingTopResultVisible();
+        waitForClickable(btnDetailTrainingTopResult);
+        click(btnDetailTrainingTopResult);
+        clickDetailTopSearchResult();
     }
 
-
-
-
-//    public void openTrainingDetailByName(String name) {
-//        log.info("Open training detail by name (top result): {}", name);
-//
-//        // search dulu
-//        searchTrainingByName(name);
-//
-//        // tunggu tombol detail paling atas muncul & clickable
-//        waitForVisibility(detailTrainingOne);
-//        click(detailTrainingOne);
-//
-//        log.info("Clicked Detail on top search result");
-//    }
-
-    public void openTrainingDetailTopResult(String keyword) {
-        log.info("Open training detail (top result) by keyword: {}", keyword);
-
-        searchTrainingByName(keyword);
-
-        By btnDetailTop = By.id("button-detail-training-0");
-
-        // tunggu tombolnya muncul & clickable
-        WebElement detailBtn = wait.until(ExpectedConditions.elementToBeClickable(btnDetailTop));
-
-        // scroll biar pasti kelihatan
-        scrollToElement(detailBtn);
-
-        // click normal dulu
-        try {
-            detailBtn.click();
-            log.info("Clicked Detail on top search result");
-        } catch (Exception e) {
-            // fallback: JS click (kalau ketutup overlay / intercept)
-            log.warn("Normal click failed, fallback to JS click. Reason: {}", e.getMessage());
-            jsClick(detailBtn);
-        }
-    }
 
 
     public void verifyTrainingNameRequiredVisible() {

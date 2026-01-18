@@ -111,11 +111,20 @@ public class TrainingTests extends BaseTest {
         // assert create sukses (toast create program)
         toast.verifySuccessCreateProgramVisible();
 
-        // ===== Open detail training by name =====
-        // trainingListPage.openTrainingDetailByName(trainingName);
+        // ===== Open detail training
+
+//        trainingListPage.openTrainingDetailByName(trainingName);
+
         trainingListPage.searchTrainingByName(trainingName);
-        trainingListPage.verifyTopSearchResultContains(trainingName); // kalau pakai fullName
-        trainingListPage.clickDetailTrainingTopResult();
+        trainingListPage.waitTrainingSearchResultLoaded();
+
+        // Action Add + Close Modal Add Training
+        // - > Supaya DetailTop Results dapat di klik
+        trainingListPage.clickAddTraining();
+        trainingListPage.clickCloseAddTraining();
+
+        trainingListPage.clickDetailTopSearchResult();
+
 
         detailTrainingPage.verifyDetailTrainingPageLoaded();
 

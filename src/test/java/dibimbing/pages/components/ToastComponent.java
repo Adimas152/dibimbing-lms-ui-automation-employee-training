@@ -1,6 +1,6 @@
 package dibimbing.pages.components;
 
-import dibimbing.pages.BasePage;
+import dibimbing.pages.base.BasePage;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
@@ -48,6 +48,16 @@ public class ToastComponent extends BasePage {
 
     @FindBy(xpath = "//p[contains(text(),'Success update division')]")
     private WebElement toastSuccessUpdateDivision;
+
+    @FindBy(xpath = "//p[contains(text(),'Success create chapter')]")
+    private WebElement toastSuccessCreateChapter;
+
+    @FindBy(xpath = "//p[contains(text(),'Success create content')]")
+    private WebElement toastSuccessCreateContent;
+
+    @FindBy(xpath = "//p[contains(text(),'Success update chapter')]")
+    private WebElement toastSuccessUpdateChapter;
+
 
     public ToastComponent(WebDriver driver) {
         super(driver);
@@ -110,6 +120,21 @@ public class ToastComponent extends BasePage {
     public String getSuccessUpdateProgramText() {
         log.info("Get toast text: Success update program");
         return getText(toastSuccessUpdateProgram);
+    }
+
+    public String getSuccessCreateChapterText() {
+        log.info("Get toast text: Success create chapter");
+        return getText(toastSuccessCreateChapter);
+    }
+
+    public String getSuccessCreateContentText() {
+        log.info("Get toast text: Success create content");
+        return getText(toastSuccessCreateContent);
+    }
+
+    public String getSuccessUpdateChapterText() {
+        log.info("Get toast text: Success update chapter");
+        return getText(toastSuccessUpdateChapter);
     }
 
     /* =========================
@@ -185,6 +210,31 @@ public class ToastComponent extends BasePage {
         );
     }
 
+    public void verifySuccessCreateChapterVisible() {
+        log.info("Verify toast visible: Success create chapter");
+        Assert.assertTrue(
+                waitForVisibility(toastSuccessCreateChapter).isDisplayed(),
+                "Toast success create chapter tidak tampil"
+        );
+    }
+
+    public void verifySuccessCreateContentVisible() {
+        log.info("Verify toast visible: Success create content");
+        Assert.assertTrue(
+                waitForVisibility(toastSuccessCreateContent).isDisplayed(),
+                "Toast success create content tidak tampil"
+        );
+    }
+
+    public void verifySuccessUpdateChapterVisible() {
+        log.info("Verify toast visible: Success update chapter");
+        Assert.assertTrue(
+                waitForVisibility(toastSuccessUpdateChapter).isDisplayed(),
+                "Toast success update chapter tidak tampil"
+        );
+    }
+
+
     public boolean isSuccessCreateEmployeeToastVisible() {
         return isDisplayed(toastSuccessCreateEmployee);
     }
@@ -232,6 +282,21 @@ public class ToastComponent extends BasePage {
     public boolean isSuccessUpdateProgramToastVisible() {
         log.info("Check toast visible: Success update program");
         return isDisplayed(toastSuccessUpdateProgram);
+    }
+
+    public boolean isSuccessCreateChapterToastVisible() {
+        log.info("Check toast visible: Success create chapter");
+        return isDisplayed(toastSuccessCreateChapter);
+    }
+
+    public boolean isSuccessCreateContentToastVisible() {
+        log.info("Check toast visible: Success create content");
+        return isDisplayed(toastSuccessCreateContent);
+    }
+
+    public boolean isSuccessUpdateChapterToastVisible() {
+        log.info("Check toast visible: Success update chapter");
+        return isDisplayed(toastSuccessUpdateChapter);
     }
 
 
