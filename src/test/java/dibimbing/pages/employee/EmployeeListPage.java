@@ -61,6 +61,11 @@ public class EmployeeListPage extends BasePage {
         Assert.assertTrue(isDisplayed(addEmployeeButton), "Button Add Employee tidak tampil");
     }
 
+    public void verifySearchInputLoaded() {
+        log.info("Verify Search Input loaded");
+        Assert.assertTrue(isDisplayed(employeeSearchInput), "Employee search input tidak tampil");
+    }
+
     public void clickAddEmployee() {
         log.info("Click Add Employee button");
         click(addEmployeeButton);
@@ -68,6 +73,7 @@ public class EmployeeListPage extends BasePage {
 
     public void searchEmployeeByName(String name) {
         log.info("Search employee by name: {}", name);
+        verifySearchInputLoaded();
         type(employeeSearchInput, name);
     }
 
