@@ -3,6 +3,7 @@ package dibimbing.pages.training;
 import dibimbing.pages.base.BasePage;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -28,6 +29,10 @@ public class ContentChapterPage extends BasePage {
 
     @FindBy(id = "title-feedback")
     private WebElement chapterNameRequiredMsg;
+
+
+    @FindBy(xpath = "(//div[starts-with(@id,'chapter-item')])[1]")
+    private WebElement firstChapterItem;
 
     @FindBy(id = "update-chapter-button-1")
     private WebElement btnEditChapter;
@@ -62,6 +67,10 @@ public class ContentChapterPage extends BasePage {
     @FindBy(className = "css-14t4u77")
     private WebElement selectArticleFile;
 
+    @FindBy(xpath = "(//div[contains(@class,'chakra-modal__body')]//div[contains(@class,'chakra-stack')]//div[contains(@style,'position: absolute') and contains(@style,'z-index')])[1]")
+    private WebElement firstSelectableMediaOverlay;
+
+
     @FindBy(xpath = "//button[text()='Choose Media']")
     private WebElement chooseMediaButton;
 
@@ -80,9 +89,16 @@ public class ContentChapterPage extends BasePage {
     @FindBy(xpath = "//button[starts-with(@id, 'submit-button-') and text()='Add Content']")
     private WebElement submitContentButton;
 
+    @FindBy(xpath = "//button[normalize-space()='Detail']")
+    private WebElement btnDetailContent;
+
+
+
     public ContentChapterPage(WebDriver driver) {
         super(driver);
     }
+
+
 
     /* =========================
       VERIFY PAGE / SECTION
@@ -95,9 +111,62 @@ public class ContentChapterPage extends BasePage {
         );
     }
 
+    public void clickFirstChapterItem() {
+        log.info("Click first chapter item (chapter paling atas) with retry");
+
+        By firstChapterBy = By.xpath("(//div[starts-with(@id,'chapter-item')])[1]");
+
+        int maxRetry = 3;
+        for (int i = 1; i <= maxRetry; i++) {
+            try {
+                WebElement el = waitForVisibility(firstChapterBy);
+                waitForClickable(firstChapterBy);
+                el.click();
+                return;
+            } catch (org.openqa.selenium.StaleElementReferenceException e) {
+                log.warn("Stale element when clicking first chapter item. Retry {}/{}", i, maxRetry);
+                waitMillis(300);
+            } catch (org.openqa.selenium.ElementClickInterceptedException e) {
+                log.warn("Click intercepted. Fallback JS click. Retry {}/{}", i, maxRetry);
+                WebElement el = driver.findElement(firstChapterBy);
+                ((org.openqa.selenium.JavascriptExecutor) driver).executeScript("arguments[0].click();", el);
+                return;
+            }
+        }
+
+        // last attempt (hard fail kalau masih gagal)
+        WebElement el = driver.findElement(firstChapterBy);
+        ((org.openqa.selenium.JavascriptExecutor) driver).executeScript("arguments[0].click();", el);
+    }
+
+    public void selectMediaByName(String fileName) {
+        By card = By.xpath("//div[contains(@class,'chakra-modal__body')]//*[normalize-space()='" + fileName + "']/ancestor::div[contains(@class,'chakra-stack')][1]");
+        WebElement el = waitForVisibility(card);
+        try {
+            waitForClickable(el);
+            el.click();
+        } catch (Exception e) {
+            ((org.openqa.selenium.JavascriptExecutor) driver).executeScript("arguments[0].click();", el);
+        }
+    }
+
+
+
+    public void waitMediaModalClosed() {
+        // sesuaikan locator modal kalau kamu punya
+        // kalau belum ada, minimal tunggu tombol chooseMediaButton hilang
+        log.info("Wait media modal closed");
+        waitForVisibility(chooseMediaButton); // butuh method waitForInvisibility di BasePage
+    }
+
     /* =========================
        CHAPTER - ADD
        ========================= */
+    public void clickBtnDetailContent() {
+        log.info("Click Detail Content");
+        click(btnDetailContent);
+    }
+
     public void clickAddChapter() {
         log.info("Click Add Chapter");
         click(btnAddChapter);
@@ -143,6 +212,8 @@ public class ContentChapterPage extends BasePage {
         fillChapterForm(name, desc);
         clickConfirmAddChapter();
     }
+
+
 
     /* =========================
        CHAPTER - VALIDATION
@@ -230,13 +301,15 @@ public class ContentChapterPage extends BasePage {
     }
 
     public void chooseFirstMediaFromLibrary() {
-        log.info("Choose first media from library (css-14t4u77)");
+        log.info("Choose first media from library ");
         click(selectMediaFile); // note: class ini berpotensi tidak unik
         click(chooseMediaButton);
+        // IMPORTANT: tunggu modal bener-bener hilang (minimal jeda)
+        waitMillis(500);
     }
 
     public void chooseFirstArticleFromLibrary() {
-        log.info("Choose first article from library (css-14t4u77)");
+        log.info("Choose first article from library");
         click(selectArticleFile); // note: class ini berpotensi tidak unik
         click(chooseMediaButton);
     }
@@ -252,6 +325,7 @@ public class ContentChapterPage extends BasePage {
     public void inputReadDuration(String minutes) {
         log.info("Input Read Duration: {}", minutes);
         type(readDurationInput, minutes);
+
     }
 
     public void inputTestDuration(String minutes) {
@@ -273,6 +347,12 @@ public class ContentChapterPage extends BasePage {
     /* =========================
        CONTENT - SUBMIT
        ========================= */
+
+    public void clickChooseMediaButton() {
+        log.info("Click Choose Media");
+        click(chooseMediaButton);
+    }
+
     public void clickSubmitAddContent() {
         log.info("Click Submit Add Content");
         click(submitContentButton);
@@ -295,6 +375,11 @@ public class ContentChapterPage extends BasePage {
         clickUploadMedia();
         chooseFirstMediaFromLibrary();
 
+        // tunggu UI stabil setelah modal close
+        waitMillis(1000);
+        waitForVisibility(readDurationInput);
+        waitForClickable(readDurationInput);
+
         inputEstimatedVideoDuration(estMinutes);
         clickSubmitAddContent();
     }
@@ -304,11 +389,9 @@ public class ContentChapterPage extends BasePage {
         log.info("Create Article content");
         clickAddContent();
         verifyAddContentFormVisible();
-
         selectContentTypeArticle();
         inputContentTitle(title);
         inputContentDescription(desc);
-
         clickUploadMedia();
         chooseFirstArticleFromLibrary();
 

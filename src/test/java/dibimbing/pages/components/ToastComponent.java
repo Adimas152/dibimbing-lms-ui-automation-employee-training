@@ -58,6 +58,12 @@ public class ToastComponent extends BasePage {
     @FindBy(xpath = "//p[contains(text(),'Success update chapter')]")
     private WebElement toastSuccessUpdateChapter;
 
+    @FindBy(xpath = "//p[contains(text(),'Success update content')]")
+    private WebElement toastSuccessUpdateContent;
+
+    @FindBy(xpath = "//p[contains(text(),'Success delete content')]")
+    private WebElement toastSuccessDeleteContent;
+
 
     public ToastComponent(WebDriver driver) {
         super(driver);
@@ -235,6 +241,13 @@ public class ToastComponent extends BasePage {
     }
 
 
+    public void verifySuccessUpdateContentVisible() {
+        log.info("Verify toast visible: Success update content");
+        Assert.assertTrue(waitForVisibility(toastSuccessUpdateContent).isDisplayed(),
+                "Toast success update content tidak tampil");
+    }
+
+
     public boolean isSuccessCreateEmployeeToastVisible() {
         return isDisplayed(toastSuccessCreateEmployee);
     }
@@ -297,6 +310,16 @@ public class ToastComponent extends BasePage {
     public boolean isSuccessUpdateChapterToastVisible() {
         log.info("Check toast visible: Success update chapter");
         return isDisplayed(toastSuccessUpdateChapter);
+    }
+
+    public boolean isSuccessUpdateContentToastVisible() {
+        log.info("Check toast visible: Success update content");
+        return isDisplayed(toastSuccessUpdateContent);
+    }
+
+    public boolean isSuccessDeleteContentToastVisible() {
+        log.info("Check toast visible: Success delete content");
+        return isDisplayed(toastSuccessDeleteContent);
     }
 
 

@@ -23,7 +23,7 @@
             <class name="dibimbing.tests.training.TrainingTests"/>
 <!--            <class name="dibimbing.tests.training.AssignTests"/>-->
             <class name="dibimbing.tests.training.ChapterTests"/>
-<!--            <class name="dibimbing.tests.training.ContentTests"/>-->
+            <class name="dibimbing.tests.training.ContentTests"/>
 <!--            <class name="dibimbing.tests.training.QuestionTests"/>-->
         </classes>
     </test>
