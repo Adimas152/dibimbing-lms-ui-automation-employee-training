@@ -45,7 +45,12 @@ public class EmployeeSearchTests  extends BaseTest {
 
         toast.verifySuccessCreateEmployeeVisible();
 
+        employeeListPage.verifyEmployeeListPageLoaded();
+
         // ===== Act: search by keyword =====
+
+        employeeListPage.verifyEmployeeListPageLoaded();
+
         employeeListPage.searchEmployeeByName(fullName);
 
         // ===== Assert: row yang dibuat muncul =====

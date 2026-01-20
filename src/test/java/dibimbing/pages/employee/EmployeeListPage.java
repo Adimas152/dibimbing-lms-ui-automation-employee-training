@@ -7,6 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 
 public class EmployeeListPage extends BasePage {
@@ -18,7 +19,7 @@ public class EmployeeListPage extends BasePage {
     @FindBy(id = "employee-list-count")
     private WebElement employeeCountBadge;
 
-    @FindBy(id = "input-admin-employee-search")
+    @FindBy(xpath = "//input[@placeholder='Search name, e-mail, phone...']")
     private WebElement employeeSearchInput;
 
     @FindBy(xpath = "//p[text()='Filter by Angkatan']")
@@ -51,6 +52,9 @@ public class EmployeeListPage extends BasePage {
     @FindBy(id = "button-add-employee")
     private WebElement addEmployeeButton;
 
+    @FindBy(id = "copy-employee-email-0-icon")
+    private WebElement copyEmployeeEmail;
+
     public EmployeeListPage(WebDriver driver) {
         super(driver);
     }
@@ -59,6 +63,7 @@ public class EmployeeListPage extends BasePage {
         log.info("Verify Employee List Page loaded");
         Assert.assertTrue(isDisplayed(employeeListTab), "Employee List tab tidak tampil");
         Assert.assertTrue(isDisplayed(addEmployeeButton), "Button Add Employee tidak tampil");
+        Assert.assertTrue(isDisplayed(employeeSearchInput), "Search Input tidak tampil");
     }
 
     public void verifySearchInputLoaded() {
@@ -71,9 +76,9 @@ public class EmployeeListPage extends BasePage {
         click(addEmployeeButton);
     }
 
+
     public void searchEmployeeByName(String name) {
         log.info("Search employee by name: {}", name);
-        verifySearchInputLoaded();
         type(employeeSearchInput, name);
     }
 
