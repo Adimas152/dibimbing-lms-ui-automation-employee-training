@@ -35,8 +35,6 @@ public class EditContentPage extends BasePage {
     @FindBy(xpath = "(//button[normalize-space()='Delete'])[2]")
     private WebElement btnConfirmDeleteContent;
 
-
-
     public EditContentPage(WebDriver driver) {
         super(driver);
     }
