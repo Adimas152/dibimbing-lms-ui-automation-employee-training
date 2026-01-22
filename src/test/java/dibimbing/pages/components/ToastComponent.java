@@ -67,6 +67,26 @@ public class ToastComponent extends BasePage {
     @FindBy(xpath = "//p[contains(text(),'Success save question')]")
     private WebElement toastSuccessSaveQuestion;
 
+    @FindBy(xpath = "//p[contains(text(),'Success assign employee')]")
+    private WebElement toastSuccessAssignEmployee;
+
+    @FindBy(xpath = "//p[contains(text(),'Success update assigned employee')]")
+    private WebElement toastSuccessUpdateAssignEmployee;
+
+    @FindBy(xpath = "//p[contains(text(),'Success delete Assigned Employee')]")
+    private WebElement toastSuccessDeleteAssignEmployee;
+
+    @FindBy(xpath = "//p[contains(text(),'Lengkapi konten terlebih dahulu')]")
+    private WebElement toastErrorCompleteContentFirst;
+
+    @FindBy(xpath = "//p[contains(text(),'The end date must be later than the start date.')]")
+    private WebElement toastErrorEndDateMustBeLater;
+
+
+
+
+
+
 
 
 
@@ -268,6 +288,39 @@ public class ToastComponent extends BasePage {
         );
     }
 
+    public void verifySuccessAssignEmployeeToastVisible() {
+        log.info("Verify toast visible: Success assign employee");
+        waitForVisibility(toastSuccessAssignEmployee);
+    }
+
+    public void verifySuccessUpdateAssignEmployeeToastVisible() {
+        log.info("Verify toast visible: Success update assigned employee");
+        waitForVisibility(toastSuccessUpdateAssignEmployee);
+    }
+
+    public void verifySuccessDeleteAssignEmployeeToastVisible() {
+        log.info("Verify toast visible: Success delete Assigned Employee");
+        waitForVisibility(toastSuccessDeleteAssignEmployee);
+    }
+
+    public void verifyErrorCompleteContentFirstToastVisible() {
+        log.info("Verify toast visible: Lengkapi konten terlebih dahulu");
+        Assert.assertTrue(
+                waitForVisibility(toastErrorCompleteContentFirst).isDisplayed(),
+                "Toast 'Lengkapi konten terlebih dahulu' tidak tampil"
+        );
+    }
+
+    public void verifyErrorEndDateMustBeLaterToastVisible() {
+        log.info("Verify toast visible: Error - End date must be later than start date");
+
+        Assert.assertTrue(
+                waitForVisibility(toastErrorEndDateMustBeLater).isDisplayed(),
+                "Toast error 'End date must be later than start date' tidak tampil"
+        );
+    }
+
+
 
     public boolean isSuccessCreateEmployeeToastVisible() {
         return isDisplayed(toastSuccessCreateEmployee);
@@ -347,6 +400,30 @@ public class ToastComponent extends BasePage {
         log.info("Check toast visible: Success save question");
         return isDisplayed(toastSuccessSaveQuestion);
     }
+
+    public boolean isSuccessAssignEmployeeToastVisible() {
+        return isDisplayed(toastSuccessAssignEmployee);
+    }
+
+    public boolean isSuccessUpdateAssignEmployeeToastVisible() {
+        return isDisplayed(toastSuccessUpdateAssignEmployee);
+    }
+
+    public boolean isSuccessDeleteAssignEmployeeToastVisible() {
+        return isDisplayed(toastSuccessDeleteAssignEmployee);
+    }
+
+    public boolean isErrorCompleteContentFirstToastVisible() {
+        log.info("Check toast visible: Lengkapi konten terlebih dahulu");
+        return isDisplayed(toastErrorCompleteContentFirst);
+    }
+
+    public boolean isErrorEndDateMustBeLaterToastVisible() {
+        log.info("Check toast visible: Error - End date must be later than start date");
+        return isDisplayed(toastErrorEndDateMustBeLater);
+    }
+
+
 
 
 
