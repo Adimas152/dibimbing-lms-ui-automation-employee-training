@@ -26,31 +26,22 @@ public class DivisionEditTests extends BaseTest {
         dashboardPage.clickEmployeeSidebareMenu();
         divisionPage.clickDivisionTab();
         divisionPage.verifyDivisionTabVisible();
+        String divisionKeyword = "DIV_AUTO_";
 
-        // ===== Seed: create division valid dulu =====
-        String runId = String.valueOf(System.nanoTime());
-        String divisionName = "DIV_EDIT_SEED_" + runId;
-        String divisionDesc = "Seed division desc " + runId;
+        // cari division hasil dari DIV_ADD_001
+        divisionPage.searchDivisionByName(divisionKeyword);
+        divisionPage.waitDivisionSearchResultLoaded();
 
-        divisionPage.clickAddDivision();
-        divisionPage.verifyAddDivisionModalVisible();
-        divisionPage.fillDivisionForm(divisionName, divisionDesc);
+        // buka detail division paling atas (terbaru)
+        divisionPage.clickDetailTopSearchResult();
 
-        toast.verifySuccessCreateDivisionVisible();
-
-        // ===== Open detail division (butuh open detail by name) =====
-        // Asumsi kamu sudah punya metode ini (mirip Employee):
-        // divisionPage.openDivisionDetailByName(divisionName);
-        divisionPage.openDivisionDetailByName(divisionName);
-
-        detailDivisionPage.verifyDetailDivisionPageLoaded();
 
         // ===== Act: edit division =====
         detailDivisionPage.clickEditDivision();
         detailDivisionPage.verifyEditDivisionModalVisible();
 
-        String updatedName = divisionName + "_UPD";
-        String updatedDesc = "Updated division desc " + runId;
+        String updatedName = divisionKeyword + "_UPD";
+        String updatedDesc = "Updated division desc " + "_UPD";
 
         detailDivisionPage.clearDivisionName();
         detailDivisionPage.updateDivisionName(updatedName);

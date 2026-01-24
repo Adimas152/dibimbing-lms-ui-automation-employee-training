@@ -39,10 +39,31 @@ public class DivisionPage extends BasePage {
     @FindBy(xpath = "(//p[normalize-space()='Required'])[2]")
     private WebElement divisionDescRequiredMsg;
 
+    private final By firstRowBy = By.xpath("(//tbody//tr)[1]");
+    private final By detailTopButtonBy =
+            By.xpath("(//button[normalize-space()='Detail'])[1]");
+
 
     public DivisionPage(WebDriver driver) {
         super(driver);
     }
+
+    public void waitDivisionSearchResultLoaded() {
+        log.info("Wait division search result loaded");
+
+        wait.until(driver -> driver.findElements(firstRowBy).size() > 0);
+        waitForVisibility(firstRowBy);
+        waitForClickable(detailTopButtonBy);
+    }
+
+    public void clickDetailTopSearchResult() {
+        log.info("Click Detail division top search result");
+
+        waitForVisibility(detailTopButtonBy);
+        waitForClickable(detailTopButtonBy);
+        driver.findElement(detailTopButtonBy).click();
+    }
+
 
     public void verifyDivisionTabVisible() {
         log.info("Verify Division tab visible");

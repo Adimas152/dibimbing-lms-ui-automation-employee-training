@@ -37,13 +37,15 @@ public class AssignTests extends BaseTest {
 
         detailTrainingPage.verifyDetailTrainingPageLoaded();
         detailTrainingPage.openTabAssignedEmployee();
+
         assignEmployeePage.clickAssignEmployeeButton();
+
         String employeeKeyword = "QA Auto";
-        String startDate = DateUtils.todayDdMmYyyy();
-        String deadlineDate = DateUtils.plusDaysFromDdMmYyyy(startDate, 20);
+        String deadlineDate = DateUtils.plusDaysFromTodayDdMmYyyy(20);
+
         assignEmployeePage.searchEmployeeToAssign(employeeKeyword);
         assignEmployeePage.clickActionAssignEmployeeTopResult();
-        assignEmployeePage.inputStartDate(startDate);
+
         assignEmployeePage.inputDeadlineDate(deadlineDate);
         assignEmployeePage.clickSaveAssignEmployee();
 
@@ -82,13 +84,15 @@ public class AssignTests extends BaseTest {
         trainingListPage.clickDetailTopSearchResult();
         detailTrainingPage.verifyDetailTrainingPageLoaded();
         detailTrainingPage.openTabAssignedEmployee();
+
         assignEmployeePage.clickAssignEmployeeButton();
+
         String employeeKeyword = "QA Auto";
-        String startDate = DateUtils.todayDdMmYyyy();
-        String deadlineDate = DateUtils.plusDaysFromDdMmYyyy(startDate, 20);
+        String deadlineDate = DateUtils.plusDaysFromTodayDdMmYyyy(20);
+
         assignEmployeePage.searchEmployeeToAssign(employeeKeyword);
         assignEmployeePage.clickActionAssignEmployeeTopResult();
-        assignEmployeePage.inputStartDate(startDate);
+
         assignEmployeePage.inputDeadlineDate(deadlineDate);
         assignEmployeePage.clickSaveAssignEmployee();
 
@@ -131,13 +135,11 @@ public class AssignTests extends BaseTest {
         assignEmployeePage.searchEmployeeToAssign(employeeKeyword);
         assignEmployeePage.clickActionAssignEmployeeTopResult();
 
-        // ===== Invalid date scenario =====
+        // ===== Invalid deadline (BEFORE start date) =====
+        String invalidDeadlineDate =
+                DateUtils.plusDaysFromTodayDdMmYyyy(-20);
 
-        String startDate = DateUtils.todayDdMmYyyy();
-        String deadlineDate = DateUtils.plusDaysFromDdMmYyyy(startDate, -20);
-
-        assignEmployeePage.inputStartDate(startDate);
-        assignEmployeePage.inputDeadlineDate(deadlineDate);
+        assignEmployeePage.inputDeadlineDate(invalidDeadlineDate);
 
         assignEmployeePage.clickSaveAssignEmployee();
 
@@ -151,6 +153,7 @@ public class AssignTests extends BaseTest {
             description = "ASN-EDITDL-001 - Update assignment deadline with valid date - Success update assignment",
             groups = {"regression","training","positive"})
     public void ASN_EDITDL_001_updateAssignmentDeadlineSuccessfully() {
+
         DashboardPage dashboardPage = new DashboardPage(DriverManager.getDriver());
         TrainingListPage trainingListPage = new TrainingListPage(DriverManager.getDriver());
         DetailTrainingPage detailTrainingPage = new DetailTrainingPage(DriverManager.getDriver());
@@ -159,12 +162,11 @@ public class AssignTests extends BaseTest {
 
         login();
 
-        // ===== Navigate to Training page =====
+        // ===== Navigate =====
         dashboardPage.verifyEmployeeTrainingMenuVisible();
-        dashboardPage.clickTrainingSidebarMenu(); // pastikan method ini ada di DashboardPage
+        dashboardPage.clickTrainingSidebarMenu();
         trainingListPage.verifyTrainingListPageLoaded();
 
-        // Training yang tidak memiliki content CNT_ART_SEED_)
         String trainingName = "CNT_ART_SEED_CONTENT";
         trainingListPage.searchTrainingByName(trainingName);
         trainingListPage.waitTrainingSearchResultLoaded();
@@ -172,44 +174,51 @@ public class AssignTests extends BaseTest {
 
         detailTrainingPage.verifyDetailTrainingPageLoaded();
         detailTrainingPage.openTabAssignedEmployee();
+
+        // ===== Seed: Assign employee (VALID) =====
         assignEmployeePage.clickAssignEmployeeButton();
+
         String employeeKeyword = "QA Auto";
-        String startDate = DateUtils.todayDdMmYyyy();
-        String deadlineDate = DateUtils.plusDaysFromDdMmYyyy(startDate, 20);
+        String initialDeadlineDate =
+                DateUtils.plusDaysFromTodayDdMmYyyy(20);
+
         assignEmployeePage.searchEmployeeToAssign(employeeKeyword);
         assignEmployeePage.clickActionAssignEmployeeTopResult();
-        assignEmployeePage.inputStartDate(startDate);
-        assignEmployeePage.inputDeadlineDate(deadlineDate);
+
+        // ❗ Start Date BIARKAN default dari UI
+        assignEmployeePage.inputDeadlineDate(initialDeadlineDate);
         assignEmployeePage.clickSaveAssignEmployee();
 
-
-        // ===== Assert toast success assign employee =====
         toast.verifySuccessAssignEmployeeToastVisible();
         Assert.assertTrue(
                 toast.isSuccessAssignEmployeeToastVisible(),
-                "Toast 'Success assign employee' tidak muncul setelah assign employee"
+                "Toast 'Success assign employee' tidak muncul"
         );
 
+        // ===== Act: Update deadline =====
         detailTrainingPage.openTabAssignedEmployee();
         assignEmployeePage.clickDetailAssignedEmployee();
         assignEmployeePage.clickUpdateAssignedEmployee();
-        String updateDeadlineDate = DateUtils.plusDaysFromDdMmYyyy(startDate, 30);
-        assignEmployeePage.updateDeadlineDate(updateDeadlineDate);
+
+        String updatedDeadlineDate =
+                DateUtils.plusDaysFromTodayDdMmYyyy(30);
+
+        assignEmployeePage.updateDeadlineDate(updatedDeadlineDate);
         assignEmployeePage.clickSaveUpdateDeadline();
 
-        // ===== Assert toast success assign employee =====
+        // ===== Assert =====
         toast.verifySuccessUpdateAssignEmployeeToastVisible();
         Assert.assertTrue(
                 toast.isSuccessUpdateAssignEmployeeToastVisible(),
-                "Toast 'Success update assign employee' tidak muncul setelah update assign employee"
+                "Toast 'Success update assign employee' tidak muncul setelah update deadline"
         );
-
     }
 
     @Test(
             description = "ASN-EDITDL-002 - Update assignment deadline with invalid date - Validation error displayed",
             groups = {"regression","training","negative"})
     public void ASN_EDITDL_002_updateAssignmentDeadlineInvalidRejected() {
+
         DashboardPage dashboardPage = new DashboardPage(DriverManager.getDriver());
         TrainingListPage trainingListPage = new TrainingListPage(DriverManager.getDriver());
         DetailTrainingPage detailTrainingPage = new DetailTrainingPage(DriverManager.getDriver());
@@ -218,12 +227,11 @@ public class AssignTests extends BaseTest {
 
         login();
 
-        // ===== Navigate to Training page =====
+        // ===== Navigate =====
         dashboardPage.verifyEmployeeTrainingMenuVisible();
-        dashboardPage.clickTrainingSidebarMenu(); // pastikan method ini ada di DashboardPage
+        dashboardPage.clickTrainingSidebarMenu();
         trainingListPage.verifyTrainingListPageLoaded();
 
-        // Training yang tidak memiliki content (CNT_ART_SEED_)
         String trainingName = "CNT_ART_SEED_CONTENT";
         trainingListPage.searchTrainingByName(trainingName);
         trainingListPage.waitTrainingSearchResultLoaded();
@@ -231,35 +239,42 @@ public class AssignTests extends BaseTest {
 
         detailTrainingPage.verifyDetailTrainingPageLoaded();
         detailTrainingPage.openTabAssignedEmployee();
+
+        // ===== Seed: Assign employee VALID =====
         assignEmployeePage.clickAssignEmployeeButton();
+
         String employeeKeyword = "QA AUTO";
-        String startDate = DateUtils.todayDdMmYyyy();
-        String deadlineDate = DateUtils.plusDaysFromDdMmYyyy(startDate, 20);
+        String initialDeadlineDate =
+                DateUtils.plusDaysFromTodayDdMmYyyy(20);
+
         assignEmployeePage.searchEmployeeToAssign(employeeKeyword);
         assignEmployeePage.clickActionAssignEmployeeTopResult();
-        assignEmployeePage.inputStartDate(startDate);
-        assignEmployeePage.inputDeadlineDate(deadlineDate);
+
+        // ❗ Start Date BIARKAN default dari UI
+        assignEmployeePage.inputDeadlineDate(initialDeadlineDate);
         assignEmployeePage.clickSaveAssignEmployee();
 
-
-        // ===== Assert toast success assign employee =====
         toast.verifySuccessAssignEmployeeToastVisible();
         Assert.assertTrue(
                 toast.isSuccessAssignEmployeeToastVisible(),
-                "Toast 'Success assign employee' tidak muncul setelah assign employee"
+                "Toast 'Success assign employee' tidak muncul"
         );
 
+        // ===== Act: Update deadline INVALID (before start date) =====
         detailTrainingPage.openTabAssignedEmployee();
         assignEmployeePage.clickDetailAssignedEmployee();
         assignEmployeePage.clickUpdateAssignedEmployee();
-        String updateDeadlineDate = DateUtils.plusDaysFromDdMmYyyy(startDate, -30);
-        assignEmployeePage.updateDeadlineDate(updateDeadlineDate);
+
+        String invalidUpdatedDeadlineDate =
+                DateUtils.plusDaysFromTodayDdMmYyyy(-30);
+
+        assignEmployeePage.updateDeadlineDate(invalidUpdatedDeadlineDate);
         assignEmployeePage.clickSaveUpdateDeadline();
-        // ===== Assert toast success assign employee =====
-        toast.verifySuccessUpdateAssignEmployeeToastVisible();
-        Assert.assertFalse(
-                toast.isSuccessUpdateAssignEmployeeToastVisible(),
-                "Update assign employee berhasil padahal deadline nya lebih kecil dari start date"
+
+        // ===== Assert ERROR =====
+        Assert.assertTrue(
+                toast.isErrorEndDateMustBeLaterToastVisible(),
+                "Error toast 'End date must be later than the start date' tidak muncul saat update deadline invalid"
         );
     }
 
@@ -267,6 +282,7 @@ public class AssignTests extends BaseTest {
             description = "ASN-DEL-001 - Delete assignment with confirmation - Success delete assignment",
             groups = {"regression","training","positive"})
     public void ASN_DEL_001_deleteAssignmentSuccessfully() {
+
         DashboardPage dashboardPage = new DashboardPage(DriverManager.getDriver());
         TrainingListPage trainingListPage = new TrainingListPage(DriverManager.getDriver());
         DetailTrainingPage detailTrainingPage = new DetailTrainingPage(DriverManager.getDriver());
@@ -275,12 +291,11 @@ public class AssignTests extends BaseTest {
 
         login();
 
-        // ===== Navigate to Training page =====
+        // ===== Navigate =====
         dashboardPage.verifyEmployeeTrainingMenuVisible();
-        dashboardPage.clickTrainingSidebarMenu(); // pastikan method ini ada di DashboardPage
+        dashboardPage.clickTrainingSidebarMenu();
         trainingListPage.verifyTrainingListPageLoaded();
 
-        // Training yang tidak memiliki content (CNT_ART_SEED_CONTENT)
         String trainingName = "CNT_ART_SEED_CONTENT";
         trainingListPage.searchTrainingByName(trainingName);
         trainingListPage.waitTrainingSearchResultLoaded();
@@ -288,36 +303,38 @@ public class AssignTests extends BaseTest {
 
         detailTrainingPage.verifyDetailTrainingPageLoaded();
         detailTrainingPage.openTabAssignedEmployee();
+
+        // ===== Seed: Assign employee (VALID) =====
         assignEmployeePage.clickAssignEmployeeButton();
+
         String employeeKeyword = "QA AUTO";
-        String startDate = DateUtils.todayDdMmYyyy();
-        String deadlineDate = DateUtils.plusDaysFromDdMmYyyy(startDate, 20);
+        String deadlineDate =
+                DateUtils.plusDaysFromTodayDdMmYyyy(20);
+
         assignEmployeePage.searchEmployeeToAssign(employeeKeyword);
         assignEmployeePage.clickActionAssignEmployeeTopResult();
-        assignEmployeePage.inputStartDate(startDate);
+
+        // ❗ Start Date BIARKAN default dari UI
         assignEmployeePage.inputDeadlineDate(deadlineDate);
         assignEmployeePage.clickSaveAssignEmployee();
 
-
-        // ===== Assert toast success assign employee =====
         toast.verifySuccessAssignEmployeeToastVisible();
         Assert.assertTrue(
                 toast.isSuccessAssignEmployeeToastVisible(),
-                "Toast 'Success assign employee' tidak muncul setelah assign employee"
+                "Toast 'Success assign employee' tidak muncul"
         );
 
+        // ===== Act: Delete assignment =====
         detailTrainingPage.openTabAssignedEmployee();
         assignEmployeePage.clickDetailAssignedEmployee();
         assignEmployeePage.clickDeleteAssignedEmployee();
         assignEmployeePage.confirmDeleteAssignedEmployee();
-        // ===== ASSERT DELETE SUCCESS =====
-        toast.verifySuccessDeleteAssignEmployeeToastVisible();
 
+        // ===== Assert =====
+        toast.verifySuccessDeleteAssignEmployeeToastVisible();
         Assert.assertTrue(
                 toast.isSuccessDeleteAssignEmployeeToastVisible(),
                 "Toast 'Success delete Assigned Employee' tidak muncul setelah delete assignment"
         );
-
     }
-
 }
