@@ -35,9 +35,20 @@ public class TestListener implements ITestListener {
 
     @Override
     public void onTestStart(ITestResult result) {
-        ExtentTest test = extent.createTest(result.getMethod().getMethodName());
+
+        ExtentTest test = extent.createTest(
+                result.getMethod().getMethodName(),
+                result.getMethod().getDescription()
+        );
+
+        // Assign category HANYA dari TestNG groups
+        for (String group : result.getMethod().getGroups()) {
+            test.assignCategory(group.toUpperCase());
+        }
+
         testThread.set(test);
     }
+
 
     @Override
     public void onTestSuccess(ITestResult result) {

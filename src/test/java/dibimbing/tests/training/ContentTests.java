@@ -32,7 +32,7 @@ public class ContentTests extends BaseTest {
         String runId = String.valueOf(System.nanoTime());
 
         // ===== Seed: create training valid =====
-        String trainingName = "CNT_ART_SEED_" + runId;
+        String trainingName = "CNT_ART_SEED_CONTENT" + runId;
         String trainingDesc = "Seed training desc " + runId;
 
         trainingListPage.clickAddTraining();
@@ -59,7 +59,7 @@ public class ContentTests extends BaseTest {
         contentChapterPage.clickAddChapter();
         contentChapterPage.verifyAddChapterModalVisible();
 
-        String chapterName = "CHP_SEED_" + runId;
+        String chapterName = "CHP_SEED_WITH_CONTENT" + runId;
         String chapterDesc = "Chapter desc " + runId;
 
         contentChapterPage.submitCreateChapter(chapterName, chapterDesc);
@@ -572,7 +572,6 @@ public class ContentTests extends BaseTest {
         editContentPage.verifyEditContentModalVisible();
 
         String updatedTitle = "Video UPDATED " + runId;
-        String updatedEstDuration = "50";
 
         // Update fields (pastikan modal edit kamu punya clear & update untuk duration)
         editContentPage.clearTitle();

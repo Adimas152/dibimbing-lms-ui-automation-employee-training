@@ -29,8 +29,8 @@ public class AssignTests extends BaseTest {
         dashboardPage.clickTrainingSidebarMenu(); // pastikan method ini ada di DashboardPage
         trainingListPage.verifyTrainingListPageLoaded();
 
-        // Training yang tidak memiliki content (TRN_CHAPTER_SEED_)
-        String trainingName = "TRN_CHAPTER_SEED_";
+        // Training yang tidak memiliki content (CNT_ART_SEED_)
+        String trainingName = "CNT_ART_SEED_CONTENT";
         trainingListPage.searchTrainingByName(trainingName);
         trainingListPage.waitTrainingSearchResultLoaded();
         trainingListPage.clickDetailTopSearchResult();
@@ -117,7 +117,7 @@ public class AssignTests extends BaseTest {
         dashboardPage.clickTrainingSidebarMenu();
         trainingListPage.verifyTrainingListPageLoaded();
 
-        String trainingName = "CNT_EDIT_SEED_"; // training yang sudah ada content
+        String trainingName = "CNT_ART_SEED_CONTENT"; // training yang sudah ada content
 
         trainingListPage.searchTrainingByName(trainingName);
         trainingListPage.waitTrainingSearchResultLoaded();
@@ -164,8 +164,8 @@ public class AssignTests extends BaseTest {
         dashboardPage.clickTrainingSidebarMenu(); // pastikan method ini ada di DashboardPage
         trainingListPage.verifyTrainingListPageLoaded();
 
-        // Training yang tidak memiliki content CNT_EDIT_SEED_)
-        String trainingName = "CNT_EDIT_SEED_";
+        // Training yang tidak memiliki content CNT_ART_SEED_)
+        String trainingName = "CNT_ART_SEED_CONTENT";
         trainingListPage.searchTrainingByName(trainingName);
         trainingListPage.waitTrainingSearchResultLoaded();
         trainingListPage.clickDetailTopSearchResult();
@@ -223,8 +223,8 @@ public class AssignTests extends BaseTest {
         dashboardPage.clickTrainingSidebarMenu(); // pastikan method ini ada di DashboardPage
         trainingListPage.verifyTrainingListPageLoaded();
 
-        // Training yang tidak memiliki content (CNT_EDIT_SEED_)
-        String trainingName = "CNT_EDIT_SEED_";
+        // Training yang tidak memiliki content (CNT_ART_SEED_)
+        String trainingName = "CNT_ART_SEED_CONTENT";
         trainingListPage.searchTrainingByName(trainingName);
         trainingListPage.waitTrainingSearchResultLoaded();
         trainingListPage.clickDetailTopSearchResult();
@@ -280,8 +280,8 @@ public class AssignTests extends BaseTest {
         dashboardPage.clickTrainingSidebarMenu(); // pastikan method ini ada di DashboardPage
         trainingListPage.verifyTrainingListPageLoaded();
 
-        // Training yang tidak memiliki content (CNT_EDIT_SEED_)
-        String trainingName = "CNT_EDIT_SEED_";
+        // Training yang tidak memiliki content (CNT_ART_SEED_CONTENT)
+        String trainingName = "CNT_ART_SEED_CONTENT";
         trainingListPage.searchTrainingByName(trainingName);
         trainingListPage.waitTrainingSearchResultLoaded();
         trainingListPage.clickDetailTopSearchResult();

@@ -177,18 +177,33 @@ public class QuestionPage extends BasePage {
        HIGH LEVEL HELPERS
        ========================= */
 
-    public void createSingleSelectionQuestion(String question, String answer0, String answer1, int correctIndex) {
-        clickAddQuestion();
-        selectSingleSelection();
-        inputQuestionText(question);
+    public void selectSingleCorrectAnswer(int answerIndex) {
+        log.info("Select single correct answer index {}", answerIndex);
 
-        // jawab minimal 2 opsi
+        By selectBy = By.id("select-correct-answer");
+        WebElement selectEl = waitForVisibility(selectBy);
+        waitForClickable(selectEl);
+
+        Select select = new Select(selectEl);
+
+        // tunggu option kebentuk (placeholder + jawaban)
+        wait.until(driver -> select.getOptions().size() > answerIndex);
+
+        // value di DOM = 0,1,2,...
+        select.selectByValue(String.valueOf(answerIndex));
+    }
+
+    public void createSingleSelectionQuestion(
+            String answer0,
+            String answer1,
+            int correctIndex
+    ) {
         inputAnswerByIndex(0, answer0);
         clickAddAnswer();
         inputAnswerByIndex(1, answer1);
 
+        selectSingleCorrectAnswer(correctIndex);
 
-        markAnswerAsCorrectByIndex(correctIndex);
         clickSaveQuestion();
     }
 

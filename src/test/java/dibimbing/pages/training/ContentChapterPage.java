@@ -319,13 +319,24 @@ public class ContentChapterPage extends BasePage {
        ========================= */
     public void inputEstimatedVideoDuration(String minutes) {
         log.info("Input Estimated Video Duration: {}", minutes);
+
+        waitForVisibility(estimatedVideoDurationInput);
+        waitForClickable(estimatedVideoDurationInput);
+
+        click(estimatedVideoDurationInput);      // penting
+        clearField(estimatedVideoDurationInput); // penting
         type(estimatedVideoDurationInput, minutes);
     }
 
     public void inputReadDuration(String minutes) {
         log.info("Input Read Duration: {}", minutes);
-        type(readDurationInput, minutes);
 
+        waitForVisibility(readDurationInput);
+        waitForClickable(readDurationInput);
+
+        click(readDurationInput);      // penting untuk Chakra UI
+        clearField(readDurationInput); // optional tapi aman
+        type(readDurationInput, minutes);
     }
 
     public void inputTestDuration(String minutes) {

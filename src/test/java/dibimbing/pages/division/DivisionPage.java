@@ -109,6 +109,12 @@ public class DivisionPage extends BasePage {
 
     public void searchDivisionByName(String keyword) {
         log.info("Search division by keyword: {}", keyword);
+
+        waitForVisibility(divisionSerachInput);
+        waitForClickable(divisionSerachInput);
+
+        click(divisionSerachInput);
+        clearField(divisionSerachInput);
         type(divisionSerachInput, keyword);
     }
 

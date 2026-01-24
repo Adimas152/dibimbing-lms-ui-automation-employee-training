@@ -94,9 +94,14 @@ public class QuestionTests extends BaseTest {
         questionPage.verifyQuestionSectionLoaded();
 
         // ===== Act: create single selection question =====
+
+        questionPage.clickAddQuestion();
+        questionPage.selectSingleSelection();
+
         String question = "Single Question " + runId + " ?";
+        questionPage.inputQuestionText(question);
+
         questionPage.createSingleSelectionQuestion(
-                question,
                 "Answer A",
                 "Answer B",
                 0 // correct = Answer A
