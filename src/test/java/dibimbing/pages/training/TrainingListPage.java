@@ -39,8 +39,10 @@ public class TrainingListPage extends BasePage {
     @FindBy(xpath = "(//button[starts-with(@id,'button-detail-training-') and normalize-space()='Detail'])[1]")
     private WebElement btnDetailTrainingFirst;
 
-    @FindBy(xpath = "(//tbody//tr)[1]")
-    private WebElement firstRow;
+//    @FindBy(xpath = "(//tbody//tr)[1]")
+//    private WebElement firstRow;
+
+    private final By firstRowBy = By.xpath("(//tbody//tr)[1]");
 
     public TrainingListPage(WebDriver driver) {
         super(driver);
@@ -49,8 +51,8 @@ public class TrainingListPage extends BasePage {
     public void waitTrainingSearchResultLoaded() {
         log.info("Wait training search result loaded");
 
-        // tunggu row pertama muncul (lebih stabil daripada nunggu tombol detail langsung)
-        waitForVisibility(firstRow);
+        wait.until(driver -> driver.findElements(firstRowBy).size() > 0);
+        waitForVisibility(firstRowBy);
 
         // optional: pastikan tombol detail udah bisa diklik
         waitForVisibility(btnDetailTrainingFirst);

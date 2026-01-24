@@ -133,6 +133,25 @@ public class BasePage {
         el.sendKeys(text);
     }
 
+    /**
+     * CI-safe date input handler (React / Chakra).
+     */
+    protected void setDateInput(WebElement element, String mmDdYyyy) {
+        waitForVisibility(element);
+        waitForClickable(element);
+
+        element.click();
+
+        // OS-aware select all
+        String os = System.getProperty("os.name").toLowerCase();
+        Keys cmdCtrl = os.contains("mac") ? Keys.COMMAND : Keys.CONTROL;
+
+        element.sendKeys(cmdCtrl, "a");
+        element.sendKeys(Keys.DELETE);
+
+        element.sendKeys(mmDdYyyy);
+    }
+
 
 
 }

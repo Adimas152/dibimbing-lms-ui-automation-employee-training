@@ -165,11 +165,9 @@ public class AssignEmployeePage extends BasePage {
         click(btnActionAssignEmployeeListTop);
     }
 
-    public void inputStartDate(String yyyyMmDd) {
-        log.info("Input start date: {}", yyyyMmDd);
-        waitForVisibility(inputStarDate);
-        clearField(inputStarDate);
-        type(inputStarDate, yyyyMmDd);
+    public void inputStartDate(String mmDdYyyy) {
+        log.info("Input start date: {}", mmDdYyyy);
+        setDateInput(inputStarDate, mmDdYyyy);
     }
 
     public void inputDeadlineDate(String yyyyMmDd) {
