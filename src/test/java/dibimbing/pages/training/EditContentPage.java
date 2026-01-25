@@ -3,6 +3,7 @@ package dibimbing.pages.training;
 import dibimbing.pages.base.BasePage;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -13,6 +14,9 @@ public class EditContentPage extends BasePage {
 
     @FindBy(id = "button-update-content")
     private WebElement btnEditContent;
+
+    private By btnUpdateContent =
+            By.id("button-update-content");
 
     @FindBy(id = "input-title-content")
     private WebElement inputContentTitle;
@@ -51,10 +55,15 @@ public class EditContentPage extends BasePage {
         click(btnConfirmDeleteContent);
     }
 
+//    public void clickEditContent() {
+//        log.info("Click Edit Content");
+//        waitForClickable(btnEditContent);
+//        click(btnEditContent);
+//    }
+
     public void clickEditContent() {
-        log.info("Click Edit Content");
-        waitForClickable(btnEditContent);
-        click(btnEditContent);
+        log.info("Click Update Content (CI safe)");
+        clickStable(btnUpdateContent);
     }
 
     public void verifyEditContentModalVisible() {
