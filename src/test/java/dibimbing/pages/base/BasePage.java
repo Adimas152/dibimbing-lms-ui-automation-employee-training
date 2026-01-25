@@ -136,20 +136,24 @@ public class BasePage {
     /**
      * CI-safe date input handler (React / Chakra).
      */
-    protected void setDateInput(WebElement element, String mmDdYyyy) {
-        waitForVisibility(element);
-        waitForClickable(element);
+    protected void setDateInput(WebElement el, String yyyyMmDd) {
+        waitForVisibility(el);
+        ((JavascriptExecutor) driver)
+                .executeScript("arguments[0].value = arguments[1];", el, yyyyMmDd);
+    }
 
-        element.click();
-
-        // OS-aware select all
-        String os = System.getProperty("os.name").toLowerCase();
-        Keys cmdCtrl = os.contains("mac") ? Keys.COMMAND : Keys.CONTROL;
-
-        element.sendKeys(cmdCtrl, "a");
-        element.sendKeys(Keys.DELETE);
-
-        element.sendKeys(mmDdYyyy);
+    protected void clickStable(By by) {
+        int attempts = 0;
+        while (attempts < 3) {
+            try {
+                WebElement el = wait.until(ExpectedConditions.elementToBeClickable(by));
+                el.click();
+                return;
+            } catch (StaleElementReferenceException e) {
+                attempts++;
+            }
+        }
+        throw new RuntimeException("Failed to click element after retries: " + by);
     }
 
 

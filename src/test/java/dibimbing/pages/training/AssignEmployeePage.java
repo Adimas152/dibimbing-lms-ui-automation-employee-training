@@ -7,6 +7,7 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
+import org.openqa.selenium.Keys;
 
 public class AssignEmployeePage extends BasePage {
     private static final Logger log = LogManager.getLogger(AssignEmployeePage.class);
@@ -170,12 +171,38 @@ public class AssignEmployeePage extends BasePage {
         setDateInput(inputStarDate, mmDdYyyy);
     }
 
-    public void inputDeadlineDate(String yyyyMmDd) {
-        log.info("Input deadline date: {}", yyyyMmDd);
+//    public void inputDeadlineDate(String yyyyMmDd) {
+//        log.info("Input deadline date (HTML): {}", yyyyMmDd);
+//        setDateInput(inputDeadlineDate, yyyyMmDd);
+//    }
+
+//    public void inputDeadlineDate(String date) {
+//        log.info("Input deadline date: {}", date);
+//
+//        WebElement deadline = inputDeadlineDate; // @FindBy kamu
+//
+//        ((JavascriptExecutor) driver).executeScript(
+//                "arguments[0].value = arguments[1];" +
+//                        "arguments[0].dispatchEvent(new Event('change'));" +
+//                        "arguments[0].dispatchEvent(new Event('blur'));",
+//                deadline,
+//                date
+//        );
+//
+//        // 🔒 Safety assert (WAJIB pas debug)
+//        String actual = deadline.getAttribute("value");
+//        log.info("Actual deadline value in DOM: {}", actual);
+//    }
+
+
+    public void inputDeadlineDate(String ddMmYyyy) {
+        log.info("Input deadline date: {}", ddMmYyyy);
         waitForVisibility(inputDeadlineDate);
         clearField(inputDeadlineDate);
-        type(inputDeadlineDate, yyyyMmDd);
+        type(inputDeadlineDate, ddMmYyyy);
     }
+
+
 
     public void clickSaveAssignEmployee() {
         log.info("Click Save Assign Employee");

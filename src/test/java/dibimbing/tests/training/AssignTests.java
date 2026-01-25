@@ -31,18 +31,24 @@ public class AssignTests extends BaseTest {
 
         // Training yang tidak memiliki content (CNT_ART_SEED_)
         String trainingName = "CNT_ART_SEED_CONTENT";
+
+
+
         trainingListPage.searchTrainingByName(trainingName);
         trainingListPage.waitTrainingSearchResultLoaded();
+
+        trainingListPage.clickAddTraining();
+        trainingListPage.clickCloseAddTraining();
+
         trainingListPage.clickDetailTopSearchResult();
 
         detailTrainingPage.verifyDetailTrainingPageLoaded();
-        detailTrainingPage.openTabAssignedEmployee();
 
+        detailTrainingPage.openTabAssignedEmployee();
         assignEmployeePage.clickAssignEmployeeButton();
 
         String employeeKeyword = "QA Auto";
-        String deadlineDate = DateUtils.plusDaysFromTodayDdMmYyyy(20);
-
+        String deadlineDate = DateUtils.plusDaysFromTodayUi(20);
         assignEmployeePage.searchEmployeeToAssign(employeeKeyword);
         assignEmployeePage.clickActionAssignEmployeeTopResult();
 
@@ -81,6 +87,10 @@ public class AssignTests extends BaseTest {
         trainingListPage.searchTrainingByName(trainingName);
         trainingListPage.waitTrainingSearchResultLoaded();
 
+        trainingListPage.clickAddTraining();
+        trainingListPage.clickCloseAddTraining();
+
+
         trainingListPage.clickDetailTopSearchResult();
         detailTrainingPage.verifyDetailTrainingPageLoaded();
         detailTrainingPage.openTabAssignedEmployee();
@@ -88,7 +98,7 @@ public class AssignTests extends BaseTest {
         assignEmployeePage.clickAssignEmployeeButton();
 
         String employeeKeyword = "QA Auto";
-        String deadlineDate = DateUtils.plusDaysFromTodayDdMmYyyy(20);
+        String deadlineDate = DateUtils.plusDaysFromTodayUi(20);
 
         assignEmployeePage.searchEmployeeToAssign(employeeKeyword);
         assignEmployeePage.clickActionAssignEmployeeTopResult();
@@ -125,6 +135,10 @@ public class AssignTests extends BaseTest {
 
         trainingListPage.searchTrainingByName(trainingName);
         trainingListPage.waitTrainingSearchResultLoaded();
+
+        trainingListPage.clickAddTraining();
+        trainingListPage.clickCloseAddTraining();
+
         trainingListPage.clickDetailTopSearchResult();
         detailTrainingPage.verifyDetailTrainingPageLoaded();
 
@@ -137,7 +151,8 @@ public class AssignTests extends BaseTest {
 
         // ===== Invalid deadline (BEFORE start date) =====
         String invalidDeadlineDate =
-                DateUtils.plusDaysFromTodayDdMmYyyy(-20);
+                DateUtils.plusDaysFromTodayUi(-20); // ✅ BENAR
+
 
         assignEmployeePage.inputDeadlineDate(invalidDeadlineDate);
 
@@ -170,6 +185,10 @@ public class AssignTests extends BaseTest {
         String trainingName = "CNT_ART_SEED_CONTENT";
         trainingListPage.searchTrainingByName(trainingName);
         trainingListPage.waitTrainingSearchResultLoaded();
+
+        trainingListPage.clickAddTraining();
+        trainingListPage.clickCloseAddTraining();
+
         trainingListPage.clickDetailTopSearchResult();
 
         detailTrainingPage.verifyDetailTrainingPageLoaded();
@@ -179,8 +198,9 @@ public class AssignTests extends BaseTest {
         assignEmployeePage.clickAssignEmployeeButton();
 
         String employeeKeyword = "QA Auto";
+
         String initialDeadlineDate =
-                DateUtils.plusDaysFromTodayDdMmYyyy(20);
+                DateUtils.plusDaysFromTodayUi(20);
 
         assignEmployeePage.searchEmployeeToAssign(employeeKeyword);
         assignEmployeePage.clickActionAssignEmployeeTopResult();
@@ -201,7 +221,7 @@ public class AssignTests extends BaseTest {
         assignEmployeePage.clickUpdateAssignedEmployee();
 
         String updatedDeadlineDate =
-                DateUtils.plusDaysFromTodayDdMmYyyy(30);
+                DateUtils.plusDaysFromTodayUi(30);
 
         assignEmployeePage.updateDeadlineDate(updatedDeadlineDate);
         assignEmployeePage.clickSaveUpdateDeadline();
@@ -235,6 +255,10 @@ public class AssignTests extends BaseTest {
         String trainingName = "CNT_ART_SEED_CONTENT";
         trainingListPage.searchTrainingByName(trainingName);
         trainingListPage.waitTrainingSearchResultLoaded();
+
+        trainingListPage.clickAddTraining();
+        trainingListPage.clickCloseAddTraining();
+
         trainingListPage.clickDetailTopSearchResult();
 
         detailTrainingPage.verifyDetailTrainingPageLoaded();
@@ -245,7 +269,7 @@ public class AssignTests extends BaseTest {
 
         String employeeKeyword = "QA AUTO";
         String initialDeadlineDate =
-                DateUtils.plusDaysFromTodayDdMmYyyy(20);
+                DateUtils.plusDaysFromTodayUi(20);
 
         assignEmployeePage.searchEmployeeToAssign(employeeKeyword);
         assignEmployeePage.clickActionAssignEmployeeTopResult();
@@ -266,7 +290,7 @@ public class AssignTests extends BaseTest {
         assignEmployeePage.clickUpdateAssignedEmployee();
 
         String invalidUpdatedDeadlineDate =
-                DateUtils.plusDaysFromTodayDdMmYyyy(-30);
+                DateUtils.plusDaysFromTodayUi(-30);
 
         assignEmployeePage.updateDeadlineDate(invalidUpdatedDeadlineDate);
         assignEmployeePage.clickSaveUpdateDeadline();
@@ -299,6 +323,10 @@ public class AssignTests extends BaseTest {
         String trainingName = "CNT_ART_SEED_CONTENT";
         trainingListPage.searchTrainingByName(trainingName);
         trainingListPage.waitTrainingSearchResultLoaded();
+
+        trainingListPage.clickAddTraining();
+        trainingListPage.clickCloseAddTraining();
+
         trainingListPage.clickDetailTopSearchResult();
 
         detailTrainingPage.verifyDetailTrainingPageLoaded();
@@ -309,7 +337,7 @@ public class AssignTests extends BaseTest {
 
         String employeeKeyword = "QA AUTO";
         String deadlineDate =
-                DateUtils.plusDaysFromTodayDdMmYyyy(20);
+                DateUtils.plusDaysFromTodayUi(20);
 
         assignEmployeePage.searchEmployeeToAssign(employeeKeyword);
         assignEmployeePage.clickActionAssignEmployeeTopResult();

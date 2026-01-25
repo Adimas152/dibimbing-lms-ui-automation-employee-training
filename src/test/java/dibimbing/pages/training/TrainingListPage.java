@@ -3,10 +3,9 @@ package dibimbing.pages.training;
 import dibimbing.pages.base.BasePage;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 
 public class TrainingListPage extends BasePage {
@@ -39,28 +38,32 @@ public class TrainingListPage extends BasePage {
     @FindBy(xpath = "(//button[starts-with(@id,'button-detail-training-') and normalize-space()='Detail'])[1]")
     private WebElement btnDetailTrainingFirst;
 
+    private final By detailTopButtonBy = By.id("button-detail-training-0");
+
 //    @FindBy(xpath = "(//tbody//tr)[1]")
 //    private WebElement firstRow;
 
     private final By firstRowBy = By.xpath("(//tbody//tr)[1]");
 
+    private By btnDetailTopResult = By.xpath(
+            "//table//tbody/tr[1]//button[contains(@class,'detail')]"
+    );
+
     public TrainingListPage(WebDriver driver) {
         super(driver);
     }
 
-    public void waitTrainingSearchResultLoaded() {
-        log.info("Wait training search result loaded");
-
-        wait.until(driver -> driver.findElements(firstRowBy).size() > 0);
-        waitForVisibility(firstRowBy);
-
-        // optional: pastikan tombol detail udah bisa diklik
-        waitForVisibility(btnDetailTrainingFirst);
-        waitForClickable(btnDetailTrainingFirst);
-    }
-
-
-
+//    public void waitTrainingSearchResultLoaded() {
+//        log.info("Wait training search result loaded");
+//
+//        wait.until(driver -> driver.findElements(firstRowBy).size() > 0);
+//        waitForVisibility(firstRowBy);
+//
+//        // optional: pastikan tombol detail udah bisa diklik
+//        waitForVisibility(btnDetailTrainingFirst);
+//        waitForClickable(btnDetailTrainingFirst);
+//    }
+    
     public void verifyTrainingListPageLoaded() {
         log.info("Verify Training List page loaded");
         Assert.assertTrue(
@@ -85,17 +88,53 @@ public class TrainingListPage extends BasePage {
         );
     }
 
-
     /* =========================
        ACTIONS
        ========================= */
-
     public void clickDetailTopSearchResult() {
-        log.info("Click Detail on top search result (index 0)");
-        waitForVisibility(btnDetailTrainingTopResult);
-        waitForClickable(btnDetailTrainingTopResult);
-        click(btnDetailTrainingTopResult);
+        log.info("Click Detail on top search result (index 0) - HARD STALE SAFE");
+
+        By detailBtn = By.id("button-detail-training-0");
+
+        wait.until(ExpectedConditions.presenceOfElementLocated(detailBtn));
+
+        for (int i = 0; i < 3; i++) { // retry max 3x
+            try {
+                WebElement btn = wait.until(
+                        ExpectedConditions.elementToBeClickable(detailBtn)
+                );
+
+                // scroll TANPA simpan element lama
+                ((JavascriptExecutor) driver)
+                        .executeScript(
+                                "document.getElementById('button-detail-training-0')" +
+                                        ".scrollIntoView({block:'center'});"
+                        );
+
+                btn.click();
+                return; // SUCCESS → keluar method
+
+            } catch (StaleElementReferenceException e) {
+                log.warn("Stale element detected, retrying click... attempt {}", i + 1);
+            }
+        }
+
+        throw new RuntimeException("Failed to click Detail button due to stale DOM");
     }
+
+
+
+    public void waitTrainingSearchResultLoaded() {
+        log.info("Wait training search result loaded");
+
+        By firstRow = By.xpath("(//tbody//tr)[1]");
+        wait.until(ExpectedConditions.visibilityOfElementLocated(firstRow));
+
+        wait.until(ExpectedConditions.presenceOfElementLocated(
+                By.id("button-detail-training-0")
+        ));
+    }
+
 
     public void clickv2DetailTopSearchResult() {
         log.info("Click Detail on top search result (index 0) v2");
@@ -149,12 +188,24 @@ public class TrainingListPage extends BasePage {
     /* =========================
        SEARCH
        ========================= */
+//    public void searchTrainingByName(String keyword) {
+//        log.info("Search training by keyword: {}", keyword);
+//        type(trainingSearchInput, keyword);
+//        By detailTop = By.id("button-detail-training-0");
+//        waitForVisibility(detailTop);
+//        waitMillis(500);
+//    }
+
     public void searchTrainingByName(String keyword) {
         log.info("Search training by keyword: {}", keyword);
-        type(trainingSearchInput, keyword);
-        By detailTop = By.id("button-detail-training-0");
-        waitForVisibility(detailTop);
-        waitMillis(500);
+
+        // pastikan input benar-benar siap diketik
+        waitUntilInteractable(trainingSearchInput, 15);
+        safeType(trainingSearchInput, keyword);
+
+        // tunggu sampai hasil search muncul
+        By firstResultRow = By.xpath("(//tbody//tr)[1]");
+        wait.until(ExpectedConditions.visibilityOfElementLocated(firstResultRow));
     }
 
     public void openTrainingDetailByName(String name) {

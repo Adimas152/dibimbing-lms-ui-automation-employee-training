@@ -530,6 +530,7 @@ public class ContentTests extends BaseTest {
 
         String chapterName = "CHP_SEED_" + runId;
         String chapterDesc = "Chapter desc " + runId;
+
         contentChapterPage.submitCreateChapter(chapterName, chapterDesc);
 
         Assert.assertTrue(

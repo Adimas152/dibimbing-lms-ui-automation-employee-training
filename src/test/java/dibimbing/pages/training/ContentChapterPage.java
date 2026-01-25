@@ -7,6 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 
 public class ContentChapterPage extends BasePage {
@@ -42,6 +43,9 @@ public class ContentChapterPage extends BasePage {
 
     @FindBy(xpath = "(//button[normalize-space()='Add Content'])[1]")
     private WebElement addContentButton;
+
+    private final By btnAddContentBy =
+            By.xpath("//button[normalize-space()='Add Content']");
 
     @FindBy(xpath = "//span[text()='Video']")
     private WebElement videoContentType;
@@ -88,6 +92,9 @@ public class ContentChapterPage extends BasePage {
 
     @FindBy(xpath = "//button[starts-with(@id, 'submit-button-') and text()='Add Content']")
     private WebElement submitContentButton;
+
+    private final By btnSubmitAddContentBy =
+            By.xpath("//button[starts-with(@id,'submit-button-') and normalize-space()='Add Content']");
 
     @FindBy(xpath = "//button[normalize-space()='Detail']")
     private WebElement btnDetailContent;
@@ -246,9 +253,16 @@ public class ContentChapterPage extends BasePage {
     /* =========================
        CONTENT - OPEN ADD CONTENT
        ========================= */
+//    public void clickAddContent() {
+//        log.info("Click Add Content");
+//        click(addContentButton);
+//    }
+
     public void clickAddContent() {
-        log.info("Click Add Content");
-        click(addContentButton);
+        WebElement btn = wait.until(
+                ExpectedConditions.elementToBeClickable(btnAddContentBy)
+        );
+        btn.click();
     }
 
     public void verifyAddContentFormVisible() {
@@ -363,10 +377,15 @@ public class ContentChapterPage extends BasePage {
         log.info("Click Choose Media");
         click(chooseMediaButton);
     }
+//
+//    public void clickSubmitAddContent() {
+//        log.info("Click Submit Add Content");
+//        click(submitContentButton);
+//    }
 
     public void clickSubmitAddContent() {
         log.info("Click Submit Add Content");
-        click(submitContentButton);
+        clickStable(btnSubmitAddContentBy);
     }
 
     /* =========================
