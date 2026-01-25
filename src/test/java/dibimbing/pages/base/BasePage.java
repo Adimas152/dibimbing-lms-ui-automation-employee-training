@@ -1,5 +1,7 @@
 package dibimbing.pages.base;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -8,6 +10,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 public class BasePage {
+    protected static final Logger log =
+            LogManager.getLogger(BasePage.class);
 
     protected WebDriver driver;
     protected WebDriverWait wait;
@@ -136,10 +140,54 @@ public class BasePage {
     /**
      * CI-safe date input handler (React / Chakra).
      */
-    protected void setDateInput(WebElement el, String yyyyMmDd) {
-        waitForVisibility(el);
-        ((JavascriptExecutor) driver)
-                .executeScript("arguments[0].value = arguments[1];", el, yyyyMmDd);
+//    protected void setDateInput(WebElement el, String yyyyMmDd) {
+//        waitForVisibility(el);
+//        ((JavascriptExecutor) driver)
+//                .executeScript("arguments[0].value = arguments[1];", el, yyyyMmDd);
+//    }
+
+
+    /**
+     * CI & locale safe date input
+     * ALWAYS use yyyy-MM-dd
+     */
+//    protected void setDateViaJs(WebElement el, String yyyyMmDd) {
+//        log.info("Set date via JS: {}", yyyyMmDd);
+//        waitForVisibility(el);
+//        ((JavascriptExecutor) driver).executeScript(
+//                "arguments[0].value = arguments[1];" +
+//                        "arguments[0].dispatchEvent(new Event('input', { bubbles: true }));" +
+//                        "arguments[0].dispatchEvent(new Event('change', { bubbles: true }));" +
+//                        "arguments[0].dispatchEvent(new Event('blur', { bubbles: true }));",
+//                el,
+//                yyyyMmDd
+//        );
+//    }
+
+    protected void setDateViaJs(WebElement el, String yyyyMmDd) {
+        if (!yyyyMmDd.matches("\\d{4}-\\d{2}-\\d{2}")) {
+            throw new IllegalArgumentException(
+                    "Date must be yyyy-MM-dd, but was: " + yyyyMmDd
+            );
+        }
+
+        log.info("Set date via JS (React safe): {}", yyyyMmDd);
+
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+
+        js.executeScript("""
+        const el = arguments[0];
+        const value = arguments[1];
+
+        el.value = value;
+
+        el.dispatchEvent(new Event('input', { bubbles: true }));
+        el.dispatchEvent(new Event('change', { bubbles: true }));
+        el.dispatchEvent(new Event('blur', { bubbles: true }));
+    """, el, yyyyMmDd);
+
+        // 🔒 Tunggu sampai DOM benar-benar update
+        wait.until(d -> yyyyMmDd.equals(el.getAttribute("value")));
     }
 
     protected void clickStable(By by) {

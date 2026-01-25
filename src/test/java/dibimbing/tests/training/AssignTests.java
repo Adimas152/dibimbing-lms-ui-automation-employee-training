@@ -48,7 +48,7 @@ public class AssignTests extends BaseTest {
         assignEmployeePage.clickAssignEmployeeButton();
 
         String employeeKeyword = "QA Auto";
-        String deadlineDate = DateUtils.plusDaysFromTodayUi(20);
+        String deadlineDate = DateUtils.plusDaysFromTodayHtml(20);
         assignEmployeePage.searchEmployeeToAssign(employeeKeyword);
         assignEmployeePage.clickActionAssignEmployeeTopResult();
 
@@ -98,7 +98,7 @@ public class AssignTests extends BaseTest {
         assignEmployeePage.clickAssignEmployeeButton();
 
         String employeeKeyword = "QA Auto";
-        String deadlineDate = DateUtils.plusDaysFromTodayUi(20);
+        String deadlineDate = DateUtils.plusDaysFromTodayHtml(20);
 
         assignEmployeePage.searchEmployeeToAssign(employeeKeyword);
         assignEmployeePage.clickActionAssignEmployeeTopResult();
@@ -150,8 +150,8 @@ public class AssignTests extends BaseTest {
         assignEmployeePage.clickActionAssignEmployeeTopResult();
 
         // ===== Invalid deadline (BEFORE start date) =====
-        String invalidDeadlineDate =
-                DateUtils.plusDaysFromTodayUi(-20); // ✅ BENAR
+
+        String invalidDeadlineDate = DateUtils.plusDaysFromTodayHtml(-20);
 
 
         assignEmployeePage.inputDeadlineDate(invalidDeadlineDate);
@@ -199,14 +199,13 @@ public class AssignTests extends BaseTest {
 
         String employeeKeyword = "QA Auto";
 
-        String initialDeadlineDate =
-                DateUtils.plusDaysFromTodayUi(20);
+        String deadlineDate = DateUtils.plusDaysFromTodayHtml(20);
 
         assignEmployeePage.searchEmployeeToAssign(employeeKeyword);
         assignEmployeePage.clickActionAssignEmployeeTopResult();
 
         // ❗ Start Date BIARKAN default dari UI
-        assignEmployeePage.inputDeadlineDate(initialDeadlineDate);
+        assignEmployeePage.inputDeadlineDate(deadlineDate);
         assignEmployeePage.clickSaveAssignEmployee();
 
         toast.verifySuccessAssignEmployeeToastVisible();
@@ -220,10 +219,9 @@ public class AssignTests extends BaseTest {
         assignEmployeePage.clickDetailAssignedEmployee();
         assignEmployeePage.clickUpdateAssignedEmployee();
 
-        String updatedDeadlineDate =
-                DateUtils.plusDaysFromTodayUi(30);
+        String updateDeadlineDate = DateUtils.plusDaysFromTodayHtml(10);
 
-        assignEmployeePage.updateDeadlineDate(updatedDeadlineDate);
+        assignEmployeePage.updateDeadlineDate(updateDeadlineDate);
         assignEmployeePage.clickSaveUpdateDeadline();
 
         // ===== Assert =====
@@ -268,8 +266,7 @@ public class AssignTests extends BaseTest {
         assignEmployeePage.clickAssignEmployeeButton();
 
         String employeeKeyword = "QA AUTO";
-        String initialDeadlineDate =
-                DateUtils.plusDaysFromTodayUi(20);
+        String initialDeadlineDate = DateUtils.plusDaysFromTodayHtml(20);
 
         assignEmployeePage.searchEmployeeToAssign(employeeKeyword);
         assignEmployeePage.clickActionAssignEmployeeTopResult();
@@ -289,8 +286,8 @@ public class AssignTests extends BaseTest {
         assignEmployeePage.clickDetailAssignedEmployee();
         assignEmployeePage.clickUpdateAssignedEmployee();
 
-        String invalidUpdatedDeadlineDate =
-                DateUtils.plusDaysFromTodayUi(-30);
+        String invalidUpdatedDeadlineDate = DateUtils.plusDaysFromTodayHtml(-30);
+
 
         assignEmployeePage.updateDeadlineDate(invalidUpdatedDeadlineDate);
         assignEmployeePage.clickSaveUpdateDeadline();
@@ -336,8 +333,9 @@ public class AssignTests extends BaseTest {
         assignEmployeePage.clickAssignEmployeeButton();
 
         String employeeKeyword = "QA AUTO";
-        String deadlineDate =
-                DateUtils.plusDaysFromTodayUi(20);
+
+        String deadlineDate = DateUtils.plusDaysFromTodayHtml(20);
+
 
         assignEmployeePage.searchEmployeeToAssign(employeeKeyword);
         assignEmployeePage.clickActionAssignEmployeeTopResult();

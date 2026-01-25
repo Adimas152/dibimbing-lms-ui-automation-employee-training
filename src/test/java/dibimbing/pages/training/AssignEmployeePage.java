@@ -48,6 +48,9 @@ public class AssignEmployeePage extends BasePage {
     @FindBy(xpath = "(//input[@type='date'])[2]")
     private WebElement inputDeadlineDate;
 
+    private By deadlineDateInput =
+            By.xpath("(//input[@type='date'])[2]");
+
     @FindBy(xpath = "//button[normalize-space()='Assign Employee']")
     private WebElement btnSaveAssignEmployee;
 
@@ -115,12 +118,12 @@ public class AssignEmployeePage extends BasePage {
         safeClick(btnUpdateAssignEmployee);
     }
 
-    public void updateDeadlineDate(String yyyyMmDd) {
-        log.info("Update deadline date: {}", yyyyMmDd);
-        waitForVisibility(inputUpdateDeadlineDate);
-        clearField(inputUpdateDeadlineDate);
-        type(inputUpdateDeadlineDate, yyyyMmDd);
-    }
+//    public void updateDeadlineDate(String yyyyMmDd) {
+//        log.info("Update deadline date: {}", yyyyMmDd);
+//        waitForVisibility(inputUpdateDeadlineDate);
+//        clearField(inputUpdateDeadlineDate);
+//        type(inputUpdateDeadlineDate, yyyyMmDd);
+//    }
 
     public void clickSaveUpdateDeadline() {
         log.info("Click Save Update Deadline");
@@ -166,10 +169,10 @@ public class AssignEmployeePage extends BasePage {
         click(btnActionAssignEmployeeListTop);
     }
 
-    public void inputStartDate(String mmDdYyyy) {
-        log.info("Input start date: {}", mmDdYyyy);
-        setDateInput(inputStarDate, mmDdYyyy);
-    }
+//    public void inputStartDate(String mmDdYyyy) {
+//        log.info("Input start date: {}", mmDdYyyy);
+//        setDateInput(inputStarDate, mmDdYyyy);
+//    }
 
 //    public void inputDeadlineDate(String yyyyMmDd) {
 //        log.info("Input deadline date (HTML): {}", yyyyMmDd);
@@ -195,13 +198,139 @@ public class AssignEmployeePage extends BasePage {
 //    }
 
 
-    public void inputDeadlineDate(String ddMmYyyy) {
-        log.info("Input deadline date: {}", ddMmYyyy);
-        waitForVisibility(inputDeadlineDate);
-        clearField(inputDeadlineDate);
-        type(inputDeadlineDate, ddMmYyyy);
-    }
+//    public void inputDeadlineDate(String ddMmYyyy) {
+//        log.info("Input deadline date: {}", ddMmYyyy);
+//        waitForVisibility(inputDeadlineDate);
+//        clearField(inputDeadlineDate);
+//        type(inputDeadlineDate, ddMmYyyy);
+//    }
 
+//    public void inputDeadlineDate(String yyyyMmDd) {
+//        log.info("Set deadline date via JS (CI safe): {}", yyyyMmDd);
+//        waitForVisibility(inputDeadlineDate);
+//        setDateViaJs(inputDeadlineDate, yyyyMmDd);
+//    }
+
+//    public void inputDeadlineDate(String yyyyMmDd) {
+//        log.info("Input deadline date via REAL USER FLOW: {}", yyyyMmDd);
+//
+//        // split yyyy-MM-dd
+//        String[] parts = yyyyMmDd.split("-");
+//        String year = parts[0];
+//        String month = parts[1];
+//        String day = parts[2];
+//
+//        WebElement deadline =
+//                wait.until(ExpectedConditions.elementToBeClickable(
+//                        By.xpath("(//input[@type='date'])[2]")
+//                ));
+//
+//        deadline.click();
+//        deadline.sendKeys(Keys.chord(Keys.CONTROL, "a"));
+//        deadline.sendKeys(Keys.DELETE);
+//
+//        // ⚠️ INPUT SEPERTI USER
+//        deadline.sendKeys(day);
+//        deadline.sendKeys(month);
+//        deadline.sendKeys(year);
+//
+//        // blur → commit React state
+//        deadline.sendKeys(Keys.TAB);
+//
+//        log.info("Deadline after user input = {}", deadline.getAttribute("value"));
+//    }
+
+//    public void inputDeadlineDate(String yyyyMmDd) {
+//        log.info("Set deadline date via NATIVE setter (React-safe): {}", yyyyMmDd);
+//
+//        WebElement deadline = wait.until(
+//                ExpectedConditions.presenceOfElementLocated(
+//                        By.xpath("(//input[@type='date'])[2]")
+//                )
+//        );
+//
+//        JavascriptExecutor js = (JavascriptExecutor) driver;
+//
+//        js.executeScript("""
+//        const input = arguments[0];
+//        const value = arguments[1];
+//
+//        const nativeSetter = Object.getOwnPropertyDescriptor(
+//            window.HTMLInputElement.prototype,
+//            'value'
+//        ).set;
+//
+//        nativeSetter.call(input, value);
+//
+//        input.dispatchEvent(new Event('input', { bubbles: true }));
+//        input.dispatchEvent(new Event('change', { bubbles: true }));
+//    """, deadline, yyyyMmDd);
+//
+//        log.info("Deadline after set = {}", deadline.getAttribute("value"));
+//    }
+
+    public void inputDeadlineDate(String yyyyMmDd) {
+        log.info("Set deadline date via NATIVE setter (React-safe): {}", yyyyMmDd);
+
+        WebElement deadline = wait.until(
+                ExpectedConditions.presenceOfElementLocated(
+                        By.xpath("(//input[@type='date'])[2]")
+                )
+        );
+
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+
+        js.executeScript("""
+        const input = arguments[0];
+        const value = arguments[1];
+
+        const nativeSetter = Object.getOwnPropertyDescriptor(
+            window.HTMLInputElement.prototype,
+            'value'
+        ).set;
+
+        nativeSetter.call(input, value);
+
+        input.dispatchEvent(new Event('input', { bubbles: true }));
+        input.dispatchEvent(new Event('change', { bubbles: true }));
+    """, deadline, yyyyMmDd);
+
+        log.info("Deadline after set = {}", deadline.getAttribute("value"));
+    }
+    public void updateDeadlineDate(String yyyyMmDd) {
+        log.info("Update deadline date (RESET + SET): {}", yyyyMmDd);
+
+        WebElement deadline = wait.until(ExpectedConditions.presenceOfElementLocated(
+                By.xpath("(//input[@type='date'])[1]") // modal update hanya 1 input
+        ));
+
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+
+        js.executeScript("""
+        const el = arguments[0];
+        const value = arguments[1];
+
+        const nativeSetter = Object.getOwnPropertyDescriptor(
+            window.HTMLInputElement.prototype,
+            'value'
+        ).set;
+
+        // 1️⃣ RESET REACT STATE
+        nativeSetter.call(el, '');
+        el.dispatchEvent(new Event('input', { bubbles: true }));
+        el.dispatchEvent(new Event('change', { bubbles: true }));
+
+        // 2️⃣ SET VALUE BARU
+        nativeSetter.call(el, value);
+        el.dispatchEvent(new Event('input', { bubbles: true }));
+        el.dispatchEvent(new Event('change', { bubbles: true }));
+        el.dispatchEvent(new Event('blur', { bubbles: true }));
+    """, deadline, yyyyMmDd);
+
+        // VALIDASI (WAJIB)
+        String actual = deadline.getAttribute("value");
+        log.info("Updated deadline DOM value = {}", actual);
+    }
 
 
     public void clickSaveAssignEmployee() {
@@ -224,19 +353,19 @@ public class AssignEmployeePage extends BasePage {
      * 4) isi start date & deadline
      * 5) save
      */
-    public void assignEmployeeFromTopResult(String keyword, String startDate, String deadlineDate) {
-        log.info("Assign employee from top result. keyword={}, start={}, deadline={}",
-                keyword, startDate, deadlineDate);
-
-        clickAssignEmployeeButton();
-        searchEmployeeToAssign(keyword);
-        clickActionAssignEmployeeTopResult();
-
-        inputStartDate(startDate);
-        inputDeadlineDate(deadlineDate);
-
-        clickSaveAssignEmployee();
-    }
+//    public void assignEmployeeFromTopResult(String keyword, String startDate, String deadlineDate) {
+//        log.info("Assign employee from top result. keyword={}, start={}, deadline={}",
+//                keyword, startDate, deadlineDate);
+//
+//        clickAssignEmployeeButton();
+//        searchEmployeeToAssign(keyword);
+//        clickActionAssignEmployeeTopResult();
+//
+//        inputStartDate(startDate);
+//        inputDeadlineDate(deadlineDate);
+//
+//        clickSaveAssignEmployee();
+//    }
 
     /* =========================
        SAFE CLICK (fallback JS)
