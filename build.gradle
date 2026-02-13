@@ -43,7 +43,7 @@ test {
     useTestNG() {
         def suite = project.hasProperty('suite')
                 ? project.getProperty('suite')
-                : "regression.xml"
+                : "cross-browser-parallel.xml"
 
         print "Run test suite: ${suite}"
 

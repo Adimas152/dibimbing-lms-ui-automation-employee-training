@@ -10,20 +10,19 @@
         <parameter name="browser" value="chrome"/>
         <classes>
             <class name="dibimbing.tests.employee.EmployeeAddTests"/>
+            <class name="dibimbing.tests.employee.EmployeeEditTests"/>
+            <class name="dibimbing.tests.employee.EmployeeStatusTests"/>
             <class name="dibimbing.tests.employee.EmployeeDeleteTests"/>
             <class name="dibimbing.tests.employee.EmployeeSearchTests"/>
-            <class name="dibimbing.tests.employee.EmployeeStatusTests"/>
-            <class name="dibimbing.tests.employee.EmployeeEditTests"/>
-
             <class name="dibimbing.tests.division.DivisionAddTests"/>
-            <class name="dibimbing.tests.division.DivisionDeleteTests"/>
             <class name="dibimbing.tests.division.DivisionEditTests"/>
+            <class name="dibimbing.tests.division.DivisionDeleteTests"/>
 
             <class name="dibimbing.tests.training.TrainingTests"/>
-            <class name="dibimbing.tests.training.AssignTests"/>
             <class name="dibimbing.tests.training.ChapterTests"/>
             <class name="dibimbing.tests.training.ContentTests"/>
             <class name="dibimbing.tests.training.QuestionTests"/>
+            <class name="dibimbing.tests.training.AssignTests"/>
         </classes>
     </test>
 
@@ -32,20 +31,19 @@
         <parameter name="browser" value="firefox"/>
         <classes>
             <class name="dibimbing.tests.employee.EmployeeAddTests"/>
+            <class name="dibimbing.tests.employee.EmployeeEditTests"/>
+            <class name="dibimbing.tests.employee.EmployeeStatusTests"/>
             <class name="dibimbing.tests.employee.EmployeeDeleteTests"/>
             <class name="dibimbing.tests.employee.EmployeeSearchTests"/>
-            <class name="dibimbing.tests.employee.EmployeeStatusTests"/>
-            <class name="dibimbing.tests.employee.EmployeeEditTests"/>
-
             <class name="dibimbing.tests.division.DivisionAddTests"/>
-            <class name="dibimbing.tests.division.DivisionDeleteTests"/>
             <class name="dibimbing.tests.division.DivisionEditTests"/>
+            <class name="dibimbing.tests.division.DivisionDeleteTests"/>
 
             <class name="dibimbing.tests.training.TrainingTests"/>
-            <class name="dibimbing.tests.training.AssignTests"/>
             <class name="dibimbing.tests.training.ChapterTests"/>
             <class name="dibimbing.tests.training.ContentTests"/>
             <class name="dibimbing.tests.training.QuestionTests"/>
+            <class name="dibimbing.tests.training.AssignTests"/>
         </classes>
     </test>
 
@@ -54,20 +52,20 @@
         <parameter name="browser" value="safari"/>
         <classes>
             <class name="dibimbing.tests.employee.EmployeeAddTests"/>
+            <class name="dibimbing.tests.employee.EmployeeEditTests"/>
+            <class name="dibimbing.tests.employee.EmployeeStatusTests"/>
             <class name="dibimbing.tests.employee.EmployeeDeleteTests"/>
             <class name="dibimbing.tests.employee.EmployeeSearchTests"/>
-<!--            <class name="dibimbing.tests.employee.EmployeeStatusTests"/>-->
-<!--            <class name="dibimbing.tests.employee.EmployeeEditTests"/>-->
 
             <class name="dibimbing.tests.division.DivisionAddTests"/>
-            <class name="dibimbing.tests.division.DivisionDeleteTests"/>
             <class name="dibimbing.tests.division.DivisionEditTests"/>
+            <class name="dibimbing.tests.division.DivisionDeleteTests"/>
 
             <class name="dibimbing.tests.training.TrainingTests"/>
-<!--            <class name="dibimbing.tests.training.AssignTests"/>-->
             <class name="dibimbing.tests.training.ChapterTests"/>
-<!--            <class name="dibimbing.tests.training.ContentTests"/>-->
-<!--            <class name="dibimbing.tests.training.QuestionTests"/>-->
+            <class name="dibimbing.tests.training.ContentTests"/>
+            <class name="dibimbing.tests.training.QuestionTests"/>
+            <class name="dibimbing.tests.training.AssignTests"/>
         </classes>
     </test>
 

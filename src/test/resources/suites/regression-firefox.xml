@@ -6,15 +6,15 @@
     </listeners>
 
     <test name="RegressionTests">
-        <parameter name="browser" value="chrome"/>
+        <parameter name="browser" value="firefox"/>
         <classes>
             <class name="dibimbing.tests.employee.EmployeeAddTests"/>
             <class name="dibimbing.tests.employee.EmployeeEditTests"/>
             <class name="dibimbing.tests.employee.EmployeeStatusTests"/>
             <class name="dibimbing.tests.employee.EmployeeDeleteTests"/>
             <class name="dibimbing.tests.employee.EmployeeSearchTests"/>
-<!--            <class name="dibimbing.tests.employee.EmployeeTransferTests"/>-->
-<!--            <class name="dibimbing.tests.employee.EmployeeImportTests"/>-->
+
+
             <class name="dibimbing.tests.division.DivisionAddTests"/>
             <class name="dibimbing.tests.division.DivisionEditTests"/>
             <class name="dibimbing.tests.division.DivisionDeleteTests"/>

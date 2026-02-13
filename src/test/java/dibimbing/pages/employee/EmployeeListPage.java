@@ -79,7 +79,12 @@ public class EmployeeListPage extends BasePage {
 
     public void searchEmployeeByName(String name) {
         log.info("Search employee by name: {}", name);
-        type(employeeSearchInput, name);
+
+        wait.until(ExpectedConditions.elementToBeClickable(employeeSearchInput));
+
+        click(employeeSearchInput);          // paksa fokus
+        employeeSearchInput.clear();         // reset value
+        employeeSearchInput.sendKeys(name);  // JANGAN pakai type()
     }
 
     public void openActionDropdown() {

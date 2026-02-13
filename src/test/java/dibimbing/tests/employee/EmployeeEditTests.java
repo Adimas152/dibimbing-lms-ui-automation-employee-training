@@ -34,7 +34,7 @@ public class EmployeeEditTests extends BaseTest {
         String runId = String.valueOf(System.nanoTime());
         String fullName = "EDIT_SEED_" + runId;
         String employeeId = "EMP-EDIT-" + runId;
-        String email = "seed.edit+" + runId + "@example.com";
+        String email = "seed.edit" + runId + "@example.com";
         String phone = "62" + runId.substring(0, 10);
         String role = "Member";
 
@@ -220,7 +220,7 @@ public class EmployeeEditTests extends BaseTest {
     @Test(
             description = "EMP-EDIT-004 - Update employee with duplicate ID - Duplicate error displayed",
             groups = {"regression","employee","negative"})
-    public void EMP_EDIT_004_updateEmployeeDuplicateRejected() {
+    public void EMP_EDIT_004_updateEmployeeDuplicateIdRejected() {
         DashboardPage dashboardPage = new DashboardPage(DriverManager.getDriver());
         EmployeeListPage employeeListPage = new EmployeeListPage(DriverManager.getDriver());
         AddEmployeeModal addEmployeeModal = new AddEmployeeModal(DriverManager.getDriver());
@@ -242,7 +242,7 @@ public class EmployeeEditTests extends BaseTest {
         // =========================================================
         String empAName = "EDIT4_A_" + runId;
         String empAId = "EMP-EDIT4-A-" + runId;
-        String empAEmail = "seed.edit4a+" + runId + "@example.com";
+        String empAEmail = "seed.edit4a" + runId + "@example.com";
         String empAPhone = "62" + runId.substring(0, 10);
         String role = "Member";
 
@@ -261,7 +261,7 @@ public class EmployeeEditTests extends BaseTest {
         // =========================================================
         String empBName = "EDIT4_B_" + runId;
         String empBId = "EMP-EDIT4-B-" + runId;
-        String empBEmail = "seed.edit4b+" + runId + "@example.com";
+        String empBEmail = "seed.edit4b" + runId + "@example.com";
         String empBPhone = "62" + String.valueOf(System.nanoTime()).substring(0, 10);
 
         employeeListPage.clickAddEmployee();
@@ -272,7 +272,12 @@ public class EmployeeEditTests extends BaseTest {
                 "1234567890123456", "123456789012345"
         );
         addEmployeeModal.submitCreateEmployee();
-        toast.verifySuccessCreateEmployeeVisible();
+        Assert.assertTrue(
+                toast.isSuccessCreateEmployeeToastVisible(),
+                "Toast success create employee tidak muncul (seed gagal dibuat)"
+        );
+
+        employeeListPage.verifyEmployeeListPageLoaded();
 
         // =========================================================
         // ACT: Open detail Employee B -> Edit -> set Employee ID = empAId (duplicate)

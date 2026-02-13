@@ -1,0 +1,28 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="RegressionSuite" parallel="classes" thread-count="3">
+
+    <listeners>
+        <listener class-name="dibimbing.core.TestListener"/>
+    </listeners>
+
+    <test name="RegressionTests">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="dibimbing.tests.employee.EmployeeAddTests"/>
+            <class name="dibimbing.tests.employee.EmployeeEditTests"/>
+            <class name="dibimbing.tests.employee.EmployeeStatusTests"/>
+            <class name="dibimbing.tests.employee.EmployeeDeleteTests"/>
+            <class name="dibimbing.tests.employee.EmployeeSearchTests"/>
+
+            <class name="dibimbing.tests.division.DivisionAddTests"/>
+            <class name="dibimbing.tests.division.DivisionEditTests"/>
+            <class name="dibimbing.tests.division.DivisionDeleteTests"/>
+
+            <class name="dibimbing.tests.training.TrainingTests"/>
+            <class name="dibimbing.tests.training.ChapterTests"/>
+            <class name="dibimbing.tests.training.ContentTests"/>
+            <class name="dibimbing.tests.training.QuestionTests"/>
+            <class name="dibimbing.tests.training.AssignTests"/>
+        </classes>
+    </test>
+</suite>

@@ -36,12 +36,20 @@ public class TestListener implements ITestListener {
     @Override
     public void onTestStart(ITestResult result) {
 
+        String browser = result
+                .getTestContext()
+                .getCurrentXmlTest()
+                .getParameter("browser");
+
         ExtentTest test = extent.createTest(
-                result.getMethod().getMethodName(),
+                "[" + browser.toUpperCase() + "] " + result.getMethod().getMethodName(),
                 result.getMethod().getDescription()
         );
 
-        // Assign category HANYA dari TestNG groups
+        // Category dari browser
+        test.assignCategory(browser.toUpperCase());
+
+        // Category dari TestNG groups
         for (String group : result.getMethod().getGroups()) {
             test.assignCategory(group.toUpperCase());
         }

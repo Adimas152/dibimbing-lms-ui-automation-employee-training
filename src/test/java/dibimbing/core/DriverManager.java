@@ -28,13 +28,28 @@ public class DriverManager {
             }
 
             case "firefox" -> {
+                if (isCI) {
+                    throw new IllegalArgumentException(
+                            "Firefox is not allowed in CI/CD. Use Chrome only."
+                    );
+                }
                 WebDriverManager.firefoxdriver().setup();
-                FirefoxOptions options = buildFirefoxOptions(isCI);
+                FirefoxOptions options = buildFirefoxOptions(false);
                 webDriver = new FirefoxDriver(options);
             }
 
+            case "safari" -> {
+                if (isCI) {
+                    throw new IllegalArgumentException(
+                            "Safari is not supported in CI/CD. Use Chrome only."
+                    );
+                }
+                webDriver = new org.openqa.selenium.safari.SafariDriver();
+            }
+
+
             default -> throw new IllegalArgumentException(
-                    "Browser not supported: " + browser + " (use: chrome / firefox)"
+                    "Browser not supported: " + browser + " (use: chrome / firefox / safari)"
             );
         }
 

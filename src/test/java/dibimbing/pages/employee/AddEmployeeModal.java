@@ -3,6 +3,7 @@ package dibimbing.pages.employee;
 import dibimbing.pages.base.BasePage;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -40,18 +41,6 @@ public class AddEmployeeModal extends BasePage {
 
     @FindBy(xpath = "(//span[text()='▼'])[2]")
     private WebElement dropdownAngkatan;
-
-    @FindBy(xpath = "(//button[@role='menuitem' and normalize-space()='2024 Ganjil'])[2]")
-    private WebElement angkatanInputOption2024Ganjil;
-
-    @FindBy(xpath = "(//button[@role='menuitem' and normalize-space()='2024 Genap'])[2]")
-    private WebElement angkatanInputOption2024Genap;
-
-    @FindBy(xpath = "(//button[@role='menuitem' and normalize-space()='2025 Ganjil'])[2]")
-    private WebElement angkatanInputOptionGanjil;
-
-    @FindBy(xpath = "(//button[@role='menuitem' and normalize-space()='2025 Genap'])[2]")
-    private WebElement angkatanInputOption2025Genap;
 
     @FindBy(id = "add-employee-gender-radio-male-text")
     private WebElement radioGenderMale;
@@ -146,28 +135,13 @@ public class AddEmployeeModal extends BasePage {
         type(inputRole, role);
     }
 
-    public void selectAngkatan2024Ganjil() {
-        log.info("Select angkatan: 2024 Ganjil");
+    public void selectAngkatan(String angkatanText) {
+        log.info("Select angkatan: {}", angkatanText);
         click(dropdownAngkatan);
-        click(angkatanInputOption2024Ganjil);
-    }
-
-    public void selectAngkatan2024Genap() {
-        log.info("Select angkatan: 2024 Genap");
-        click(dropdownAngkatan);
-        click(angkatanInputOption2024Genap);
-    }
-
-    public void selectAngkatan2025Ganjil() {
-        log.info("Select angkatan: 2025 Ganjil");
-        click(dropdownAngkatan);
-        click(angkatanInputOptionGanjil);
-    }
-
-    public void selectAngkatan2025Genap() {
-        log.info("Select angkatan: 2025 Genap");
-        click(dropdownAngkatan);
-        click(angkatanInputOption2025Genap);
+        WebElement option = waitForVisibility(
+            By.xpath("(//button[@role='menuitem' and normalize-space()='" + angkatanText + "'])[2]")
+        );
+        click(option);
     }
 
     public void selectGenderMale() {
@@ -227,7 +201,7 @@ public class AddEmployeeModal extends BasePage {
         // pilih division
         selectDivisionQualityAssurance();
         inputRole(role);
-        selectAngkatan2024Ganjil();
+       selectAngkatan("2024 Ganjil");
 
         if (gender != null && !gender.isBlank()) {
             if (gender.equalsIgnoreCase("Male")) selectGenderMale();
