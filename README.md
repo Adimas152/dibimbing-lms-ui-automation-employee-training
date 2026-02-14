@@ -1,3 +1,90 @@
+# 📘 Dibimbing LMS – UI Automation (Employee Training)
+
+UI Automation Testing project for Dibimbing LMS – Employee Training using Java, Selenium WebDriver, TestNG, and Gradle, implemented with Page Object Model (POM) and Extent Report.
+
+---
+
+## 🚀 Tech Stack
+
+Language: Java 17  
+UI Automation: Selenium WebDriver  
+Test Framework: TestNG  
+Design Pattern: Page Object Model (POM)  
+Build Tool: Gradle  
+Reporting:
+- TestNG HTML Report
+- Extent Report (HTML)  
+  Cross Browser: Chrome, Firefox, Safari
+
+---
+
+## 🧪 Test Coverage
+
+👤 Employee Module
+- Add Employee (Positive)
+- Failed add employee when email invalid
+- Failed add employee when required field empty
+- Failed add employee when employee ID duplicate
+- Edit Employee
+- Delete Employee
+- Search Employee
+
+🏢 Division Module
+- Add Division
+- Failed add division when required field empty
+- Failed add division when duplicate name
+- Edit Division
+- Delete Division
+
+🎓 Training Module
+- Add Training
+- Edit Training
+- Search Training
+- Pagination verification
+
+📘 Content Module
+- Add Article
+- Add Video
+- Add Test
+- Edit Content
+- Delete Content
+- Failed when:
+    - Duration invalid
+    - Required field empty
+
+📌 Assign Module
+- Assign employee to training
+- Edit assignment deadline
+- Delete assignment
+- Failed when:
+    - Deadline < Start date
+    - Duplicate assignment
+
+---
+
+## 📊 Automation Coverage
+
+Total Test Case: 61  
+Automated (UI): 43 (70%)  
+Focus Area: High priority regression scenarios
+
+---
+
+## ▶️ How to Run Test (Local)
+
+Run all test:
+
+```bash
+./gradlew clean test
+```
+
+Or specific suite:
+
+```bash
+./gradlew clean test -Dsuite=regression-chrome.xml
+./gradlew clean test -Dsuite=regression-firefox.xml
+./gradlew clean test -Dsuite=regression-safari.xml
+```
 
 ---
 
@@ -12,37 +99,17 @@ Supported:
 
 ---
 
-## 🧠 Design Approach
+## 🔔 Slack Notification (CI/CD)
 
-✔ Page Object Model (POM) for maintainability  
-✔ Separation of test logic and page interaction  
-✔ Reusable DriverManager  
-✔ Centralized configuration  
-✔ Regression-ready structure
+Automation sudah terintegrasi dengan Slack untuk mengirim hasil eksekusi setiap pipeline berjalan.
 
----
+Informasi yang dikirim:
 
-## 🎯 Project Objective
+- Status (PASSED / FAILED)
+- Total Tests
+- Passed / Failed / Skipped
+- Pass Rate (%)
+- Branch
+- Triggered By (GitHub Actor)
 
-Tujuan utama automation ini adalah:
-
-- Memastikan fitur berjalan sesuai acceptance criteria
-- Menguji validasi form dan business rule
-- Menyediakan regression suite untuk mencegah defect berulang
-- Mengidentifikasi inkonsistensi antara UI dan API validation
-
----
-
-## 📌 Key Finding (From Automation Execution)
-
-- Beberapa validasi hanya diterapkan di UI layer
-- Backend API masih menerima data invalid
-- Ditemukan defect terkait duplicate data & business rule
-
----
-
-## 👨‍💻 Author
-
-Adimas Sutrisno
-
-Portfolio: https://adimas152.github.io/  
+Notifikasi dikirim melalui GitHub Actions menggunakan Slack Webhook setelah proses testing selesai.

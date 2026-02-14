@@ -19,27 +19,83 @@ jobs:
       GITHUB_ACTIONS: "true"
 
     steps:
-      - name: Checkout
+      - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Set up Java
+      - name: Set up Java 17
         uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: "17"
           cache: gradle
 
-      - name: Grant execute permission
+      - name: Grant Execute Permission
         run: chmod +x gradlew
 
-      - name: Run tests
+      - name: Run UI Automation Tests
         run: ./gradlew clean test
 
-      - name: Upload test reports
+      # ================================
+      # PARSE TESTNG XML RESULT
+      # ================================
+      - name: Parse Test Results
+        if: always()
+        id: test_results
+        run: |
+          TOTAL=$(grep -h "tests=\"" build/test-results/test/*.xml | sed -n 's/.*tests="\([0-9]*\)".*/\1/p' | awk '{sum+=$1} END {print sum}')
+          FAILED=$(grep -h "failures=\"" build/test-results/test/*.xml | sed -n 's/.*failures="\([0-9]*\)".*/\1/p' | awk '{sum+=$1} END {print sum}')
+          SKIPPED=$(grep -h "skipped=\"" build/test-results/test/*.xml | sed -n 's/.*skipped="\([0-9]*\)".*/\1/p' | awk '{sum+=$1} END {print sum}')
+
+          PASSED=$((TOTAL - FAILED - SKIPPED))
+
+          if [ "$TOTAL" -gt 0 ]; then
+            PASS_RATE=$(awk "BEGIN {printf \"%.2f\", ($PASSED/$TOTAL)*100}")
+          else
+            PASS_RATE=0
+          fi
+
+          if [ "$FAILED" -gt 0 ]; then
+            STATUS="FAILED ❌"
+          else
+            STATUS="PASSED ✅"
+          fi
+
+          echo "TOTAL=$TOTAL" >> $GITHUB_OUTPUT
+          echo "PASSED=$PASSED" >> $GITHUB_OUTPUT
+          echo "FAILED=$FAILED" >> $GITHUB_OUTPUT
+          echo "SKIPPED=$SKIPPED" >> $GITHUB_OUTPUT
+          echo "PASS_RATE=$PASS_RATE" >> $GITHUB_OUTPUT
+          echo "STATUS=$STATUS" >> $GITHUB_OUTPUT
+
+      # ================================
+      # SEND SLACK NOTIFICATION
+      # ================================
+      - name: Send Slack Notification
+        if: always()
+        run: |
+          curl -X POST -H 'Content-type: application/json' \
+          --data "{
+            \"text\": \"🔔 *UI Automation Test Result*\n
+            *Status:* ${{ steps.test_results.outputs.STATUS }}\n
+            *Total Tests:* ${{ steps.test_results.outputs.TOTAL }}\n
+            *Passed:* ${{ steps.test_results.outputs.PASSED }}\n
+            *Failed:* ${{ steps.test_results.outputs.FAILED }}\n
+            *Skipped:* ${{ steps.test_results.outputs.SKIPPED }}\n
+            *Pass Rate:* ${{ steps.test_results.outputs.PASS_RATE }}%\n
+            *Branch:* ${GITHUB_REF_NAME}\n
+            *Triggered By:* ${GITHUB_ACTOR}\n
+            *Workflow Run:* https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}\"
+          }" \
+          ${{ secrets.SLACK_WEBHOOK_URL }}
+
+      # ================================
+      # UPLOAD ARTIFACT REPORT
+      # ================================
+      - name: Upload Test Reports
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: test-reports
+          name: ui-automation-test-reports
           path: |
             build/reports/
             build/test-results/
